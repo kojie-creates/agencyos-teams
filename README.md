@@ -1,7 +1,8 @@
+
 # AgencyOS Teams
 
 AgencyOS Teams is the plural flagship surface:
-
+<img width="1408" height="1408" alt="grok-image-1786b98e-b901-4444-9002-b38a9878ba69" src="https://github.com/user-attachments/assets/50be1abf-4cb8-4796-856a-c584e1f02a6a" />
 ```text
 AgencyOS Teams = AgencyOS Beings + AgencyOS Pro
 ```
