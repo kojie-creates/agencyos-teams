@@ -1,0 +1,220 @@
+{
+  "items": [
+    {
+      "id": "run-ed221ad4a14c",
+      "title": "Assess AgencyOS value for the Kojie voice-over career project",
+      "project": "Kojie Voice Over Career Value Assessment",
+      "summary": "Draft a concise but strong executive-facing assessment of how AgencyOS Teams could increase value for the Koji...",
+      "status": "completed",
+      "stage": "Closed",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "## Executive Assessment: Value Proposition of AgencyOS Teams for Kojie Voice-Over Project **Goal:** To demonstrate how AgencyOS standardizes and elevates the operational capacity o...",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-ed221ad4a14c/drafts/kojie-voice-over-career-value-assessment.md",
+      "runId": "run-ed221ad4a14c"
+    },
+    {
+      "id": "run-fdbfacd906eb",
+      "title": "Assess AgencyOS value for a property manager and Cirrus Asset Management",
+      "project": "Toya Cirrus Property Manager Value",
+      "summary": "Draft a concise internal assessment of what the combined AgencyOS Teams system could provide as value to Toya,...",
+      "status": "completed",
+      "stage": "Closed",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "## Internal Assessment: AgencyOS Teams Value Review **To:** Cirrus Asset Management Leadership Team **From:** [Your Department/Assessment Team] **Date:** October 26, 2023 **Subject...",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-fdbfacd906eb/drafts/toya-cirrus-property-manager-value.md",
+      "runId": "run-fdbfacd906eb"
+    },
+    {
+      "id": "run-b530ad943a8b",
+      "title": "Assess AgencyOS value for a property manager and Cirrus Asset Management",
+      "project": "Toya Cirrus Property Manager Value",
+      "summary": "Draft a concise internal assessment of what the combined AgencyOS Teams system could provide as value to Toya,...",
+      "status": "waiting",
+      "stage": "Approval",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "# Internal Assessment: Optimizing Property Operations with AgencyOS Teams **To:** Toya, Property Manager **From:** [Your Department/Team] **Date:** October 26, 2023 **Subject:** St...",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-b530ad943a8b/drafts/toya-cirrus-property-manager-value.md",
+      "runId": "run-b530ad943a8b"
+    },
+    {
+      "id": "run-2b0020d0ff1d",
+      "title": "Local LM Studio runbook",
+      "project": "Runbook2 Local Lmstudio",
+      "summary": "Draft ashort internal runbook for validating a local LM Studio setup before using it on team workflows.",
+      "status": "completed",
+      "stage": "Closed",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "# \ud83d\ude80 LM Studio Local Setup Validation Runbook **(Internal Use Only)** This runbook guides users through validating a newly installed local LLM environment using LM Studio before int...",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-2b0020d0ff1d/drafts/runbook.md",
+      "runId": "run-2b0020d0ff1d"
+    },
+    {
+      "id": "run-7284f8c25c79",
+      "title": "Local LM Studio runbook",
+      "project": "Runbook Local Lmstudio",
+      "summary": "Draft a short internal runbook for validating a local LM Studio setup before using it on team workflows.",
+      "status": "waiting",
+      "stage": "Approval",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "***Note: This runbook assumes the user has successfully installed LM Studio and a specific model (`[MODEL NAME]`).*** --- # \ud83d\ude80 Local LLM Validation Runbook: LM Studio Setup Check **...",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-7284f8c25c79/drafts/runbook.md",
+      "runId": "run-7284f8c25c79"
+    },
+    {
+      "id": "run-3270a5d6afb6",
+      "title": "Local model proof packet",
+      "project": "Canon Local Proof",
+      "summary": "Create and verify a local model-draft proof packet for a short internal research task.",
+      "status": "completed",
+      "stage": "Closed",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Local validation matters because it ensures the model performs reliably and fairly across diverse subgroups or specific contexts, preventing overall accuracy from masking critical ...",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-3270a5d6afb6/drafts/canon-proof.md",
+      "runId": "run-3270a5d6afb6"
+    },
+    {
+      "id": "run-f3d73e955dbd",
+      "title": "Local model proof packet random",
+      "project": "Local Model Proof Random",
+      "summary": "Create and verify a local model-draft proof packet for a small random reasoning task.",
+      "status": "completed",
+      "stage": "Closed",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Because a model that works perfectly in theory can fail completely when confronted with the unique, messy variables of the real world.",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-f3d73e955dbd/drafts/random-proof.md",
+      "runId": "run-f3d73e955dbd"
+    },
+    {
+      "id": "run-07d63035f8f2",
+      "title": "Local model proof packet random",
+      "project": "Local Model Proof Random",
+      "summary": "Create and verify a local model-draft proof packet for a small random reasoning task.",
+      "status": "in_progress",
+      "stage": "Drafting",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Generated artifact for this work item.",
+      "nextAction": "Open",
+      "artifactPath": "",
+      "runId": "run-07d63035f8f2"
+    },
+    {
+      "id": "run-338f1ac344e0",
+      "title": "Local model proof packet random",
+      "project": "Local Model Proof Random",
+      "summary": "Create and verify a local model-draft proof packet for a small random reasoning task.",
+      "status": "ready",
+      "stage": "Ready",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Generated artifact for this work item.",
+      "nextAction": "Open",
+      "artifactPath": "",
+      "runId": "run-338f1ac344e0"
+    },
+    {
+      "id": "run-4fc79c55ecf1",
+      "title": "Local model proof packet",
+      "project": "Local Model Proof",
+      "summary": "Create and verify a local model-draft proof packet.",
+      "status": "completed",
+      "stage": "Closed",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Hello! It's great to connect with you today.",
+      "nextAction": "Review",
+      "artifactPath": ".agencyos-runtime/artifacts/run-4fc79c55ecf1/drafts/handoff-verify-close.md",
+      "runId": "run-4fc79c55ecf1"
+    },
+    {
+      "id": "run-1165ea5557d7",
+      "title": "Local model proof packet",
+      "project": "Local Model Proof",
+      "summary": "Create and verify a local model-draft proof packet.",
+      "status": "ready",
+      "stage": "Ready",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Hello there!",
+      "nextAction": "Open",
+      "artifactPath": ".agencyos-runtime/artifacts/run-1165ea5557d7/drafts/final-closeout.md",
+      "runId": "run-1165ea5557d7"
+    },
+    {
+      "id": "run-b74d000a23da",
+      "title": "Local model proof packet",
+      "project": "Local Model Proof",
+      "summary": "Create and verify a local model-draft proof packet.",
+      "status": "ready",
+      "stage": "Ready",
+      "time": "recent",
+      "model": "Gemma via LM Studio",
+      "tags": [
+        "internal_artifact",
+        "research"
+      ],
+      "artifactSummary": "Hello! I hope you have a wonderful day.",
+      "nextAction": "Open",
+      "artifactPath": ".agencyos-runtime/artifacts/run-b74d000a23da/drafts/final-smoke.md",
+      "runId": "run-b74d000a23da"
+    }
+  ]
+}

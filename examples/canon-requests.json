@@ -1,0 +1,67 @@
+[
+  {
+    "request_id": "canon-local-proof",
+    "title": "Local model proof packet",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Create and verify a local model-draft proof packet for a short internal research task.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ]
+  },
+  {
+    "request_id": "canon-brief-synthesis",
+    "title": "Internal brief synthesis",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Summarize the supplied notes into a one-page internal briefing with key findings, risks, and next actions.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ]
+  },
+  {
+    "request_id": "canon-meeting-recap",
+    "title": "Meeting recap and action items",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Turn the meeting transcript into action items, decisions, blockers, and a concise owner summary.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ]
+  },
+  {
+    "request_id": "canon-decision-memo",
+    "title": "Decision memo",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Draft an internal recommendation memo comparing two options and recommending one with reasons and tradeoffs.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ]
+  },
+  {
+    "request_id": "canon-runbook",
+    "title": "Runbook generation",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Draft a short internal runbook for validating a local LM Studio setup before using it on team work.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "request_id": "local-model-proof-random",
+  "title": "Local model proof packet random",
+  "actor_id": "actor-operator",
+  "requested_outcome": "Create and verify a local model-draft proof packet for a small random reasoning task.",
+  "action_class": "internal_artifact",
+  "reversible": true,
+  "external": false,
+  "sensitive": false,
+  "required_workstreams": [
+    "research"
+  ]
+}

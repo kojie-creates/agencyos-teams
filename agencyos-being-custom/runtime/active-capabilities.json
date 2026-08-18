@@ -1,0 +1,152 @@
+{
+  "purpose": "Separate the bloated capability surface into explicit runtime states.",
+  "rule": "Available does not mean active. Active requires routing, evidence, and approval gates when marked.",
+  "capabilities": [
+    {
+      "id": "jaavis-active-personality",
+      "name": "Jaavis Active Personality",
+      "status": "active",
+      "category": "personality",
+      "source": "personality/ACTIVE-PERSONALITY.md"
+    },
+    {
+      "id": "solo-identity-map",
+      "name": "Solo Agency Identity Map",
+      "status": "active",
+      "category": "identity",
+      "source": "personality/IDENTITY-REFERENCE.md"
+    },
+    {
+      "id": "role-routing-map",
+      "name": "Coordinator and Specialist Routing",
+      "status": "active",
+      "category": "routing",
+      "source": "personality/ROLE-PERSONALITY-MAP.md"
+    },
+    {
+      "id": "runtime-event-log",
+      "name": "Runtime Event Log",
+      "status": "active",
+      "category": "runtime",
+      "source": "runtime/README.md"
+    },
+    {
+      "id": "evidence-lock",
+      "name": "Evidence Lock / Hash Verification",
+      "status": "active",
+      "category": "governance",
+      "source": "governance/README.md"
+    },
+    {
+      "id": "deterministic-diagram-generation",
+      "name": "Deterministic Diagram Generation",
+      "status": "active",
+      "category": "visual",
+      "source": "tools/build_solo_agency_diagram.py"
+    },
+    {
+      "id": "parent-orchestrator",
+      "name": "Parent Orchestrator",
+      "status": "available",
+      "category": "core-operating-agent",
+      "source": "skills/AGENCYOS-PRO-AGENTS.md"
+    },
+    {
+      "id": "config-selector",
+      "name": "Config Selector",
+      "status": "available",
+      "category": "selector",
+      "source": "skills/AGENCYOS-PRO-AGENTS.md"
+    },
+    {
+      "id": "agency-selector",
+      "name": "Agency Selector",
+      "status": "available",
+      "category": "selector",
+      "source": "skills/AGENCYOS-PRO-AGENTS.md"
+    },
+    {
+      "id": "scope-gate",
+      "name": "Scope Gate",
+      "status": "available",
+      "category": "governance",
+      "source": "skills/AGENCYOS-PRO-AGENTS.md"
+    },
+    {
+      "id": "risk-gate",
+      "name": "Risk Gate",
+      "status": "installed",
+      "category": "governance",
+      "source": "skills/AGENCYOS-PRO-AGENTS.md"
+    },
+    {
+      "id": "scenario-agencies",
+      "name": "Scenario Agency Skills",
+      "status": "available",
+      "category": "scenario",
+      "source": "skills/AGENCYOS-PRO-AGENTS.md"
+    },
+    {
+      "id": "tool-routines",
+      "name": "Tool Routines",
+      "status": "available",
+      "category": "tools",
+      "source": "CUSTOMIZATION.md"
+    },
+    {
+      "id": "capability-prompts",
+      "name": "Capability Prompts",
+      "status": "available",
+      "category": "skills",
+      "source": "CUSTOMIZATION.md"
+    },
+    {
+      "id": "portfolio-system",
+      "name": "Portfolio System",
+      "status": "installed",
+      "category": "portfolio",
+      "source": "portfolio/README.md"
+    },
+    {
+      "id": "personal-context",
+      "name": "Personal Context",
+      "status": "requires_approval",
+      "category": "memory",
+      "source": "personal/README.md",
+      "requires_approval": true,
+      "reason": "Personal material enters only with explicit human approval."
+    },
+    {
+      "id": "history-import",
+      "name": "History Import",
+      "status": "requires_approval",
+      "category": "provenance",
+      "source": "history/README.md",
+      "requires_approval": true,
+      "reason": "History remains outside active self until verified."
+    },
+    {
+      "id": "environment-apps",
+      "name": "Environment / Connected Apps",
+      "status": "available",
+      "category": "environment",
+      "source": "100-PERCENT-COVERAGE-INTAKE.md"
+    },
+    {
+      "id": "being-command",
+      "name": "@being Command",
+      "status": "blocked",
+      "category": "command",
+      "source": "BEING-NAME-FORM.md",
+      "reason": "Proposed only. No command/plugin mechanism has been implemented and tested."
+    },
+    {
+      "id": "legacy-bloat",
+      "name": "Load Everything By Default",
+      "status": "deprecated",
+      "category": "operating-mode",
+      "source": "README.md",
+      "reason": "Blueprints may reference broad capability, but runtime should activate narrowly."
+    }
+  ]
+}

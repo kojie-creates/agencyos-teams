@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300">
+  <defs>
+    <style>
+      .bg{fill:#061a33}.grid{stroke:#1f4c78;stroke-width:1;opacity:.42}
+      .title{fill:#dff6ff;font:800 56px Arial,sans-serif}.sub{fill:#9fd3ff;font:500 22px Arial,sans-serif}
+      .card{fill:#082645;stroke:#9be7ff;stroke-width:2;rx:18}.step{fill:#0a3158;stroke:#62c8ff;stroke-width:1.7;rx:14}
+      .h{fill:#dff6ff;font:800 26px Arial,sans-serif}.small{fill:#bdeaff;font:500 18px Arial,sans-serif}.tiny{fill:#8fc9ef;font:800 13px Arial,sans-serif;letter-spacing:2px}
+      .line{stroke:#8ee8ff;stroke-width:4;fill:none}.arrow{fill:#8ee8ff}.green{fill:#86efac}
+    </style>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path class="grid" d="M64 0H0V64"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path class="arrow" d="M0 0L10 5L0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="1800" height="1300"/><rect width="1800" height="1300" fill="url(#grid)"/>
+  <text class="title" x="80" y="95">AgencyOS Org Product Flow</text>
+  <text class="sub" x="82" y="135">How onboarding, configs, agencies, governance, and seed data pull the picture together</text>
+
+  <g transform="translate(80,235)">
+    <rect class="step" width="260" height="210"/><text class="tiny" x="28" y="40">01</text><text class="h" x="28" y="82">Onboard</text><text class="small" x="28" y="124">Client state</text><text class="small" x="28" y="154">Existing data</text><text class="small" x="28" y="184">Current workflow</text>
+  </g>
+  <path class="line" marker-end="url(#arrow)" d="M360 340H455"/>
+  <g transform="translate(475,235)">
+    <rect class="step" width="260" height="210"/><text class="tiny" x="28" y="40">02</text><text class="h" x="28" y="82">Protect</text><text class="small" x="28" y="124">Do not touch list</text><text class="small" x="28" y="154">Memory boundaries</text><text class="small" x="28" y="184">Pilot scope</text>
+  </g>
+  <path class="line" marker-end="url(#arrow)" d="M755 340H850"/>
+  <g transform="translate(870,235)">
+    <rect class="step" width="260" height="210"/><text class="tiny" x="28" y="40">03</text><text class="h" x="28" y="82">Configure</text><text class="small" x="28" y="124">Agency charters</text><text class="small" x="28" y="154">Configs by problem</text><text class="small" x="28" y="184">Decision rights</text>
+  </g>
+  <path class="line" marker-end="url(#arrow)" d="M1150 340H1245"/>
+  <g transform="translate(1265,235)">
+    <rect class="step" width="260" height="210"/><text class="tiny" x="28" y="40">04</text><text class="h" x="28" y="82">Pilot</text><text class="small" x="28" y="124">Run beside</text><text class="small" x="28" y="154">current process</text><text class="small" x="28" y="184">Verify output</text>
+  </g>
+
+  <g transform="translate(260,575)">
+    <rect class="card" width="1280" height="360"/>
+    <text class="tiny green" x="40" y="45">AGENCY LAYER</text>
+    <text class="h" x="40" y="90">A business can run several focused agencies at once</text>
+    <g transform="translate(60,145)">
+      <rect class="step" width="210" height="110"/><text class="h" x="48" y="45">Growth</text><text class="small" x="42" y="78">offers + content</text>
+      <rect class="step" x="245" width="210" height="110"/><text class="h" x="299" y="45">Ops</text><text class="small" x="282" y="78">workflow + handoffs</text>
+      <rect class="step" x="490" width="210" height="110"/><text class="h" x="536" y="45">Delivery</text><text class="small" x="526" y="78">client or member work</text>
+      <rect class="step" x="735" width="210" height="110"/><text class="h" x="779" y="45">Risk</text><text class="small" x="772" y="78">claims + proof</text>
+      <rect class="step" x="980" width="210" height="110"/><text class="h" x="1024" y="45">Insights</text><text class="small" x="1018" y="78">learn + improve</text>
+    </g>
+  </g>
+
+  <path class="line" marker-end="url(#arrow)" d="M900 955V1045"/>
+  <g transform="translate(395,1060)">
+    <rect class="card" width="1010" height="150"/>
+    <text class="h" x="40" y="58">Seed Data</text>
+    <text class="small" x="40" y="98">Queue · decision log · evidence ledger · memory · retrospectives · monitor/review labels</text>
+  </g>
+</svg>

@@ -1,0 +1,153 @@
+{"actor": "@jaavis", "event_id": "evt-001", "note": "Pilot launch decision received.", "phase": "intake", "timestamp": "2026-08-12T12:00:00Z", "type": "task_received"}
+{"actor": "@jaavis", "event_id": "evt-002", "phase": "intake", "timestamp": "2026-08-12T12:01:00Z", "type": "agent_activated"}
+{"actor": "@athena", "event_id": "evt-003", "phase": "route", "timestamp": "2026-08-12T12:03:00Z", "type": "agent_activated"}
+{"actor": "@vera", "event_id": "evt-004", "phase": "risk_frame", "timestamp": "2026-08-12T12:05:00Z", "type": "agent_activated"}
+{"actor": "@ronan-shield", "event_id": "evt-005", "phase": "risk_frame", "timestamp": "2026-08-12T12:05:30Z", "type": "agent_activated"}
+{"actor": "@clara-rule", "event_id": "evt-006", "phase": "risk_frame", "timestamp": "2026-08-12T12:06:00Z", "type": "agent_activated"}
+{"actor": "@amara-guard", "event_id": "evt-007", "phase": "risk_frame", "timestamp": "2026-08-12T12:06:30Z", "type": "agent_activated"}
+{"actor": "@vera", "event_id": "evt-008", "phase": "risk_frame", "timestamp": "2026-08-12T12:10:00Z", "type": "agent_muted"}
+{"actor": "@ronan-shield", "event_id": "evt-009", "phase": "risk_frame", "timestamp": "2026-08-12T12:10:00Z", "type": "agent_muted"}
+{"actor": "@clara-rule", "event_id": "evt-010", "phase": "risk_frame", "timestamp": "2026-08-12T12:10:00Z", "type": "agent_muted"}
+{"actor": "@amara-guard", "event_id": "evt-011", "phase": "risk_frame", "timestamp": "2026-08-12T12:10:00Z", "type": "agent_muted"}
+{"actor": "@atlas", "event_id": "evt-012", "phase": "research", "timestamp": "2026-08-12T12:12:00Z", "type": "agent_activated"}
+{"actor": "@corin-vale", "event_id": "evt-013", "phase": "research", "timestamp": "2026-08-12T12:13:00Z", "type": "agent_activated"}
+{"actor": "@selene-cross", "event_id": "evt-014", "phase": "research", "timestamp": "2026-08-12T12:13:30Z", "type": "agent_activated"}
+{"actor": "@nova-field", "event_id": "evt-015", "phase": "research", "timestamp": "2026-08-12T12:14:00Z", "type": "agent_activated"}
+{"actor": "@rowan-quill", "event_id": "evt-016", "phase": "research", "timestamp": "2026-08-12T12:14:30Z", "type": "agent_activated"}
+{"actor": "@atlas", "event_id": "evt-017", "phase": "research", "timestamp": "2026-08-12T12:24:00Z", "type": "agent_muted"}
+{"actor": "@corin-vale", "event_id": "evt-018", "phase": "research", "timestamp": "2026-08-12T12:24:00Z", "type": "agent_muted"}
+{"actor": "@selene-cross", "event_id": "evt-019", "phase": "research", "timestamp": "2026-08-12T12:24:00Z", "type": "agent_muted"}
+{"actor": "@nova-field", "event_id": "evt-020", "phase": "research", "timestamp": "2026-08-12T12:24:00Z", "type": "agent_muted"}
+{"actor": "@rowan-quill", "event_id": "evt-021", "phase": "research", "timestamp": "2026-08-12T12:24:00Z", "type": "agent_muted"}
+{"actor": "@bob", "event_id": "evt-022", "phase": "ux_shape", "timestamp": "2026-08-12T12:26:00Z", "type": "agent_activated"}
+{"actor": "@cassian-forge", "event_id": "evt-023", "phase": "ux_shape", "timestamp": "2026-08-12T12:27:00Z", "type": "agent_activated"}
+{"actor": "@luma-hart", "event_id": "evt-024", "phase": "ux_shape", "timestamp": "2026-08-12T12:28:00Z", "type": "agent_activated"}
+{"actor": "@cassian-forge", "event_id": "evt-025", "phase": "ux_shape", "timestamp": "2026-08-12T12:36:00Z", "type": "agent_muted"}
+{"actor": "@luma-hart", "event_id": "evt-026", "phase": "ux_shape", "timestamp": "2026-08-12T12:36:00Z", "type": "agent_muted"}
+{"actor": "@mason-true", "event_id": "evt-027", "phase": "build", "timestamp": "2026-08-12T12:38:00Z", "type": "agent_activated"}
+{"actor": "@iris-bolt", "event_id": "evt-028", "phase": "build", "timestamp": "2026-08-12T12:45:00Z", "type": "agent_activated"}
+{"actor": "@soren-gate", "event_id": "evt-029", "phase": "build", "timestamp": "2026-08-12T12:50:00Z", "type": "agent_activated"}
+{"actor": "@mason-true", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-030", "phase": "build", "timestamp": "2026-08-12T12:55:00Z", "type": "deliverable_created"}
+{"actor": "@mason-true", "event_id": "evt-031", "phase": "build", "timestamp": "2026-08-12T12:56:00Z", "type": "agent_muted"}
+{"actor": "@iris-bolt", "event_id": "evt-032", "phase": "build", "timestamp": "2026-08-12T12:56:00Z", "type": "agent_muted"}
+{"actor": "@soren-gate", "event_id": "evt-033", "phase": "build", "timestamp": "2026-08-12T12:56:00Z", "type": "agent_muted"}
+{"actor": "@bob", "event_id": "evt-034", "phase": "build", "timestamp": "2026-08-12T12:57:00Z", "type": "agent_muted"}
+{"actor": "@maya", "event_id": "evt-035", "phase": "operate", "timestamp": "2026-08-12T13:00:00Z", "type": "agent_activated"}
+{"actor": "@mira-stone", "event_id": "evt-036", "phase": "operate", "timestamp": "2026-08-12T13:01:00Z", "type": "agent_activated"}
+{"actor": "@niko-thread", "event_id": "evt-037", "phase": "operate", "timestamp": "2026-08-12T13:02:00Z", "type": "agent_activated"}
+{"actor": "@darius-lock", "event_id": "evt-038", "phase": "operate", "timestamp": "2026-08-12T13:03:00Z", "type": "agent_activated"}
+{"actor": "@felix-torque", "event_id": "evt-039", "phase": "operate", "timestamp": "2026-08-12T13:04:00Z", "type": "agent_activated"}
+{"actor": "@maya", "event_id": "evt-040", "phase": "operate", "timestamp": "2026-08-12T13:15:00Z", "type": "agent_muted"}
+{"actor": "@mira-stone", "event_id": "evt-041", "phase": "operate", "timestamp": "2026-08-12T13:15:00Z", "type": "agent_muted"}
+{"actor": "@niko-thread", "event_id": "evt-042", "phase": "operate", "timestamp": "2026-08-12T13:15:00Z", "type": "agent_muted"}
+{"actor": "@darius-lock", "event_id": "evt-043", "phase": "operate", "timestamp": "2026-08-12T13:15:00Z", "type": "agent_muted"}
+{"actor": "@felix-torque", "event_id": "evt-044", "phase": "operate", "timestamp": "2026-08-12T13:15:00Z", "type": "agent_muted"}
+{"actor": "@miles", "event_id": "evt-045", "phase": "distribution", "timestamp": "2026-08-12T13:18:00Z", "type": "agent_activated"}
+{"actor": "@katie", "event_id": "evt-046", "phase": "distribution", "timestamp": "2026-08-12T13:18:30Z", "type": "agent_activated"}
+{"actor": "@star", "event_id": "evt-047", "phase": "distribution", "timestamp": "2026-08-12T13:19:00Z", "type": "agent_activated"}
+{"actor": "@lyra-north", "event_id": "evt-048", "phase": "distribution", "timestamp": "2026-08-12T13:20:00Z", "type": "agent_activated"}
+{"actor": "@aria-bloom", "event_id": "evt-049", "phase": "distribution", "timestamp": "2026-08-12T13:21:00Z", "type": "agent_activated"}
+{"actor": "@theo-close", "event_id": "evt-050", "phase": "distribution", "timestamp": "2026-08-12T13:22:00Z", "type": "agent_activated"}
+{"actor": "@gemma-hearth", "event_id": "evt-051", "phase": "distribution", "timestamp": "2026-08-12T13:23:00Z", "type": "agent_activated"}
+{"actor": "@aria-bloom", "artifact": "deliverables/landing-copy.md", "event_id": "evt-052", "phase": "distribution", "timestamp": "2026-08-12T13:30:00Z", "type": "deliverable_created"}
+{"actor": "@miles", "event_id": "evt-053", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@katie", "event_id": "evt-054", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@star", "event_id": "evt-055", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@lyra-north", "event_id": "evt-056", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@aria-bloom", "event_id": "evt-057", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@theo-close", "event_id": "evt-058", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@gemma-hearth", "event_id": "evt-059", "phase": "distribution", "timestamp": "2026-08-12T13:34:00Z", "type": "agent_muted"}
+{"actor": "@elias", "event_id": "evt-060", "phase": "learning", "timestamp": "2026-08-12T13:36:00Z", "type": "agent_activated"}
+{"actor": "@elias-vale", "event_id": "evt-061", "phase": "learning", "timestamp": "2026-08-12T13:37:00Z", "type": "agent_activated"}
+{"actor": "@nina-door", "event_id": "evt-062", "phase": "learning", "timestamp": "2026-08-12T13:38:00Z", "type": "agent_activated"}
+{"actor": "@pax-trial", "event_id": "evt-063", "phase": "learning", "timestamp": "2026-08-12T13:39:00Z", "type": "agent_activated"}
+{"actor": "@adrian-ledger", "event_id": "evt-064", "phase": "learning", "timestamp": "2026-08-12T13:40:00Z", "type": "agent_activated"}
+{"actor": "@elias", "event_id": "evt-065", "phase": "learning", "timestamp": "2026-08-12T13:48:00Z", "type": "agent_muted"}
+{"actor": "@elias-vale", "event_id": "evt-066", "phase": "learning", "timestamp": "2026-08-12T13:48:00Z", "type": "agent_muted"}
+{"actor": "@nina-door", "event_id": "evt-067", "phase": "learning", "timestamp": "2026-08-12T13:48:00Z", "type": "agent_muted"}
+{"actor": "@pax-trial", "event_id": "evt-068", "phase": "learning", "timestamp": "2026-08-12T13:48:00Z", "type": "agent_muted"}
+{"actor": "@adrian-ledger", "event_id": "evt-069", "phase": "learning", "timestamp": "2026-08-12T13:48:00Z", "type": "agent_muted"}
+{"actor": "@vera-quill", "event_id": "evt-070", "phase": "pre_launch_audit", "timestamp": "2026-08-12T13:50:00Z", "type": "agent_activated"}
+{"actor": "@ronan-shield", "event_id": "evt-071", "phase": "pre_launch_audit", "timestamp": "2026-08-12T13:51:00Z", "type": "agent_activated"}
+{"actor": "@clara-rule", "event_id": "evt-072", "phase": "pre_launch_audit", "timestamp": "2026-08-12T13:52:00Z", "type": "agent_activated"}
+{"actor": "@amara-guard", "event_id": "evt-073", "phase": "pre_launch_audit", "timestamp": "2026-08-12T13:53:00Z", "type": "agent_activated"}
+{"actor": "@vera-quill", "event_id": "evt-074", "phase": "pre_launch_audit", "timestamp": "2026-08-12T14:00:00Z", "type": "agent_muted"}
+{"actor": "@ronan-shield", "event_id": "evt-075", "phase": "pre_launch_audit", "timestamp": "2026-08-12T14:00:00Z", "type": "agent_muted"}
+{"actor": "@clara-rule", "event_id": "evt-076", "phase": "pre_launch_audit", "timestamp": "2026-08-12T14:00:00Z", "type": "agent_muted"}
+{"actor": "@amara-guard", "event_id": "evt-077", "phase": "pre_launch_audit", "timestamp": "2026-08-12T14:00:00Z", "type": "agent_muted"}
+{"actor": "@soren-gate", "event_id": "evt-078", "phase": "evidence_lock", "timestamp": "2026-08-12T14:02:00Z", "type": "agent_activated"}
+{"actor": "@vera", "event_id": "evt-079", "phase": "evidence_lock", "timestamp": "2026-08-12T14:02:30Z", "type": "agent_activated"}
+{"actor": "@vera-quill", "event_id": "evt-080", "phase": "evidence_lock", "timestamp": "2026-08-12T14:03:00Z", "type": "agent_activated"}
+{"actor": "@elias", "event_id": "evt-081", "phase": "evidence_lock", "timestamp": "2026-08-12T14:03:30Z", "type": "agent_activated"}
+{"actor": "@soren-gate", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-082", "phase": "evidence_lock", "sha256": "02b1be54a28f7d6f066abf190cca56500d35fd14c215a2acc14cf2f28e9ee89c", "timestamp": "2026-08-12T14:04:00Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/landing-copy.md", "event_id": "evt-083", "phase": "evidence_lock", "sha256": "9a0b2ce8a24f0d0bc0242c21b31dbfb7db46ed723b2248a4d621f10071515d50", "timestamp": "2026-08-12T14:04:30Z", "type": "deliverable_hashed"}
+{"actor": "@vera", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-084", "phase": "evidence_lock", "timestamp": "2026-08-12T14:05:00Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/landing-copy.md", "event_id": "evt-085", "phase": "evidence_lock", "timestamp": "2026-08-12T14:05:30Z", "type": "evidence_attached"}
+{"actor": "@vera-quill", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-086", "phase": "evidence_lock", "timestamp": "2026-08-12T14:06:00Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/landing-copy.md", "event_id": "evt-087", "phase": "evidence_lock", "timestamp": "2026-08-12T14:06:30Z", "type": "claim_verified"}
+{"actor": "@vera", "event_id": "evt-088", "phase": "evidence_lock", "timestamp": "2026-08-12T14:07:00Z", "type": "evidence_lock_passed"}
+{"actor": "@soren-gate", "event_id": "evt-089", "phase": "evidence_lock", "timestamp": "2026-08-12T14:08:00Z", "type": "agent_muted"}
+{"actor": "@vera", "event_id": "evt-090", "phase": "evidence_lock", "timestamp": "2026-08-12T14:08:00Z", "type": "agent_muted"}
+{"actor": "@vera-quill", "event_id": "evt-091", "phase": "evidence_lock", "timestamp": "2026-08-12T14:08:00Z", "type": "agent_muted"}
+{"actor": "@elias", "event_id": "evt-092", "phase": "evidence_lock", "timestamp": "2026-08-12T14:08:00Z", "type": "agent_muted"}
+{"actor": "@athena", "event_id": "evt-092a", "phase": "closeout", "timestamp": "2026-08-12T14:09:00Z", "type": "agent_muted"}
+{"actor": "@jaavis", "event_id": "evt-093", "phase": "closeout", "timestamp": "2026-08-12T14:10:00Z", "type": "decision_packet_created"}
+{"actor": "Kojie", "event_id": "evt-094", "phase": "closeout", "timestamp": "2026-08-12T14:12:00Z", "type": "kojie_approved"}
+{"actor": "@jaavis", "event_id": "evt-095", "phase": "closeout", "timestamp": "2026-08-12T14:13:00Z", "type": "agent_muted"}
+{"actor": "@jaavis", "event_id": "evt-096", "phase": "closeout", "timestamp": "2026-08-12T14:14:00Z", "type": "task_closed"}
+{"actor": "@jaavis", "artifact": "deliverables/pilot-offer-brief.md", "event_id": "evt-097", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:30Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/target-customer-profile.md", "event_id": "evt-098", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:31Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-099", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:32Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/landing-copy.md", "event_id": "evt-100", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:33Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/outreach-email.md", "event_id": "evt-101", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:34Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/sales-call-script.md", "event_id": "evt-102", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:35Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/fulfillment-workflow.md", "event_id": "evt-103", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:36Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/risk-and-claim-review.md", "event_id": "evt-104", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:37Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/evidence-packet.md", "event_id": "evt-105", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:38Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/final-decision-packet.md", "event_id": "evt-106", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:39Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/hash-lock-manifest.md", "event_id": "evt-107", "phase": "northline_packet", "timestamp": "2026-08-13T00:16:40Z", "type": "deliverable_created"}
+{"actor": "@soren-gate", "artifact": "deliverables/pilot-offer-brief.md", "event_id": "evt-108", "phase": "evidence_lock", "sha256": "04bc111615e8808f418878948ced5c59d591fa250c14f48d0b4f5dbe7660dfb7", "timestamp": "2026-08-13T00:17:00Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/target-customer-profile.md", "event_id": "evt-109", "phase": "evidence_lock", "sha256": "5f8f2ed239b7f9099ec8281917724130b427f548bdaa026993b196810a0ff136", "timestamp": "2026-08-13T00:17:01Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-110", "phase": "evidence_lock", "sha256": "f42e10eba3a0b65679b22c1951258e787b5acb2d16b7124b8cc683e3d088478e", "timestamp": "2026-08-13T00:17:02Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/landing-copy.md", "event_id": "evt-111", "phase": "evidence_lock", "sha256": "53b890bb71c4abfcaca4c90813011745b387eaae01e046d8af159a98a63dc526", "timestamp": "2026-08-13T00:17:03Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/outreach-email.md", "event_id": "evt-112", "phase": "evidence_lock", "sha256": "b90c04f0a2930245c46ee4ff30c180166d2d09c09ec72fe33a112a19d8977bca", "timestamp": "2026-08-13T00:17:04Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/sales-call-script.md", "event_id": "evt-113", "phase": "evidence_lock", "sha256": "0c37e3ff5868a117ff5e7bd0edfe87fea5b22b4e4ad25b288d4edb080fb28ff1", "timestamp": "2026-08-13T00:17:05Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/fulfillment-workflow.md", "event_id": "evt-114", "phase": "evidence_lock", "sha256": "4aba42db87203afc633be8891b20af10f496c348a2ed07d4a4b3b5f6b9040d06", "timestamp": "2026-08-13T00:17:06Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/risk-and-claim-review.md", "event_id": "evt-115", "phase": "evidence_lock", "sha256": "a69e8ce919d2b4fbf43b0acb37236f47f1d497c51eb7fe340a1559c52e5f643c", "timestamp": "2026-08-13T00:17:07Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/evidence-packet.md", "event_id": "evt-116", "phase": "evidence_lock", "sha256": "0cd5c9fe3e76c00673148ca79db0e519637153cd364c4d052d830862697ce74a", "timestamp": "2026-08-13T00:17:08Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/final-decision-packet.md", "event_id": "evt-117", "phase": "evidence_lock", "sha256": "81d9f3c66acecc9676569416e46447b6f2eb2e19d1d2f60df73a3662c5fd5548", "timestamp": "2026-08-13T00:17:09Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/hash-lock-manifest.md", "event_id": "evt-118", "phase": "evidence_lock", "sha256": "dae9977b10bb3696b63038be66176bb2f2f4c2f493391e8aab2bdab7d9a7ebe9", "timestamp": "2026-08-13T00:17:10Z", "type": "deliverable_hashed"}
+{"actor": "@vera", "artifact": "deliverables/pilot-offer-brief.md", "event_id": "evt-119", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:20Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/target-customer-profile.md", "event_id": "evt-120", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:21Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-121", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:22Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/landing-copy.md", "event_id": "evt-122", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:23Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/outreach-email.md", "event_id": "evt-123", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:24Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/sales-call-script.md", "event_id": "evt-124", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:25Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/fulfillment-workflow.md", "event_id": "evt-125", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:26Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/risk-and-claim-review.md", "event_id": "evt-126", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:27Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/evidence-packet.md", "event_id": "evt-127", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:28Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/final-decision-packet.md", "event_id": "evt-128", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:29Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/hash-lock-manifest.md", "event_id": "evt-129", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:30Z", "type": "evidence_attached"}
+{"actor": "@vera-quill", "artifact": "deliverables/pilot-offer-brief.md", "event_id": "evt-130", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:40Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/target-customer-profile.md", "event_id": "evt-131", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:41Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/pilot-intake.html", "event_id": "evt-132", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:42Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/landing-copy.md", "event_id": "evt-133", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:43Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/outreach-email.md", "event_id": "evt-134", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:44Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/sales-call-script.md", "event_id": "evt-135", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:45Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/fulfillment-workflow.md", "event_id": "evt-136", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:46Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/risk-and-claim-review.md", "event_id": "evt-137", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:47Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/evidence-packet.md", "event_id": "evt-138", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:48Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/final-decision-packet.md", "event_id": "evt-139", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:49Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/hash-lock-manifest.md", "event_id": "evt-140", "phase": "evidence_lock", "timestamp": "2026-08-13T00:17:50Z", "type": "claim_verified"}
+{"actor": "@vera", "event_id": "evt-141", "phase": "evidence_lock", "timestamp": "2026-08-13T00:18:00Z", "type": "evidence_lock_passed"}
+{"actor": "@jaavis", "event_id": "evt-142", "phase": "closeout", "timestamp": "2026-08-13T00:18:10Z", "type": "decision_packet_created"}
+{"actor": "Kojie", "event_id": "evt-143", "phase": "closeout", "timestamp": "2026-08-13T00:21:47Z", "type": "kojie_approved"}
+{"actor": "@jaavis", "event_id": "evt-144", "phase": "closeout", "timestamp": "2026-08-13T00:21:48Z", "type": "task_closed"}
+{"actor": "@jaavis", "artifact": "deliverables/pilot-run-example.md", "event_id": "evt-145", "phase": "example_run", "timestamp": "2026-08-13T00:25:00Z", "type": "deliverable_created"}
+{"actor": "@jaavis", "artifact": "deliverables/pilot-run-scorecard.md", "event_id": "evt-146", "phase": "example_run", "timestamp": "2026-08-13T00:25:01Z", "type": "deliverable_created"}
+{"actor": "@soren-gate", "artifact": "deliverables/pilot-run-example.md", "event_id": "evt-147", "phase": "example_run", "sha256": "78a74f18ed9178770d7d5df48dc4786b6d8dd1f0a0b7be05ee356f85117c5bd2", "timestamp": "2026-08-13T00:25:02Z", "type": "deliverable_hashed"}
+{"actor": "@soren-gate", "artifact": "deliverables/pilot-run-scorecard.md", "event_id": "evt-148", "phase": "example_run", "sha256": "f455c8f5d96cd79537d279cd5c6a6aa5837d4253166c59aeba98c3f005b1ddea", "timestamp": "2026-08-13T00:25:03Z", "type": "deliverable_hashed"}
+{"actor": "@vera", "artifact": "deliverables/pilot-run-example.md", "event_id": "evt-149", "phase": "example_run", "note": "Marked simulated example. Not real demand evidence.", "timestamp": "2026-08-13T00:25:04Z", "type": "evidence_attached"}
+{"actor": "@vera", "artifact": "deliverables/pilot-run-scorecard.md", "event_id": "evt-150", "phase": "example_run", "note": "Marked simulated example. Not real demand evidence.", "timestamp": "2026-08-13T00:25:05Z", "type": "evidence_attached"}
+{"actor": "@vera-quill", "artifact": "deliverables/pilot-run-example.md", "event_id": "evt-151", "phase": "example_run", "note": "Claim review passed because artifact labels assumptions and simulated status.", "timestamp": "2026-08-13T00:25:06Z", "type": "claim_verified"}
+{"actor": "@vera-quill", "artifact": "deliverables/pilot-run-scorecard.md", "event_id": "evt-152", "phase": "example_run", "note": "Claim review passed because artifact labels assumptions and simulated status.", "timestamp": "2026-08-13T00:25:07Z", "type": "claim_verified"}

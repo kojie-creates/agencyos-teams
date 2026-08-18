@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgencyOS Workboard</title>
+    <style>
+      :root {
+        --bg: #f4efe8;
+        --panel: #f9f6f2;
+        --panel-strong: #ffffff;
+        --ink: #1f1f1f;
+        --muted: #6d655f;
+        --line: #e5dfd4;
+        --accent: #b78045;
+        --accent-soft: #f1d7b2;
+        --green: #2f8f62;
+        --green-soft: #dff4e8;
+        --amber: #b17a2c;
+        --amber-soft: #f7e7c4;
+        --slate: #4c5763;
+        --slate-soft: #e7edf2;
+        --shadow: 0 10px 28px rgba(31, 31, 31, 0.06);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #efe7dd 0%, var(--bg) 100%);
+        color: var(--ink);
+      }
+
+      .shell {
+        width: min(1440px, 96vw);
+        min-height: 100vh;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr) 380px;
+      }
+
+      .sidebar {
+        background: rgba(255,255,255,0.46);
+        border-right: 1px solid var(--line);
+        padding: 24px 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 10px 18px;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #1f1f1f, #7a5c3a);
+        color: white;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+      }
+
+      .nav-group {
+        margin-top: 18px;
+      }
+
+      .nav-label {
+        font-size: 0.73rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding: 0 10px 8px;
+      }
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border-radius: 12px;
+        color: var(--ink);
+        margin-bottom: 6px;
+        background: transparent;
+      }
+
+      .nav-item.active {
+        background: var(--panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-item small {
+        color: var(--muted);
+        font-size: 0.7rem;
+      }
+
+      .workspace-list {
+        margin-top: 12px;
+        padding: 8px 10px;
+      }
+
+      .workspace {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255,255,255,0.26);
+        margin-bottom: 8px;
+      }
+
+      .workspace strong {
+        display: block;
+        font-size: 0.92rem;
+      }
+
+      .workspace span {
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+
+      .workspace .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(47, 143, 98, 0.12);
+      }
+
+      .main {
+        padding: 26px 24px 20px;
+      }
+
+      .workspace-view {
+        display: block;
+      }
+
+      .workspace-view.hidden {
+        display: none;
+      }
+
+      .new-project-panel {
+        background: rgba(255,255,255,0.56);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .new-project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .new-project-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      .field select {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px 11px;
+        font: inherit;
+        color: var(--ink);
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+      }
+
+      .page-title {
+        font-size: 1.85rem;
+        margin: 0;
+      }
+
+      .status-strip {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255,255,255,0.54);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .status-dot {
+        width: 9px;
+        height: 9px;
+        background: var(--green);
+        border-radius: 50%;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .stat-card {
+        background: rgba(255,255,255,0.52);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 16px 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .stat-card .label {
+        color: var(--muted);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .stat-card .value {
+        margin-top: 10px;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .board {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        gap: 18px;
+      }
+
+      .column {
+        background: rgba(255,255,255,0.4);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 12px 10px;
+      }
+
+      .column-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        padding: 2px 6px;
+      }
+
+      .column-header h3 {
+        margin: 0;
+        font-size: 0.86rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .chip {
+        font-size: 0.7rem;
+        border-radius: 999px;
+        padding: 5px 8px;
+        color: var(--ink);
+        background: var(--slate-soft);
+      }
+
+      .task-card {
+        background: var(--panel-strong);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 12px;
+        box-shadow: 0 8px 14px rgba(31,31,31,0.03);
+        margin-bottom: 12px;
+      }
+
+      .task-card h4 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+
+      .task-card p {
+        margin: 0 0 10px;
+        color: var(--muted);
+        line-height: 1.5;
+        font-size: 0.84rem;
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--accent-soft);
+        color: #5b3f20;
+        border-radius: 999px;
+        padding: 5px 8px;
+        font-size: 0.72rem;
+        font-weight: 600;
+      }
+
+      .tag.green { background: var(--green-soft); color: #1d5d41; }
+      .tag.amber { background: var(--amber-soft); color: #7b4f0d; }
+      .tag.slate { background: var(--slate-soft); color: var(--slate); }
+
+      .task-card .time {
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+
+      .preview {
+        background: rgba(255,255,255,0.52);
+        border-left: 1px solid var(--line);
+        padding: 24px 22px;
+      }
+
+      .preview-panel {
+        background: var(--panel-strong);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        position: relative; /* allow absolute-positioned controls inside */
+      }
+
+      .preview-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: none;
+        background: transparent;
+        font-size: 18px;
+        cursor: pointer;
+        color: #000; /* use pure black for the X */
+        padding: 6px;
+        border-radius: 6px;
+        transition: background 120ms ease, color 120ms ease;
+      }
+
+      .preview-close:hover {
+        background: rgba(0,0,0,0.04);
+        color: #000; /* remain black on hover */
+      }
+
+      .preview-close:focus {
+        outline: 2px solid rgba(183,128,69,0.18);
+        outline-offset: 2px;
+      }
+
+      .preview-title {
+        margin: 0 0 8px;
+        font-size: 1.2rem;
+      }
+
+      .preview-sub {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .chat-panel {
+        margin-top: 18px;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      .chat-panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .chat-panel-header h4 {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .status-pill {
+        font-size: 0.72rem;
+        background: var(--green-soft);
+        color: #1d5d41;
+        border-radius: 999px;
+        padding: 5px 8px;
+      }
+
+      .chat-form {
+        display: grid;
+        gap: 10px;
+      }
+
+      .chat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .field label {
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .field input,
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px 11px;
+        font: inherit;
+        color: var(--ink);
+      }
+
+      .field textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+
+      .json-preview {
+        background: #f7f3ee;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-size: 0.72rem;
+        line-height: 1.5;
+        color: var(--slate);
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .chat-history {
+        margin: 12px 0;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #faf8f4;
+        padding: 10px;
+        display: grid;
+        gap: 8px;
+        max-height: 240px;
+        overflow-y: auto;
+      }
+
+      .chat-message {
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+
+      .chat-message.user {
+        background: #efeae3;
+        border: 1px solid #e5d8c8;
+      }
+
+      .chat-message.assistant {
+        background: #edf6f1;
+        border: 1px solid #d6eadc;
+      }
+
+      .chat-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .download-link {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: white;
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.82rem;
+      }
+
+      .button {
+        border: none;
+        border-radius: 12px;
+        padding: 11px 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .button.primary {
+        background: var(--ink);
+        color: white;
+      }
+
+      .button.secondary {
+        background: white;
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+
+      .preview summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .summary-pill {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        background: var(--accent-soft);
+        color: #5b3f20;
+      }
+
+      .artifact {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #faf8f4;
+        padding: 16px 18px;
+      }
+
+      .artifact h5 {
+        margin: 0 0 8px;
+        font-size: 0.95rem;
+      }
+
+      .artifact p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 0.86rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .button {
+        border: none;
+        border-radius: 12px;
+        padding: 11px 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .button.primary {
+        background: var(--ink);
+        color: white;
+      }
+
+      .button.secondary {
+        background: white;
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+
+      .footer-mini {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .mini-badge {
+        background: var(--slate-soft);
+        color: var(--slate);
+        border-radius: 999px;
+        padding: 6px 8px;
+        font-size: 0.72rem;
+      }
+
+      @media (max-width: 1180px) {
+        .shell {
+          grid-template-columns: 220px minmax(0, 1fr) 320px;
+        }
+
+        .preview {
+          display: block;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .shell {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          border-right: none;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .preview {
+          border-left: none;
+          border-top: 1px solid var(--line);
+          padding-top: 20px;
+        }
+
+        .stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .board {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <h1>AgencyOS</h1>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-label">Navigation</div>
+          <div class="nav-item active" data-view="workboard">
+            <span>Workboard</span>
+            <small>5</small>
+          </div>
+          <div class="nav-item" data-view="new-project">
+            <span>New Project</span>
+            <small>New</small>
+          </div>
+          <div class="nav-item">
+            <span>Projects</span>
+            <small>3</small>
+          </div>
+          <div class="nav-item">
+            <span>Artifacts</span>
+            <small>18</small>
+          </div>
+          <div class="nav-item">
+            <span>Approvals</span>
+            <small>1</small>
+          </div>
+        </div>
+
+        <div class="workspace-list">
+          <div class="workspace">
+            <div>
+              <strong>Kojie</strong>
+              <span>Voice-over career</span>
+            </div>
+            <div class="dot"></div>
+          </div>
+          <div class="workspace">
+            <div>
+              <strong>Cirrus</strong>
+              <span>Property ops</span>
+            </div>
+            <div class="dot" style="background:#b17a2c; box-shadow: 0 0 0 4px rgba(177, 122, 44, 0.12);"></div>
+          </div>
+          <div class="workspace">
+            <div>
+              <strong>Runbooks</strong>
+              <span>Internal</span>
+            </div>
+            <div class="dot" style="background:#4c5763; box-shadow: 0 0 0 4px rgba(76,87,99,0.12);"></div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section id="workboardView" class="workspace-view">
+          <div class="topbar">
+            <h2 class="page-title">Workboard</h2>
+            <div class="status-strip">
+              <span class="status-dot"></span>
+              <span>LM Studio connected — Gemma ready</span>
+            </div>
+          </div>
+
+          <section id="stats" class="stats"></section>
+          <section id="board" class="board"></section>
+        </section>
+
+        <section id="newProjectView" class="workspace-view hidden">
+          <div class="new-project-panel">
+            <div class="new-project-header">
+              <h3>New Project</h3>
+              <span class="status-pill">LM Studio Intake</span>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="projectNameInput">Project name</label>
+                <input id="projectNameInput" type="text" value="" />
+              </div>
+              <div class="field">
+                <label for="clientNameInput">Client</label>
+                <input id="clientNameInput" type="text" value="" />
+              </div>
+
+              <div class="field">
+                <label for="requestTypeInput">Request type</label>
+                <select id="requestTypeInput">
+                  <option value="Opportunity review">Opportunity review</option>
+                  <option value="New project intake">New project intake</option>
+                  <option value="Value assessment">Value assessment</option>
+                  <option value="Market research">Market research</option>
+                  <option value="Competitive analysis">Competitive analysis</option>
+                  <option value="Risk review">Risk review</option>
+                  <option value="Source-backed claim verification">Source-backed claim verification</option>
+                  <option value="Positioning / messaging">Positioning / messaging</option>
+                  <option value="Pilot design">Pilot design</option>
+                  <option value="Launch strategy">Launch strategy</option>
+                  <option value="Sales enablement brief">Sales enablement brief</option>
+                  <option value="Client discovery summary">Client discovery summary</option>
+                  <option value="Project brief / scoping">Project brief / scoping</option>
+                  <option value="Workflow design">Workflow design</option>
+                  <option value="Process runbook">Process runbook</option>
+                  <option value="Proof packet / validation">Proof packet / validation</option>
+                  <option value="Output review / QA">Output review / QA</option>
+                  <option value="Research synthesis">Research synthesis</option>
+                  <option value="Executive summary">Executive summary</option>
+                  <option value="Proposal / pitch support">Proposal / pitch support</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lmModelInput">Model</label>
+                <select id="lmModelInput"></select>
+              </div>
+
+              <div class="field full">
+                <label for="lmEndpointInput">LM Studio endpoint</label>
+                <input id="lmEndpointInput" type="text" value="http://localhost:1234/v1" />
+              </div>
+
+              <div class="field full">
+                <label for="requestBriefInput">Request brief</label>
+                <textarea id="requestBriefInput"></textarea>
+              </div>
+
+              <div class="field full">
+                <label>Request JSON</label>
+                <pre id="requestJsonPreview" class="json-preview"></pre>
+              </div>
+
+              <div class="field full">
+                <label>Conversation</label>
+                <div class="chat-history" id="chatHistory"></div>
+              </div>
+
+              <div class="field full">
+                <div class="chat-actions">
+                  <button id="sendRequestButton" class="button primary" type="button">Send request</button>
+                  <button id="resetChatButton" class="button secondary" type="button">Reset</button>
+                  <a id="markdownDownloadLink" class="download-link" href="#" download="agencyos-project.md">Download .md</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside id="preview" class="preview"></aside>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

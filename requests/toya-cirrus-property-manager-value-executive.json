@@ -1,0 +1,12 @@
+{
+  "request_id": "toya-cirrus-property-manager-value-executive",
+  "title": "Executive value assessment for AgencyOS Teams at Cirrus Asset Management",
+  "actor_id": "actor-operator",
+  "requested_outcome": "Draft a sharper executive-facing assessment of the value AgencyOS Teams could provide to Toya, the property manager, and to Cirrus Asset Management as the employer.",
+  "action_class": "internal_artifact",
+  "reversible": true,
+  "external": false,
+  "sensitive": false,
+  "required_workstreams": ["research"],
+  "evidence_required_for": []
+}
