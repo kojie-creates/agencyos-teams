@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">AgencyOS product relationship and internal architecture</title>
+  <desc id="desc">A product ladder showing how the user relates to AgencyOS Solo, AgencyOS Pro, AgencyOS Being, and AgencyOS Teams, with simplified internal architecture for each product.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071019"/>
+      <stop offset="0.52" stop-color="#0b1117"/>
+      <stop offset="1" stop-color="#0e0d17"/>
+    </linearGradient>
+    <linearGradient id="solo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e90ff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1e90ff" stop-opacity="0.07"/>
+    </linearGradient>
+    <linearGradient id="pro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#65d982" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#65d982" stop-opacity="0.07"/>
+    </linearGradient>
+    <linearGradient id="being" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c99bff" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#c99bff" stop-opacity="0.07"/>
+    </linearGradient>
+    <linearGradient id="teams" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3bd4e" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#f3bd4e" stop-opacity="0.07"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.35 0 0 0 0 0.68 0 0 0 0 1 0 0 0 0.28 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #243142; stroke-width: 1; opacity: 0.34; }
+      .title { fill: #f3f7fb; font: 700 54px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #9fb0c4; font: 400 24px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .eyebrow { fill: #8fa1b8; font: 700 16px Arial, Helvetica, sans-serif; letter-spacing: 3px; }
+      .card { fill: #0f1721; stroke: #2f4054; stroke-width: 2; }
+      .card-title { fill: #edf4fb; font: 700 32px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .card-subtitle { fill: #aebbd0; font: 400 17px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .small { fill: #b7c7d8; font: 400 16px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .tiny { fill: #9aacc0; font: 400 13px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .label { fill: #f2f6fb; font: 700 16px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .chip-text { fill: #d9e4f0; font: 600 13px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .muted { fill: #8295aa; font: 400 14px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .user-title { fill: #f8fbff; font: 700 30px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .user-copy { fill: #b5c5d8; font: 400 17px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .line { fill: none; stroke: #526273; stroke-width: 2; }
+      .arrow { fill: none; stroke: #91a8bf; stroke-width: 2.5; marker-end: url(#arrowHead); }
+      .solo-stroke { stroke: #2d95ff; }
+      .pro-stroke { stroke: #65d982; }
+      .being-stroke { stroke: #c99bff; }
+      .teams-stroke { stroke: #f3bd4e; }
+      .solo-fill { fill: #112338; }
+      .pro-fill { fill: #12281d; }
+      .being-fill { fill: #21172f; }
+      .teams-fill { fill: #2c2414; }
+      .neutral-fill { fill: #111821; stroke: #2a3543; stroke-width: 1.5; }
+      .node { stroke-width: 2; }
+      .band { fill: #101722; stroke: #2b3948; stroke-width: 1.5; }
+    </style>
+    <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10" fill="none" stroke="#91a8bf" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1120"/>
+  <g opacity="0.75">
+    <path class="grid" d="M0 120H1800M0 240H1800M0 360H1800M0 480H1800M0 600H1800M0 720H1800M0 840H1800M0 960H1800"/>
+    <path class="grid" d="M120 0V1120M240 0V1120M360 0V1120M480 0V1120M600 0V1120M720 0V1120M840 0V1120M960 0V1120M1080 0V1120M1200 0V1120M1320 0V1120M1440 0V1120M1560 0V1120M1680 0V1120"/>
+  </g>
+
+  <text x="80" y="86" class="eyebrow">AGENCYOS PRODUCT LADDER</text>
+  <text x="80" y="150" class="title">From AI agencies to trusted AI teams</text>
+  <text x="80" y="192" class="subtitle">The user keeps authority while each product adds a stronger operating shape around the model.</text>
+
+  <g transform="translate(78 310)">
+    <rect x="0" y="0" width="245" height="510" rx="18" fill="#0d151f" stroke="#334356" stroke-width="2"/>
+    <circle cx="122" cy="115" r="64" fill="#111c28" stroke="#e7eef7" stroke-width="2.4"/>
+    <circle cx="122" cy="92" r="23" fill="none" stroke="#e7eef7" stroke-width="4"/>
+    <path d="M74 146C84 122 160 122 170 146" fill="none" stroke="#e7eef7" stroke-width="4" stroke-linecap="round"/>
+    <text x="122" y="224" text-anchor="middle" class="user-title">User</text>
+    <text x="122" y="262" text-anchor="middle" class="user-copy">Authority</text>
+    <text x="122" y="292" text-anchor="middle" class="user-copy">Context</text>
+    <text x="122" y="322" text-anchor="middle" class="user-copy">Approval</text>
+    <path d="M48 371H197" stroke="#43566b" stroke-width="1.5"/>
+    <text x="122" y="413" text-anchor="middle" class="small">The human decides</text>
+    <text x="122" y="440" text-anchor="middle" class="muted">scope, risk, voice,</text>
+    <text x="122" y="463" text-anchor="middle" class="muted">public actions, and</text>
+    <text x="122" y="486" text-anchor="middle" class="muted">what counts as done.</text>
+  </g>
+
+  <path d="M323 404C363 404 375 404 415 404" class="arrow"/>
+  <path d="M323 514C363 514 375 514 415 514" class="arrow"/>
+  <path d="M323 624C363 624 375 624 415 624" class="arrow"/>
+  <path d="M323 734C363 734 375 734 415 734" class="arrow"/>
+
+  <g transform="translate(415 270)">
+    <rect class="card" x="0" y="0" width="320" height="590" rx="16"/>
+    <rect x="0" y="0" width="320" height="590" rx="16" fill="url(#solo)"/>
+    <text x="28" y="55" class="card-title">AgencyOS Solo</text>
+    <text x="28" y="86" class="card-subtitle">User to one focused agency</text>
+    <g transform="translate(54 137)" filter="url(#softGlow)">
+      <circle cx="106" cy="106" r="74" fill="#0c1721" stroke="#2d95ff" stroke-width="4"/>
+      <text x="106" y="99" text-anchor="middle" class="label">One</text>
+      <text x="106" y="125" text-anchor="middle" class="label">Agency</text>
+      <line x1="106" y1="32" x2="106" y2="0" class="line solo-stroke"/>
+      <line x1="106" y1="180" x2="106" y2="212" class="line solo-stroke"/>
+      <line x1="32" y1="106" x2="0" y2="106" class="line solo-stroke"/>
+      <line x1="180" y1="106" x2="212" y2="106" class="line solo-stroke"/>
+      <line x1="54" y1="54" x2="24" y2="24" class="line solo-stroke"/>
+      <line x1="158" y1="158" x2="188" y2="188" class="line solo-stroke"/>
+      <rect x="70" y="-34" width="72" height="28" rx="7" class="neutral-fill"/>
+      <text x="106" y="-15" text-anchor="middle" class="chip-text">Config</text>
+      <rect x="65" y="217" width="82" height="28" rx="7" class="neutral-fill"/>
+      <text x="106" y="236" text-anchor="middle" class="chip-text">Memory</text>
+      <rect x="-56" y="92" width="84" height="28" rx="7" class="solo-fill solo-stroke node"/>
+      <text x="-14" y="111" text-anchor="middle" class="chip-text">Intake</text>
+      <rect x="184" y="92" width="104" height="28" rx="7" class="solo-fill solo-stroke node"/>
+      <text x="236" y="111" text-anchor="middle" class="chip-text">Specialists</text>
+      <rect x="-54" y="200" width="90" height="28" rx="7" class="neutral-fill"/>
+      <text x="-9" y="219" text-anchor="middle" class="chip-text">Output</text>
+      <rect x="176" y="200" width="76" height="28" rx="7" class="neutral-fill"/>
+      <text x="214" y="219" text-anchor="middle" class="chip-text">Proof</text>
+    </g>
+    <text x="28" y="430" class="label">Best relationship</text>
+    <text x="28" y="459" class="small">A single contained agency helps the</text>
+    <text x="28" y="484" class="small">user complete one workflow cleanly.</text>
+    <text x="28" y="529" class="label">Internal architecture</text>
+    <text x="28" y="558" class="tiny">Intake, Config, Specialists, Memory,</text>
+    <text x="28" y="579" class="tiny">Output, Proof.</text>
+  </g>
+
+  <g transform="translate(765 270)">
+    <rect class="card" x="0" y="0" width="320" height="590" rx="16"/>
+    <rect x="0" y="0" width="320" height="590" rx="16" fill="url(#pro)"/>
+    <text x="28" y="55" class="card-title">AgencyOS Pro</text>
+    <text x="28" y="86" class="card-subtitle">User to coordinated agency system</text>
+    <g transform="translate(37 133)">
+      <rect x="75" y="0" width="96" height="36" rx="8" class="pro-fill pro-stroke node"/>
+      <text x="123" y="23" text-anchor="middle" class="chip-text">Operator</text>
+      <line x1="123" y1="36" x2="123" y2="72" class="line pro-stroke"/>
+      <rect x="36" y="72" width="174" height="44" rx="9" class="pro-fill pro-stroke node"/>
+      <text x="123" y="99" text-anchor="middle" class="chip-text">Central Orchestrator</text>
+      <line x1="123" y1="116" x2="123" y2="148" class="line pro-stroke"/>
+      <line x1="24" y1="148" x2="222" y2="148" class="line pro-stroke"/>
+      <line x1="24" y1="148" x2="24" y2="174" class="line pro-stroke"/>
+      <line x1="74" y1="148" x2="74" y2="174" class="line pro-stroke"/>
+      <line x1="123" y1="148" x2="123" y2="174" class="line pro-stroke"/>
+      <line x1="173" y1="148" x2="173" y2="174" class="line pro-stroke"/>
+      <line x1="222" y1="148" x2="222" y2="174" class="line pro-stroke"/>
+      <rect x="-11" y="174" width="70" height="36" rx="8" class="neutral-fill"/>
+      <text x="24" y="197" text-anchor="middle" class="chip-text">Intake</text>
+      <rect x="39" y="174" width="70" height="36" rx="8" class="neutral-fill"/>
+      <text x="74" y="197" text-anchor="middle" class="chip-text">Build</text>
+      <rect x="83" y="174" width="80" height="36" rx="8" class="neutral-fill"/>
+      <text x="123" y="197" text-anchor="middle" class="chip-text">Launch</text>
+      <rect x="138" y="174" width="70" height="36" rx="8" class="neutral-fill"/>
+      <text x="173" y="197" text-anchor="middle" class="chip-text">Operate</text>
+      <rect x="187" y="174" width="70" height="36" rx="8" class="neutral-fill"/>
+      <text x="222" y="197" text-anchor="middle" class="chip-text">Learn</text>
+      <rect x="13" y="239" width="220" height="48" rx="9" fill="#20172a" stroke="#c99bff" stroke-width="2"/>
+      <text x="123" y="268" text-anchor="middle" class="chip-text">Governance + Evidence</text>
+    </g>
+    <text x="28" y="430" class="label">Best relationship</text>
+    <text x="28" y="459" class="small">Multiple agencies run in sequence</text>
+    <text x="28" y="484" class="small">or parallel under one operator.</text>
+    <text x="28" y="529" class="label">Internal architecture</text>
+    <text x="28" y="558" class="tiny">Scope, Intake, Routing, Tool Access,</text>
+    <text x="28" y="579" class="tiny">Permissions, Handoffs, Proof, Closeout.</text>
+  </g>
+
+  <g transform="translate(1115 270)">
+    <rect class="card" x="0" y="0" width="320" height="590" rx="16"/>
+    <rect x="0" y="0" width="320" height="590" rx="16" fill="url(#being)"/>
+    <text x="28" y="55" class="card-title">AgencyOS Being</text>
+    <text x="28" y="86" class="card-subtitle">User to one trusted AI partner</text>
+    <g transform="translate(48 126)">
+      <circle cx="112" cy="125" r="106" fill="none" stroke="#c99bff" stroke-width="2.5" stroke-dasharray="7 7"/>
+      <rect x="41" y="0" width="142" height="34" rx="8" fill="#251937" stroke="#c99bff" stroke-width="2"/>
+      <text x="112" y="23" text-anchor="middle" class="chip-text">Existence</text>
+      <rect x="41" y="45" width="142" height="34" rx="8" class="neutral-fill"/>
+      <text x="112" y="68" text-anchor="middle" class="chip-text">Presence</text>
+      <rect x="41" y="90" width="142" height="34" rx="8" fill="#132235" stroke="#2d95ff" stroke-width="2"/>
+      <text x="112" y="113" text-anchor="middle" class="chip-text">Intelligence</text>
+      <rect x="41" y="135" width="142" height="34" rx="8" fill="#18261b" stroke="#65d982" stroke-width="2"/>
+      <text x="112" y="158" text-anchor="middle" class="chip-text">Skeleton</text>
+      <rect x="41" y="180" width="142" height="34" rx="8" fill="#2c2414" stroke="#f3bd4e" stroke-width="2"/>
+      <text x="112" y="203" text-anchor="middle" class="chip-text">Body</text>
+      <rect x="0" y="244" width="96" height="34" rx="8" class="neutral-fill"/>
+      <text x="48" y="267" text-anchor="middle" class="chip-text">Skills</text>
+      <rect x="128" y="244" width="96" height="34" rx="8" class="neutral-fill"/>
+      <text x="176" y="267" text-anchor="middle" class="chip-text">Memory</text>
+    </g>
+    <text x="28" y="430" class="label">Best relationship</text>
+    <text x="28" y="459" class="small">A named AI partner adapts to the</text>
+    <text x="28" y="484" class="small">user's work, tone, and boundaries.</text>
+    <text x="28" y="529" class="label">Internal architecture</text>
+    <text x="28" y="558" class="tiny">Existence, Presence, Intelligence,</text>
+    <text x="28" y="579" class="tiny">Skeleton, Body, Skills, Personality.</text>
+  </g>
+
+  <g transform="translate(1465 270)">
+    <rect class="card" x="0" y="0" width="255" height="590" rx="16"/>
+    <rect x="0" y="0" width="255" height="590" rx="16" fill="url(#teams)"/>
+    <text x="26" y="55" class="card-title">AgencyOS</text>
+    <text x="26" y="91" class="card-title">Teams</text>
+    <text x="26" y="122" class="card-subtitle">User to trusted AI team</text>
+    <g transform="translate(28 160)">
+      <line x1="32" y1="64" x2="166" y2="64" class="line teams-stroke"/>
+      <line x1="99" y1="64" x2="99" y2="134" class="line teams-stroke"/>
+      <circle cx="32" cy="64" r="30" fill="#2c2414" stroke="#f3bd4e" stroke-width="2"/>
+      <circle cx="99" cy="34" r="30" fill="#251937" stroke="#c99bff" stroke-width="2"/>
+      <circle cx="166" cy="64" r="30" fill="#12281d" stroke="#65d982" stroke-width="2"/>
+      <text x="32" y="69" text-anchor="middle" class="chip-text">A</text>
+      <text x="99" y="39" text-anchor="middle" class="chip-text">B</text>
+      <text x="166" y="69" text-anchor="middle" class="chip-text">C</text>
+      <rect x="20" y="134" width="158" height="42" rx="8" fill="#20172a" stroke="#c99bff" stroke-width="2"/>
+      <text x="99" y="160" text-anchor="middle" class="chip-text">Shared Governance</text>
+      <rect x="20" y="198" width="158" height="42" rx="8" class="neutral-fill"/>
+      <text x="99" y="224" text-anchor="middle" class="chip-text">Team Memory</text>
+    </g>
+    <text x="26" y="430" class="label">Best relationship</text>
+    <text x="26" y="459" class="small">Several trusted AI partners</text>
+    <text x="26" y="484" class="small">coordinate around roles.</text>
+    <text x="26" y="529" class="label">Internal architecture</text>
+    <text x="26" y="558" class="tiny">Multiple Beings, shared rules,</text>
+    <text x="26" y="579" class="tiny">team memory, portfolio, boundaries.</text>
+  </g>
+
+  <g transform="translate(415 910)">
+    <rect x="0" y="0" width="670" height="120" rx="16" class="band"/>
+    <text x="32" y="44" class="card-title">Agency systems</text>
+    <text x="32" y="78" class="small">Solo and Pro organize work: intake, routing, handoffs, governance, proof, and closeout.</text>
+    <line x1="302" y1="-40" x2="302" y2="0" stroke="#526273" stroke-width="2"/>
+  </g>
+  <g transform="translate(1115 910)">
+    <rect x="0" y="0" width="605" height="120" rx="16" class="band"/>
+    <text x="32" y="44" class="card-title">Trusted team systems</text>
+    <text x="32" y="78" class="small">Being and Teams organize relationship: identity, memory, personality, trust, and role fit.</text>
+    <line x1="302" y1="-40" x2="302" y2="0" stroke="#526273" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(80 1015)">
+    <rect x="0" y="0" width="245" height="64" rx="14" fill="#0d151f" stroke="#334356" stroke-width="1.5"/>
+    <text x="24" y="26" class="label">Core principle</text>
+    <text x="24" y="49" class="tiny">The product expands capability.</text>
+    <text x="255" y="42" class="small">The user still holds authority.</text>
+  </g>
+</svg>

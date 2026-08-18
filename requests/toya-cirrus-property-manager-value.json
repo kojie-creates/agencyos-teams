@@ -1,0 +1,11 @@
+{
+  "request_id": "toya-cirrus-property-manager-value",
+  "title": "Assess AgencyOS value for a property manager and Cirrus Asset Management",
+  "actor_id": "actor-operator",
+  "requested_outcome": "Draft a concise internal assessment of what the combined AgencyOS Teams system could provide as value to Toya, the property manager, and to Cirrus Asset Management as her employer.",
+  "action_class": "internal_artifact",
+  "reversible": true,
+  "external": false,
+  "sensitive": false,
+  "required_workstreams": ["research"]
+}

@@ -1,0 +1,16 @@
+{
+  "product": "AgencyOS Teams",
+  "slug": "toya-propertymanager-pacificrose",
+  "install_mode": "standalone",
+  "name": "toya-propertymanager-pacificrose",
+  "owner": "Kojie",
+  "outcome": "Create an AgencyOS Teams project showing Toya and Cirrus Asset Management how AgencyOS Teams could support Pacific Rose property operations, tenant communication, maintenance visibility, risk/evidence tracking, and owner/employer value.",
+  "active_being": "Jaavis",
+  "project_root": "",
+  "allowed_tools": "local files, Codex, available project tools",
+  "off_limits": "external sends, publication, paid commitments, sensitive data, destructive changes without approval",
+  "approval_required_for": "external-facing, sensitive, paid, legal, financial, housing, medical, safety, memory, or destructive actions",
+  "notes": "Source facts provided by Kojie in chat. Draft-only internal setup. Housing/legal/financial decisions, tenant outreach, employer outreach, and public/client-facing materials require approval.",
+  "force": "False",
+  "skip_dev_diagnostic": "False"
+}

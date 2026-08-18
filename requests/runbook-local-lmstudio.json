@@ -1,0 +1,18 @@
+{
+  "request_id": "runbook-local-lmstudio",
+  "title": "Draft a local LM Studio validation runbook",
+  "actor_id": "actor-operator",
+  "requested_outcome": "Draft a short internal runbook for validating a local LM Studio setup before using it on team workflows.",
+  "action_class": "internal_artifact",
+  "reversible": true,
+  "external": false,
+  "sensitive": false,
+  "required_workstreams": ["research"],
+  "deliverable_format": "markdown",
+  "constraints": {
+    "tone": "internal and professional",
+    "length": "short",
+    "audience": "team members validating local AI workflows",
+    "approval_required": true
+  }
+}

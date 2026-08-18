@@ -1,0 +1,237 @@
+{
+  "version": "agencyos.policy.v1",
+  "rules": [
+    {
+      "rule_id": "internal_reversible_artifact_work_permitted",
+      "actions": [
+        "write_local_artifact"
+      ],
+      "roles": [
+        "research",
+        "build",
+        "operate",
+        "operator",
+        "evidence"
+      ],
+      "risk_levels": [
+        "low"
+      ],
+      "outcome": "permit",
+      "required_approval": null,
+      "required_evidence": [],
+      "reason": "Low-risk internal artifact work is permitted."
+    },
+    {
+      "rule_id": "external_action_requires_human_approval",
+      "actions": [
+        "external_send",
+        "publish",
+        "release_external"
+      ],
+      "roles": [
+        "operator",
+        "research",
+        "build",
+        "operate",
+        "evidence"
+      ],
+      "risk_levels": [
+        "medium",
+        "high",
+        "critical"
+      ],
+      "outcome": "hold",
+      "required_approval": "human",
+      "required_evidence": [],
+      "reason": "External action requires explicit human approval."
+    },
+    {
+      "rule_id": "verified_internal_closeout_permitted",
+      "actions": [
+        "closeout"
+      ],
+      "roles": [
+        "operator"
+      ],
+      "risk_levels": [
+        "low"
+      ],
+      "outcome": "permit",
+      "required_approval": null,
+      "required_evidence": [],
+      "reason": "Verified low-risk internal work may close out."
+    },
+    {
+      "rule_id": "internal_evidence_attachment_permitted",
+      "actions": [
+        "attach_evidence"
+      ],
+      "roles": [
+        "evidence",
+        "operator"
+      ],
+      "risk_levels": [
+        "low"
+      ],
+      "outcome": "permit",
+      "required_approval": null,
+      "required_evidence": [],
+      "reason": "Low-risk evidence attachment is permitted."
+    },
+    {
+      "rule_id": "sensitive_evidence_requires_human_approval",
+      "actions": [
+        "attach_sensitive_evidence"
+      ],
+      "roles": [
+        "evidence",
+        "operator"
+      ],
+      "risk_levels": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "outcome": "hold",
+      "required_approval": "human",
+      "required_evidence": [],
+      "reason": "Sensitive evidence requires human approval."
+    },
+    {
+      "rule_id": "independent_verification_permitted",
+      "actions": [
+        "verify"
+      ],
+      "roles": [
+        "verifier",
+        "truth",
+        "evidence"
+      ],
+      "risk_levels": [
+        "low"
+      ],
+      "outcome": "permit",
+      "required_approval": null,
+      "required_evidence": [],
+      "reason": "Independent low-risk verification is permitted."
+    },
+    {
+      "rule_id": "memory_write_requires_explicit_policy_and_approval",
+      "actions": [
+        "memory_write"
+      ],
+      "roles": [
+        "operator",
+        "research",
+        "build",
+        "operate",
+        "evidence",
+        "verifier"
+      ],
+      "risk_levels": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "outcome": "block",
+      "required_approval": "human",
+      "required_evidence": [],
+      "reason": "Memory writes require explicit policy and approval."
+    },
+    {
+      "rule_id": "governance_policy_change_requires_designated_authority",
+      "actions": [
+        "governance_policy_change"
+      ],
+      "roles": [
+        "operator",
+        "research",
+        "build",
+        "operate",
+        "evidence",
+        "verifier"
+      ],
+      "risk_levels": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "outcome": "block",
+      "required_approval": "governance_authority",
+      "required_evidence": [],
+      "reason": "Governance policy changes require designated authority."
+    },
+    {
+      "rule_id": "destructive_action_requires_exact_target_authorization",
+      "actions": [
+        "destructive_action"
+      ],
+      "roles": [
+        "operator",
+        "research",
+        "build",
+        "operate",
+        "evidence",
+        "verifier"
+      ],
+      "risk_levels": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "outcome": "block",
+      "required_approval": "human",
+      "required_evidence": [],
+      "reason": "Destructive actions require exact target authorization."
+    },
+    {
+      "rule_id": "tool_use_requires_explicit_permission",
+      "actions": [
+        "tool_use"
+      ],
+      "roles": [
+        "operator",
+        "research",
+        "build",
+        "operate",
+        "evidence",
+        "verifier"
+      ],
+      "risk_levels": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "outcome": "block",
+      "required_approval": null,
+      "required_evidence": [],
+      "reason": "Tool use requires explicit permission."
+    },
+    {
+      "rule_id": "sensitive_data_cannot_cross_public_boundary",
+      "actions": [
+        "write_public_artifact"
+      ],
+      "roles": [
+        "operator",
+        "research",
+        "build",
+        "operate",
+        "evidence"
+      ],
+      "risk_levels": [
+        "high",
+        "critical"
+      ],
+      "outcome": "block",
+      "required_approval": null,
+      "required_evidence": [],
+      "reason": "Sensitive data cannot cross public boundary."
+    }
+  ]
+}

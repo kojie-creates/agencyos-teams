@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+  <title id="title">AgencyOS Being Personality Spectrum Map</title>
+  <desc id="desc">A matrix showing personality archetypes that can be created from Behavioral Spectrums, with Jaavis placed as the current active personality.</desc>
+  <rect width="1400" height="980" fill="#f7f3ec"/>
+  <text x="70" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#16211f">Personality Spectrum Map</text>
+  <text x="70" y="110" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#44514d">Personality controls feel. Behavioral Spectrums control behavior under tension. Governance remains the hard boundary.</text>
+
+  <line x1="180" y1="510" x2="1220" y2="510" stroke="#2d4942" stroke-width="4"/>
+  <line x1="700" y1="170" x2="700" y2="850" stroke="#2d4942" stroke-width="4"/>
+  <polygon points="1220,510 1198,498 1198,522" fill="#2d4942"/>
+  <polygon points="700,170 688,192 712,192" fill="#2d4942"/>
+
+  <text x="155" y="545" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#2d4942" text-anchor="start">Patient / Gentle / Open</text>
+  <text x="1245" y="545" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#2d4942" text-anchor="end">Direct / Protective / Momentum</text>
+  <text x="730" y="175" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#2d4942">Meticulous / Evidence / Discerning</text>
+  <text x="730" y="850" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#2d4942">Fast / Intuitive / Trusting</text>
+
+  <rect x="90" y="155" width="520" height="300" rx="8" fill="#e8efe7" stroke="#9caf9a"/>
+  <text x="120" y="195" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#16211f">Careful Companions</text>
+  <text x="120" y="232" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#44514d">Warm, steady, reflective, evidence aware.</text>
+
+  <rect x="790" y="155" width="520" height="300" rx="8" fill="#efe7d4" stroke="#baa56d"/>
+  <text x="820" y="195" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#16211f">Command Partners</text>
+  <text x="820" y="232" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#44514d">Decisive, protective, precise, pressure-proof.</text>
+
+  <rect x="90" y="565" width="520" height="300" rx="8" fill="#e8e7ef" stroke="#9a97b6"/>
+  <text x="120" y="605" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#16211f">Explorers</text>
+  <text x="120" y="642" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#44514d">Creative, permissive, intuitive, possibility-led.</text>
+
+  <rect x="790" y="565" width="520" height="300" rx="8" fill="#e2edef" stroke="#85aab0"/>
+  <text x="820" y="605" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#16211f">Operators</text>
+  <text x="820" y="642" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#44514d">Fast, direct, pragmatic, action-biased.</text>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#16211f">
+    <circle cx="265" cy="285" r="9" fill="#557f5f"/><text x="285" y="291">InnerLight Signal Guide</text>
+    <circle cx="250" cy="345" r="9" fill="#557f5f"/><text x="270" y="351">Wise Steward</text>
+    <circle cx="405" cy="385" r="9" fill="#557f5f"/><text x="425" y="391">Evidence Mentor</text>
+
+    <circle cx="950" cy="275" r="11" fill="#9c742c"/><text x="972" y="281" font-weight="700">Jaavis for Kojie</text>
+    <circle cx="1050" cy="345" r="9" fill="#9c742c"/><text x="1070" y="351">Mission Control</text>
+    <circle cx="1115" cy="410" r="9" fill="#9c742c"/><text x="1135" y="416">Guardian Chief</text>
+
+    <circle cx="255" cy="705" r="9" fill="#6e65a4"/><text x="275" y="711">Creative Muse</text>
+    <circle cx="410" cy="765" r="9" fill="#6e65a4"/><text x="430" y="771">Possibility Scout</text>
+    <circle cx="305" cy="820" r="9" fill="#6e65a4"/><text x="325" y="826">Warm Companion</text>
+
+    <circle cx="945" cy="700" r="9" fill="#387e88"/><text x="965" y="706">Sprint Operator</text>
+    <circle cx="1090" cy="760" r="9" fill="#387e88"/><text x="1110" y="766">Tactical Analyst</text>
+    <circle cx="1005" cy="820" r="9" fill="#387e88"/><text x="1025" y="826">Builder Copilot</text>
+  </g>
+
+  <rect x="70" y="900" width="1260" height="42" rx="8" fill="#ffffff" stroke="#cfc7b7"/>
+  <text x="95" y="927" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#44514d">Blend by moving each spectrum: Persistence, Trust, Communication, Boundary, Detail, Evidence, Momentum, Privacy, Quality, Emotional Distance.</text>
+</svg>

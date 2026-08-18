@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .bg{fill:#071018}.grid{stroke:#183044;stroke-width:1;opacity:.42}
+      .title{fill:#f0f7ff;font:800 56px Arial,sans-serif}.sub{fill:#9db4c8;font:500 22px Arial,sans-serif}
+      .card{fill:#0d1a26;stroke:#2c6b8f;stroke-width:2;rx:18}.card2{fill:#101f2e;stroke:#4aa3d8;stroke-width:1.6;rx:14}
+      .h{fill:#dff6ff;font:800 31px Arial,sans-serif}.small{fill:#b7c7d8;font:500 20px Arial,sans-serif}
+      .tiny{fill:#85c7f0;font:800 14px Arial,sans-serif;letter-spacing:2px}.green{fill:#8df29a}.purple{fill:#d8b4fe}
+      .line{stroke:#6ecdf6;stroke-width:4;fill:none}.arrow{fill:#6ecdf6}
+    </style>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path class="grid" d="M64 0H0V64"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path class="arrow" d="M0 0L10 5L0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="1800" height="1200"/><rect width="1800" height="1200" fill="url(#grid)"/>
+  <text class="title" x="80" y="95">AgencyOS Org Sales Story</text>
+  <text class="sub" x="82" y="135">Problem -> Solution -> Impact for buyers who have outgrown one AI assistant</text>
+
+  <g transform="translate(85,235)">
+    <rect class="card" width="470" height="650"/>
+    <text class="tiny" x="36" y="50">PROBLEM</text>
+    <text class="h" x="36" y="95">AI Help Is Scattered</text>
+    <text class="small" x="36" y="155">Prompts happen everywhere.</text>
+    <text class="small" x="36" y="195">Decisions disappear.</text>
+    <text class="small" x="36" y="235">Claims go unchecked.</text>
+    <text class="small" x="36" y="275">Existing workflows get ignored.</text>
+    <text class="small" x="36" y="315">No one knows what is done.</text>
+    <rect class="card2" x="36" y="405" width="398" height="170"/>
+    <text class="small" x="66" y="465">Buyer feeling:</text>
+    <text class="small" x="66" y="505">"AI helps, but it does not</text>
+    <text class="small" x="66" y="540">run like my business."</text>
+  </g>
+
+  <path class="line" marker-end="url(#arrow)" d="M585 560H710"/>
+
+  <g transform="translate(720,235)">
+    <rect class="card" width="470" height="650"/>
+    <text class="tiny green" x="36" y="50">SOLUTION</text>
+    <text class="h" x="36" y="95">Multiple AI Agencies</text>
+    <text class="small" x="36" y="155">Onboard current state.</text>
+    <text class="small" x="36" y="195">Inventory existing data.</text>
+    <text class="small" x="36" y="235">Map current workflows.</text>
+    <text class="small" x="36" y="275">Configure agencies by problem.</text>
+    <text class="small" x="36" y="315">Route through proof and review.</text>
+    <rect class="card2" x="36" y="405" width="398" height="170"/>
+    <text class="small" x="66" y="465">Product promise:</text>
+    <text class="small" x="66" y="505">"One operator can run work</text>
+    <text class="small" x="66" y="540">like a small organization."</text>
+  </g>
+
+  <path class="line" marker-end="url(#arrow)" d="M1220 560H1345"/>
+
+  <g transform="translate(1355,235)">
+    <rect class="card" width="360" height="650"/>
+    <text class="tiny purple" x="36" y="50">IMPACT</text>
+    <text class="h" x="36" y="95">Operating Leverage</text>
+    <text class="small" x="36" y="155">Better output quality.</text>
+    <text class="small" x="36" y="195">Less repeated work.</text>
+    <text class="small" x="36" y="235">Safer public claims.</text>
+    <text class="small" x="36" y="275">Reusable seed data.</text>
+    <text class="small" x="36" y="315">Continuous improvement.</text>
+    <rect class="card2" x="36" y="405" width="288" height="170"/>
+    <text class="small" x="62" y="465">Buyer result:</text>
+    <text class="small" x="62" y="505">"I can see what</text>
+    <text class="small" x="62" y="540">changed and why."</text>
+  </g>
+
+  <text class="sub" x="80" y="1045">Positioning: AgencyOS Org is for solo operators whose work is too complex for one AI assistant, but not ready for a human team.</text>
+</svg>

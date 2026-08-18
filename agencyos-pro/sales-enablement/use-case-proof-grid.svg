@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300">
+  <defs>
+    <style>
+      .bg{fill:#0b1117}.grid{stroke:#243447;stroke-width:1;opacity:.38}
+      .title{fill:#f3f7fb;font:800 56px Arial,sans-serif}.sub{fill:#a9b7c5;font:500 22px Arial,sans-serif}
+      .card{fill:#111b26;stroke:#3c78a5;stroke-width:2;rx:18}.tile{fill:#132332;stroke:#4aa3d8;stroke-width:1.6;rx:14}
+      .h{fill:#e3f6ff;font:800 25px Arial,sans-serif}.small{fill:#bdd0df;font:500 17px Arial,sans-serif}.tiny{fill:#8fc9ef;font:800 13px Arial,sans-serif;letter-spacing:2px}
+      .green{fill:#86efac}.purple{fill:#d8b4fe}
+    </style>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path class="grid" d="M64 0H0V64"/></pattern>
+  </defs>
+  <rect class="bg" width="1800" height="1300"/><rect width="1800" height="1300" fill="url(#grid)"/>
+  <text class="title" x="80" y="95">AgencyOS Org Use Case Proof Grid</text>
+  <text class="sub" x="82" y="135">Sales and product enablement: each industry shows problem, solution, and proof artifact</text>
+  <g transform="translate(80,220)">
+    <rect class="card" width="1640" height="940"/>
+    <g transform="translate(35,45)">
+      <rect class="tile" width="490" height="240"/><text class="tiny" x="28" y="38">FITNESS STUDIO</text><text class="h" x="28" y="78">Problem</text><text class="small" x="28" y="112">Classes, retention, posts, and claims</text><text class="small" x="28" y="136">live in separate places.</text><text class="h" x="28" y="178">Solution</text><text class="small" x="28" y="210">Growth, Class Ops, Retention, Risk, Insights.</text>
+      <rect class="tile" x="560" width="490" height="240"/><text class="tiny green" x="588" y="38">PERFORMANCE COACH</text><text class="h" x="588" y="78">Problem</text><text class="small" x="588" y="112">Sessions create notes, but not always</text><text class="small" x="588" y="136">reusable programs or proof.</text><text class="h" x="588" y="178">Solution</text><text class="small" x="588" y="210">Client Pods, Program Build, Content, Risk.</text>
+      <rect class="tile" x="1120" width="490" height="240"/><text class="tiny purple" x="1148" y="38">PROPERTY MANAGER</text><text class="h" x="1148" y="78">Problem</text><text class="small" x="1148" y="112">Vendor, resident, maintenance, and owner</text><text class="small" x="1148" y="136">memory gets scattered.</text><text class="h" x="1148" y="178">Solution</text><text class="small" x="1148" y="210">Property Pod, Maintenance, Resident, Insights.</text>
+
+      <rect class="tile" y="300" width="490" height="240"/><text class="tiny" x="28" y="338">LEGAL SPEND</text><text class="h" x="28" y="378">Problem</text><text class="small" x="28" y="412">Invoice decisions need consistency,</text><text class="small" x="28" y="436">evidence, and escalation.</text><text class="h" x="28" y="478">Solution</text><text class="small" x="28" y="510">Invoice Review, Guidelines, Reporting, Risk.</text>
+      <rect class="tile" x="560" y="300" width="490" height="240"/><text class="tiny green" x="588" y="338">INFLUENCER</text><text class="h" x="588" y="378">Problem</text><text class="small" x="588" y="412">Daily content creates comments, claims,</text><text class="small" x="588" y="436">offers, and learning.</text><text class="h" x="588" y="478">Solution</text><text class="small" x="588" y="510">Content, Community, Offers, Risk, Insights.</text>
+      <rect class="tile" x="1120" y="300" width="490" height="240"/><text class="tiny purple" x="1148" y="338">VOICE ACTOR</text><text class="h" x="1148" y="378">Problem</text><text class="small" x="1148" y="412">Practice, auditions, clips, brand, and</text><text class="small" x="1148" y="436">studio setup are fragmented.</text><text class="h" x="1148" y="478">Solution</text><text class="small" x="1148" y="510">Voice Brand, Opportunity, Production, Risk.</text>
+
+      <rect class="tile" y="600" width="1570" height="220"/><text class="tiny green" x="28" y="638">PROOF LAYER ACROSS ALL USE CASES</text><text class="h" x="28" y="680">Impact</text><text class="small" x="28" y="724">Every use case produces seed data: queue, decisions, evidence, memory, retrospectives, and monitor/review labels.</text><text class="small" x="28" y="762">That gives buyers a concrete way to see quality, time saved, risk reduced, and assets made reusable over time.</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<form>
+  <h1>Northline Office Coffee Pilot Intake</h1>
+
+  <fieldset>
+    <legend>Buyer</legend>
+    <label>Company or space name <input name="company_name"></label>
+    <label>Buyer name <input name="buyer_name"></label>
+    <label>Email <input type="email" name="email"></label>
+    <label>Phone <input name="phone"></label>
+    <label>Role <input name="role"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Office Profile</legend>
+    <label>Office or coworking address <input name="address"></label>
+    <label>Estimated daily coffee drinkers <input type="number" min="0" name="daily_drinkers"></label>
+    <label>Current coffee setup <textarea name="current_setup"></textarea></label>
+    <label>Current provider or source <input name="current_provider"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pilot Needs</legend>
+    <label>Preferred format
+      <select name="format">
+        <option>Whole bean</option>
+        <option>Ground</option>
+        <option>Not sure</option>
+      </select>
+    </label>
+    <label>Brewing equipment <textarea name="equipment"></textarea></label>
+    <label>Delivery frequency preference <input name="delivery_frequency"></label>
+    <label>Flavor preferences <textarea name="flavor_preferences"></textarea></label>
+    <label>Budget range <input name="budget_range"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Decision Fit</legend>
+    <label>Main reason for considering Northline <textarea name="reason"></textarea></label>
+    <label>Decision deadline <input type="date" name="decision_deadline"></label>
+    <label>Who approves the pilot? <input name="approver"></label>
+    <label>Anything Northline should avoid? <textarea name="avoid"></textarea></label>
+  </fieldset>
+</form>

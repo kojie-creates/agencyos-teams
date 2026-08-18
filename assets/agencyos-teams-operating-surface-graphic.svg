@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+  <title id="title">AgencyOS Teams operating surface</title>
+  <desc id="desc">A marketing diagram showing one human authority working with multiple AI Beings through AgencyOS Pro, with workstreams, handoffs, shared governance, and learning.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060d15"/>
+      <stop offset="0.55" stop-color="#0b1018"/>
+      <stop offset="1" stop-color="#15101b"/>
+    </linearGradient>
+    <linearGradient id="proFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15331f"/>
+      <stop offset="1" stop-color="#101a25"/>
+    </linearGradient>
+    <linearGradient id="streamFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10283f"/>
+      <stop offset="1" stop-color="#111923"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2 2 L12 7 L2 12" fill="none" stroke="#9bb2c9" stroke-width="2"/>
+    </marker>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #253242; stroke-width: 1; opacity: 0.35; }
+      .eyebrow { fill: #80a9d8; font: 700 16px Arial, Helvetica, sans-serif; letter-spacing: 4px; }
+      .title { fill: #f4f8fd; font: 700 62px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #aebdd0; font: 400 24px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .panel { fill: #101822; stroke: #334458; stroke-width: 2; }
+      .panelTitle { fill: #f5f8fc; font: 700 32px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .panelSub { fill: #aebdd0; font: 400 17px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .smallTitle { fill: #f0f6fc; font: 700 20px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .small { fill: #b7c7d8; font: 400 16px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .tiny { fill: #95a8bd; font: 400 13px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .chip { fill: #131e2a; stroke: #38506a; stroke-width: 1.5; }
+      .chipText { fill: #d7e6f6; font: 700 13px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .line { fill: none; stroke: #8ea5bd; stroke-width: 3; marker-end: url(#arrow); }
+      .softLine { fill: none; stroke: #53677d; stroke-width: 2; }
+      .green { fill: #72df87; }
+      .blue { fill: #55a8ff; }
+      .violet { fill: #c79cff; }
+      .orange { fill: #f0b94f; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1800" height="1080"/>
+  <g>
+    <path class="grid" d="M0 120H1800M0 240H1800M0 360H1800M0 480H1800M0 600H1800M0 720H1800M0 840H1800M0 960H1800"/>
+    <path class="grid" d="M120 0V1080M240 0V1080M360 0V1080M480 0V1080M600 0V1080M720 0V1080M840 0V1080M960 0V1080M1080 0V1080M1200 0V1080M1320 0V1080M1440 0V1080M1560 0V1080M1680 0V1080"/>
+  </g>
+
+  <text x="80" y="88" class="eyebrow">AGENCYOS TEAMS</text>
+  <text x="80" y="160" class="title">Trusted AI teams for coordinated work</text>
+  <text x="80" y="207" class="subtitle">Multiple Beings move through AgencyOS Pro, with workstreams, handoffs, governance, and learning.</text>
+
+  <g transform="translate(80 304)">
+    <rect x="0" y="0" width="260" height="300" rx="22" class="panel"/>
+    <circle cx="130" cy="82" r="46" fill="#152130" stroke="#7fb5ff" stroke-width="3"/>
+    <circle cx="130" cy="68" r="16" fill="#dbeafe"/>
+    <path d="M92 122 C102 94,158 94,168 122" fill="none" stroke="#dbeafe" stroke-width="12" stroke-linecap="round"/>
+    <text x="130" y="170" text-anchor="middle" class="panelTitle">Human</text>
+    <text x="130" y="202" text-anchor="middle" class="panelSub">final authority</text>
+    <rect x="48" y="238" width="164" height="38" rx="10" class="chip"/>
+    <text x="130" y="263" text-anchor="middle" class="chipText">approval owner</text>
+  </g>
+
+  <path d="M340 452 C430 452,470 452,535 452" class="line"/>
+
+  <g transform="translate(535 278)">
+    <rect x="0" y="0" width="730" height="350" rx="26" fill="url(#proFill)" stroke="#72df87" stroke-width="3"/>
+    <text x="38" y="58" class="eyebrow">ORCHESTRATION LAYER</text>
+    <text x="38" y="112" class="panelTitle">AgencyOS Pro</text>
+    <text x="38" y="146" class="panelSub">classify, route, gate, hand off, close out, learn</text>
+    <g transform="translate(42 202)">
+      <rect x="0" y="0" width="128" height="52" rx="12" fill="#12281d" stroke="#72df87" stroke-width="2"/>
+      <text x="64" y="32" text-anchor="middle" class="chipText">intake</text>
+      <rect x="150" y="0" width="128" height="52" rx="12" fill="#12281d" stroke="#72df87" stroke-width="2"/>
+      <text x="214" y="32" text-anchor="middle" class="chipText">route</text>
+      <rect x="300" y="0" width="128" height="52" rx="12" fill="#12281d" stroke="#72df87" stroke-width="2"/>
+      <text x="364" y="32" text-anchor="middle" class="chipText">gate</text>
+      <rect x="450" y="0" width="128" height="52" rx="12" fill="#12281d" stroke="#72df87" stroke-width="2"/>
+      <text x="514" y="32" text-anchor="middle" class="chipText">handoff</text>
+      <rect x="600" y="0" width="88" height="52" rx="12" fill="#12281d" stroke="#72df87" stroke-width="2"/>
+      <text x="644" y="32" text-anchor="middle" class="chipText">learn</text>
+      <path d="M128 26H150M278 26H300M428 26H450M578 26H600" class="softLine"/>
+    </g>
+  </g>
+
+  <g transform="translate(470 692)">
+    <rect x="0" y="0" width="860" height="92" rx="18" fill="#1d1728" stroke="#c79cff" stroke-width="2"/>
+    <text x="36" y="38" class="smallTitle violet">AI Beings roster</text>
+    <text x="36" y="66" class="small">Named collaborators with distinct roles, personalities, strengths, and approval limits.</text>
+    <g transform="translate(554 22)">
+      <circle cx="26" cy="24" r="22" fill="#241a32" stroke="#c79cff" stroke-width="2"/>
+      <text x="26" y="30" text-anchor="middle" class="chipText">J</text>
+      <circle cx="86" cy="24" r="22" fill="#241a32" stroke="#c79cff" stroke-width="2"/>
+      <text x="86" y="30" text-anchor="middle" class="chipText">V</text>
+      <circle cx="146" cy="24" r="22" fill="#241a32" stroke="#c79cff" stroke-width="2"/>
+      <text x="146" y="30" text-anchor="middle" class="chipText">A</text>
+      <circle cx="206" cy="24" r="22" fill="#241a32" stroke="#c79cff" stroke-width="2"/>
+      <text x="206" y="30" text-anchor="middle" class="chipText">M</text>
+    </g>
+  </g>
+
+  <g transform="translate(1380 266)">
+    <rect x="0" y="0" width="330" height="562" rx="24" class="panel"/>
+    <text x="34" y="58" class="eyebrow">SHARED CONTROLS</text>
+    <text x="34" y="108" class="panelTitle">Trust Layer</text>
+    <g transform="translate(34 154)">
+      <rect x="0" y="0" width="262" height="52" rx="12" fill="#20192d" stroke="#c79cff" stroke-width="2"/>
+      <text x="131" y="32" text-anchor="middle" class="chipText">shared governance</text>
+      <rect x="0" y="72" width="262" height="52" rx="12" fill="#102236" stroke="#55a8ff" stroke-width="2"/>
+      <text x="131" y="104" text-anchor="middle" class="chipText">handoff records</text>
+      <rect x="0" y="144" width="262" height="52" rx="12" fill="#2a2212" stroke="#f0b94f" stroke-width="2"/>
+      <text x="131" y="176" text-anchor="middle" class="chipText">evidence checks</text>
+      <rect x="0" y="216" width="262" height="52" rx="12" fill="#12281d" stroke="#72df87" stroke-width="2"/>
+      <text x="131" y="248" text-anchor="middle" class="chipText">learning loop</text>
+    </g>
+    <text x="34" y="486" class="small">No Being, role, or agency</text>
+    <text x="34" y="514" class="small">overrides governance.</text>
+  </g>
+
+  <g transform="translate(170 850)">
+    <rect x="0" y="0" width="1460" height="116" rx="22" fill="#0f1721" stroke="#2f4054" stroke-width="2"/>
+    <text x="44" y="45" class="smallTitle">Buyer meaning</text>
+    <text x="44" y="80" class="small">A coordinated AI operating network for bigger work: multiple collaborators, multiple lanes, shared governance, traceable handoffs, and compounding learning.</text>
+    <text x="1120" y="45" class="smallTitle green">Simple promise</text>
+    <text x="1120" y="80" class="small">Complex work, coordinated.</text>
+  </g>
+
+  <g transform="translate(470 610)">
+    <rect x="0" y="0" width="152" height="48" rx="12" fill="url(#streamFill)" stroke="#55a8ff" stroke-width="2"/>
+    <text x="76" y="31" text-anchor="middle" class="chipText">revenue</text>
+    <rect x="176" y="0" width="152" height="48" rx="12" fill="url(#streamFill)" stroke="#55a8ff" stroke-width="2"/>
+    <text x="252" y="31" text-anchor="middle" class="chipText">delivery</text>
+    <rect x="352" y="0" width="152" height="48" rx="12" fill="url(#streamFill)" stroke="#55a8ff" stroke-width="2"/>
+    <text x="428" y="31" text-anchor="middle" class="chipText">operations</text>
+    <rect x="528" y="0" width="152" height="48" rx="12" fill="url(#streamFill)" stroke="#55a8ff" stroke-width="2"/>
+    <text x="604" y="31" text-anchor="middle" class="chipText">risk and proof</text>
+    <rect x="704" y="0" width="152" height="48" rx="12" fill="url(#streamFill)" stroke="#55a8ff" stroke-width="2"/>
+    <text x="780" y="31" text-anchor="middle" class="chipText">launch</text>
+  </g>
+</svg>
