@@ -1,0 +1,232 @@
+{
+  "run_id": "run-2b0020d0ff1d",
+  "request": {
+    "request_id": "runbook2-local-lmstudio",
+    "title": "Local LM Studio runbook",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Draft ashort internal runbook for validating a local LM Studio setup before using it on team workflows.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ],
+    "dependencies": {},
+    "evidence_required_for": [],
+    "existing_project_ref": null,
+    "create_project": false,
+    "project_slug": null,
+    "human_owner_id": null,
+    "scope_class": "one_project"
+  },
+  "project_id": "project-runbook2-local-lmstudio",
+  "state": "closed",
+  "risk_level": "low",
+  "execution_mode": "deterministic_batches",
+  "execution_batches": [
+    [
+      "research"
+    ]
+  ],
+  "scope_class": "one_project",
+  "packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "handoff_pending",
+      "artifact_id": "artifact-300a81e2f7c7",
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "runnable_packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "handoff_pending",
+      "artifact_id": "artifact-300a81e2f7c7",
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-300a81e2f7c7",
+      "workstream_id": "research",
+      "path": ".agencyos-runtime/artifacts/run-2b0020d0ff1d/drafts/runbook.md",
+      "content": "# \ud83d\ude80 LM Studio Local Setup Validation Runbook\n\n**(Internal Use Only)**\n\nThis runbook guides users through validating a newly installed local LLM environment using LM Studio before integrating it into team workflows or relying on its output for critical tasks. The goal is to ensure stability, performance, and expected functionality across various models.\n\n---\n\n### \ud83c\udfaf Scope & Goal\n\n**Goal:** To confirm that the selected hardware, operating system, model weights, and LM Studio installation are functioning together correctly under realistic load conditions.\n**Target Environment:** [Specify OS: e.g., Windows/Mac/Linux]\n**Required Hardware Check:** Stable GPU VRAM availability (Ideally \u2265 12GB for larger models).\n\n### \u2705 Phase 0: Pre-flight Checklist (Setup Verification)\n\n*   [ ] **System Requirements:** Confirm that the GPU drivers are fully updated and recognized by LM Studio.\n*   [ ] **LM Studio Version:** Verify the current version matches the latest stable release ([Specify version if necessary]).\n*   [ ] **Model Weights Integrity:** Downloaded model file (`gguf` format) is complete and verifiable (no checksum errors).\n    *   *Note:* Use a standard, reliable base model for initial testing (e.g., Mistral 7B or Llama 3 8B).\n\n### \u2699\ufe0f Phase 1: Technical Stability & Performance Test\n\n**Objective:** Measure basic operational stability and throughput before running complex prompts.\n\n| Step | Action | Expected Outcome | Pass/Fail | Notes |\n| :--- | :--- | :--- | :--- | :--- |\n| **1. Basic Load Test** | Select the model. Run a 50-word prompt using the default settings. | The response should generate cleanly and completely without crashing, freezing, or memory errors. | [ ] | Time taken: ______s |\n| **2. Context Window Stress** | Submit a very long input (e.g., a pasted article > 1,000 words). Prompt for summary. | The model must process the entire context without \"forgetting\" or truncating parts of the source text. | [ ] | Verify full processing. |\n| **3. GPU Offload Confirmation** | Check the LM Studio interface's resource usage panel (if available). | Confirm that the majority of model layers/parameters are being successfully offloaded to VRAM, not relying solely on system RAM. | [ ] | *Check console logs.* |\n| **4. Temperature & Top-P Tuning** | Change `Temperature` and `Top-P` settings manually (e.g., set Temp=0.7). Run a prompt. | The model output must immediately reflect the change in parameters, showing variability as expected. | [ ] | Test parameter sensitivity. |\n\n### \ud83d\udcdd Phase 2: Functional & Workflow Testing\n\n**Objective:** Validate that the local setup can perform tasks relevant to team workflows (e.g., coding, summarizing specific data types). *Repeat this phase with at least two different models.*\n\n| Task Category | Input Prompt/Data | Expected Behavior | Pass/Fail | Notes |\n| :--- | :--- | :--- | :--- | :--- |\n| **Summarization** | Paste a technical document (e.g., meeting minutes, API specs). *Prompt: \"Provide three bullet points summarizing the key decisions.\"* | The output must be concise, accurate, and directly address the prompt's scope without hallucination or irrelevant fluff. | [ ] | Check for factual accuracy. |\n| **Code Generation** | Provide a function description (e.g., \"Write a Python function to reverse a dictionary\"). *Prompt: \"Generate only the code block.\"* | The model must output syntactically correct, runnable code that matches the required language and functionality. | [ ] | Run the code! |\n| **Role-Playing/Tone** | Define an explicit persona (e.g., \"You are a cynical senior developer.\"). *Prompt: \"Review this commit message.\"* | The model must maintain the defined tone and adopt the specified role throughout its entire response. | [ ] | Consistency check. |\n| **Handling Failure** | Intentionally input ambiguous or contradictory data (e.g., conflicting dates, incomplete instructions). | The model should not hallucinate an answer but instead request clarification or state its assumptions clearly. | [ ] | *Crucial safety check.* |\n\n### \ud83d\uded1 Phase 3: Troubleshooting & Sign-off\n\nIf any test failed in Phase 1 or Phase 2, immediately follow the appropriate troubleshooting guide and retest until success is achieved.\n\n#### \ud83d\udee0\ufe0f Common Issues & Fixes\n\n| Symptom | Potential Cause | Quick Fix / Action |\n| :--- | :--- | :--- |\n| **\"Out of Memory\" Error** | Model is too large for available VRAM, or multiple apps are running. | Reduce context size (use quantization); Close background applications; Try a smaller model variant (e.g., 7B instead of 13B). |\n| **Slow Generation Rate** | CPU fallback or insufficient GPU utilization. | Ensure GPU drivers are current; Check resource usage to confirm VRAM is actively being utilized by LM Studio. |\n| **Inaccurate/Repetitive Output** | Model weights are corrupted, or the prompt structure is too vague. | Use a different model base; Add explicit formatting rules to your system prompt (e.g., \"Respond only in JSON format.\"). |\n\n#### \u2705 Final Sign-Off\n\n*   **Date Validated:** ____________________\n*   **Tested By:** ____________________\n*   **Model Base Used:** ____________________\n*   **Result:** [ ] **PASS.** The setup is stable and functionally validated for team use.\n*   **Sign-off Approver (Team Lead):** ____________________",
+      "creator_id": "actor-research",
+      "evidence_ids": [],
+      "verified_by": "actor-verifier",
+      "claims": [
+        "SUPPORTED::Model draft generated by openai_compatible_local/google/gemma-4-e4b."
+      ],
+      "content_hash": "sha256:1c29e2c8aec704c00d9f0738255d0ccbc394e317d7834a11ced1631b5f52a976"
+    }
+  ],
+  "evidence": [],
+  "handoff": {
+    "handoff_id": "handoff-2e44f2285bd7",
+    "artifact_ids": [
+      "artifact-300a81e2f7c7"
+    ],
+    "complete": true,
+    "created_by": "actor-operator"
+  },
+  "missing_evidence": [],
+  "block_reason": "",
+  "human_approval_by": null,
+  "intake_required": [],
+  "approval_records": [],
+  "policy_decisions": [
+    {
+      "decision_id": "policy-decision-9825ac27992e",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "being-atlas",
+      "requested_action": "write_local_artifact",
+      "resource": "research",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "internal_reversible_artifact_work_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Low-risk internal artifact work is permitted.",
+      "timestamp": "2026-08-16T08:46:07.656748+00:00"
+    },
+    {
+      "decision_id": "policy-decision-c796a4957e7e",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "actor-verifier",
+      "requested_action": "verify",
+      "resource": "project-runbook2-local-lmstudio",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "independent_verification_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Independent low-risk verification is permitted.",
+      "timestamp": "2026-08-16T08:50:35.343006+00:00"
+    },
+    {
+      "decision_id": "policy-decision-25409f16b0d6",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "actor-operator",
+      "requested_action": "closeout",
+      "resource": "project-runbook2-local-lmstudio",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "verified_internal_closeout_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Verified low-risk internal work may close out.",
+      "timestamp": "2026-08-16T08:50:48.505223+00:00"
+    }
+  ],
+  "verification_records": [
+    {
+      "verification_id": "verification-dbe808b0e18f",
+      "artifact_id": "artifact-300a81e2f7c7",
+      "verifier_id": "actor-verifier",
+      "artifact_hash": "sha256:1c29e2c8aec704c00d9f0738255d0ccbc394e317d7834a11ced1631b5f52a976",
+      "result": "approved",
+      "timestamp": "2026-08-16T08:50:35.343069+00:00"
+    }
+  ],
+  "claim_records": [
+    {
+      "claim_id": "claim-7b80f3ba4d28",
+      "artifact_id": "artifact-300a81e2f7c7",
+      "text": "Model draft generated by openai_compatible_local/google/gemma-4-e4b.",
+      "evidence_status": "supported",
+      "evidence_ids": [],
+      "claim_type": "general",
+      "required_approval": null
+    }
+  ],
+  "model_call_records": [
+    {
+      "model_call_id": "model-call-bfb0bc65c64a",
+      "provider": "openai_compatible_local",
+      "model": "google/gemma-4-e4b",
+      "actor_id": "actor-research",
+      "workstream_id": "research",
+      "prompt_hash": "sha256:caa1998c4c5ce3ce12c2cb95fdd8440d75d3a733dc2e4f01143fa1071a5647d5",
+      "output_hash": "sha256:1c29e2c8aec704c00d9f0738255d0ccbc394e317d7834a11ced1631b5f52a976",
+      "result": "success",
+      "error_message": "",
+      "artifact_id": "artifact-300a81e2f7c7",
+      "timestamp": "2026-08-16T08:47:07.358570+00:00"
+    }
+  ],
+  "failure_packets": [],
+  "reconciliation_records": [
+    {
+      "reconciliation_id": "reconciliation-f1db257ac21a",
+      "artifact_ids": [
+        "artifact-300a81e2f7c7"
+      ],
+      "conflict_keys": [],
+      "state": "no_conflicts_detected",
+      "timestamp": "2026-08-16T08:50:22.879172+00:00"
+    }
+  ],
+  "closeout_records": [
+    {
+      "closeout_id": "closeout-2187c2c3b702",
+      "created_by": "actor-operator",
+      "artifact_ids": [
+        "artifact-300a81e2f7c7"
+      ],
+      "evidence_ids": [],
+      "timestamp": "2026-08-16T08:50:48.513062+00:00"
+    }
+  ],
+  "learning_records": [
+    {
+      "learning_id": "learning-438117a77bc6",
+      "run_id": "run-2b0020d0ff1d",
+      "project_id": "project-runbook2-local-lmstudio",
+      "lesson": "generated_text_is_not_completion",
+      "timestamp": "2026-08-16T08:50:48.513080+00:00"
+    }
+  ],
+  "schema_version": "kernel.p1.v1"
+}

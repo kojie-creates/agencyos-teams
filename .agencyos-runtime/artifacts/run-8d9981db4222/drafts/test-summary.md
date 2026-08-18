@@ -1,0 +1,1 @@
+The goal of a local LM Studio smoke test is to quickly validate that the application can successfully download, load, and run *any* given LLM model locally without encountering core operational failures.

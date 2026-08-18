@@ -1,0 +1,98 @@
+{
+  "run_id": "run-9805f8365386",
+  "request": {
+    "request_id": "local-model-proof",
+    "title": "Local model proof packet",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Create and verify a local model-draft proof packet.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ],
+    "dependencies": {},
+    "evidence_required_for": [],
+    "existing_project_ref": null,
+    "create_project": false,
+    "project_slug": null,
+    "human_owner_id": null,
+    "scope_class": "one_project"
+  },
+  "project_id": "project-local-model-proof",
+  "state": "ready",
+  "risk_level": "low",
+  "execution_mode": "deterministic_batches",
+  "execution_batches": [
+    [
+      "research"
+    ]
+  ],
+  "scope_class": "one_project",
+  "packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "ready",
+      "artifact_id": null,
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "runnable_packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "ready",
+      "artifact_id": null,
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "artifacts": [],
+  "evidence": [],
+  "handoff": null,
+  "missing_evidence": [],
+  "block_reason": "",
+  "human_approval_by": null,
+  "intake_required": [],
+  "approval_records": [],
+  "policy_decisions": [],
+  "verification_records": [],
+  "claim_records": [],
+  "model_call_records": [],
+  "failure_packets": [],
+  "reconciliation_records": [],
+  "closeout_records": [],
+  "learning_records": [],
+  "schema_version": "kernel.p1.v1"
+}

@@ -1,0 +1,298 @@
+{
+  "run_id": "run-ed221ad4a14c",
+  "request": {
+    "request_id": "kojie-voice-over-career-value-assessment",
+    "title": "Assess AgencyOS value for the Kojie voice-over career project",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Draft a concise but strong executive-facing assessment of how AgencyOS Teams could increase value for the Kojie voice-over career project by improving outreach, positioning, offer packaging, and repeatable operating discipline.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ],
+    "dependencies": {},
+    "evidence_required_for": [],
+    "existing_project_ref": null,
+    "create_project": false,
+    "project_slug": null,
+    "human_owner_id": "human-kojie",
+    "scope_class": "one_project"
+  },
+  "project_id": "project-kojie-voice-over-career-value-assessment",
+  "state": "closed",
+  "risk_level": "low",
+  "execution_mode": "deterministic_batches",
+  "execution_batches": [
+    [
+      "research"
+    ]
+  ],
+  "scope_class": "one_project",
+  "packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "handoff_pending",
+      "artifact_id": "artifact-24623a41e4cc",
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "runnable_packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "handoff_pending",
+      "artifact_id": "artifact-24623a41e4cc",
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-97865e68327c",
+      "workstream_id": "research",
+      "path": ".agencyos-runtime/artifacts/run-ed221ad4a14c/drafts/kojie-voice-over-career-value-assessment.md",
+      "content": "## Executive Assessment: Value Proposition of AgencyOS Teams for Kojie Voice-Over Project\n\n**Goal:** To demonstrate how AgencyOS standardizes and elevates the operational capacity of the Kojie voice-over project, transforming individual efforts into scalable, repeatable business assets.\n\n***\n\n### \ud83d\udcc8 Operational Leverage & Scalability\nAgencyOS structures scattered processes into standardized workflows, significantly increasing output without a linear increase in effort.\n\n*   **Outreach Efficiency:** Centralized lead tracking and templated communication within AgencyOS minimize administrative drag, allowing the team to execute high-volume outreach campaigns quickly and professionally.\n*   **Repeatable Client Workflow:** By mapping out every client touchpoint\u2014from initial inquiry to final sign-off\u2014AgencyOS ensures consistency. This predictability allows for faster project turnaround and reliable delivery quality across all clients.\n\n### \ud83d\udcbc Offer & Positioning Optimization\nThe platform formalizes the creative and financial aspects of service delivery, enhancing perceived value and market positioning.\n\n*   **Offer Packaging:** Move beyond bespoke proposals. AgencyOS enables rapid assembly of structured, multi-tiered packages (e.g., Basic Voiceover + Script Review + Revision Rounds), allowing for premium pricing models and clearer client value statements.\n*   **Rate-Card Positioning:** Standardized rate card templates ensure immediate, professional pricing communication. This prevents ad-hoc quoting, anchors perceived value, and reinforces the project's status as a high-tier service provider.\n\n### \ud83d\ude80 Client Experience & Professionalism\nAgencyOS elevates the entire client interaction lifecycle, moving the perception from \"freelancer\" to \"boutique agency.\"\n\n*   **Demo Readiness:** Centralized asset storage (demos, style guides, testimonials) ensures that every pitch is equipped with polished, up-to-date materials. The team can instantly access and present a cohesive, professional narrative.\n*   **Portfolio-Level Professionalism:** AgencyOS provides the operational infrastructure to treat all client work as part of a curated agency portfolio. This unified presentation elevates credibility, justifies higher rates, and makes future pitches more compelling and authoritative.",
+      "creator_id": "actor-research",
+      "evidence_ids": [
+        "evidence-71b066a64364"
+      ],
+      "verified_by": "human-kojie",
+      "claims": [
+        "SUPPORTED::Model draft generated by openai_compatible_local/google/gemma-4-e4b."
+      ],
+      "content_hash": "sha256:1f1f16ff136a6b462b9352020297f931a4d17bb6b189b25ef4564013e353ca90"
+    },
+    {
+      "artifact_id": "artifact-24623a41e4cc",
+      "workstream_id": "research",
+      "path": ".agencyos-runtime/artifacts/run-ed221ad4a14c/drafts/test.md",
+      "content": "This workflow is designed to guide you through the manual, step-by-step process of building and deploying a custom LLM agent within an environment like AnythingLLM.\n\nSince the documentation covers the developer journey, the plan is structured into four distinct phases: **Planning**, **Building**, **Testing**, and **Deployment**.\n\n***\n\n## \ud83d\ude80 Manual Workflow Plan: Building a Custom LLM Agent\n\n### Phase 0: Preparation and Scope Definition (The \"What\" and \"Why\")\n\nBefore touching any settings or code, you must define the agent's boundaries. This is the most critical manual step to prevent scope creep.\n\n| Step | Goal | Action Items (Manual Work) | Key Output/Checklist Item |\n| :--- | :--- | :--- | :--- |\n| **0.1 Define Scope** | Determine exactly what the agent will and will not do. | Write a clear, bulleted list of the agent's primary functions (e.g., \"It can summarize articles,\" *but* \"It cannot access financial records\"). | **Scope Document:** 3-5 clear use cases. |\n| **0.2 Identify Tools** | Determine what external capabilities the agent needs to function. | List all necessary external data sources or actions: APIs (e.g., weather, calendar), databases, internal knowledge files. | **Tool Inventory:** API keys gathered; knowledge source locations identified. |\n| **0.3 Establish Tone/Persona** | Define how the agent should behave when responding. | Write out a short \"persona sheet\" (e.g., professional, casual, academic, empathetic). This will inform your System Prompt later. | **Persona Guide:** 1-2 paragraphs describing tone and constraints. |\n\n---\n\n### Phase 1: Agent Core Development (The \"Brain\")\n\nThis phase focuses on configuring the LLM's core instructions\u2014the prompt engineering that tells the agent how to think and respond.\n\n| Step | Goal | Action Items (Manual Implementation) | Verification Check |\n| :--- | :--- | :--- | :--- |\n| **1.1 Configure System Prompt** | Provide foundational rules for the LLM. | In the Agent Settings, write the comprehensive **System Prompt**. Include: 1) The Persona Guide (0.3), 2) Constraints (What *not* to do), and 3) The Goal Statement (The core mission). | \u2705 Does the prompt address role, goals, constraints, and tone? |\n| **1.2 Define Logic Flow** | Instruct the agent on its decision-making process. | Add explicit instructions in a section of the System Prompt: \"When a user asks X, first you must check Y using Tool Z before generating an answer.\" This forces structure. | \u2705 Is the logic sequential? (e.g., Check $\\to$ Process $\\to$ Answer). |\n| **1.3 Initial Knowledge Base Upload** | Give the agent context to operate on. | Manually upload or point the agent to the initial set of foundational documents relevant to its scope. *Do not over-load it yet.* | \u2705 The agent can correctly answer factual questions based *only* on these uploaded files. |\n\n---\n\n### Phase 2: Tool Integration and Logic Linking (The \"Hands\")\n\nThis phase gives your agent the ability to act outside of text generation by connecting it to external systems via custom tools or APIs.\n\n| Step | Goal | Action Items (Manual Implementation) | Verification Check |\n| :--- | :--- | :--- | :--- |\n| **2.1 Document Tool Schema** | Tell the LLM exactly what capabilities are available and how they work. | For each tool identified in Phase 0 (e.g., a Weather API), write detailed descriptions that include: 1) The function name, 2) What it does, and 3) All required input parameters (and their data types). | \u2705 Can you describe the tool's use case without looking at the code? (The description must be clear enough for an LLM to understand.) |\n| **2.2 Configure Tool Endpoints** | Connect the descriptions to the live functions. | Manually enter the API endpoints, credentials, and function calling parameters into the developer console/tool setup section of AnythingLLM. | \u2705 Does the system correctly validate the keys and connect to the external service? (Test connection outside the chat interface). |\n| **2.3 Link Tool Usage** | Force the agent to use the tools when necessary. | Return to the System Prompt (1.1) and add a mandatory instruction: \"If the user asks about weather, you *must* use the `get_weather` tool.\" | \u2705 The prompt explicitly mandates tool usage for specific query types. |\n\n---\n\n### Phase 3: Testing, Refinement, and Debugging (The \"Polish\")\n\nDo not assume it works after setup. Manual testing with varied inputs is crucial to catch logical flaws or ambiguities.\n\n| Step | Goal | Action Items (Manual Execution) | Success Criteria / What to Look For |\n| :--- | :--- | :--- | :--- |\n| **3.1 Happy Path Testing** | Test the agent's primary, expected use cases. | Input 5-10 simple queries that perfectly fit its defined scope and require tool usage (e.g., \"What was the weather in London yesterday?\" $\\to$ *Uses Weather Tool*). | The agent successfully uses the correct sequence of tools to provide a perfect answer. |\n| **3.2 Edge Case Testing** | Test failure scenarios, ambiguity, and out-of-scope requests. | 1) Ask questions it cannot answer (Out of Scope). 2) Give ambiguous queries. 3) Provide bad data inputs. | The agent correctly rejects the query or asks for clarification (\"I need more context...\") instead of hallucinating an answer. |\n| **3.3 Prompt Iteration Loop** | Adjust logic based on test failures. | If the agent fails (e.g., gives a wrong tool, ignores a constraint): *Do not change the code.* Instead, revise the System Prompt to be more restrictive or clearer (\"When X happens, you must always do Y\"). | The agent's behavior improves in subsequent testing runs without requiring major structural changes. |\n\n---\n\n### Phase 4: Deployment and Monitoring (The \"Live\" State)\n\nOnce testing is complete, finalize the agent for user consumption.\n\n| Step | Goal | Action Items (Manual Finalization) | Outcome/Deployment Checkpoint |\n| :--- | :--- | :--- | :--- |\n| **4.1 Review Security** | Ensure external data access and API usage are secure. | Verify that all sensitive credentials have been stored securely within the platform's vault, not hardcoded in prompts or exposed in front-end UI elements. | \u2705 Credentials are managed via environment variables/vault systems. |\n| **4.2 Set User Instructions** | Prepare a simple guide for the end user. | Write clear documentation detailing: 1) What the agent is good at. 2) What the agent cannot do (Setting expectations). | A concise, non-technical \"How to use the Agent\" guide. |\n| **4.3 Final Deployment** | Make the agent available to its intended audience. | Save and publish the customized agent instance. | The final working agent is accessible via the intended channel/interface. |",
+      "creator_id": "actor-research",
+      "evidence_ids": [],
+      "verified_by": null,
+      "claims": [
+        "SUPPORTED::Model draft generated by openai_compatible_local/google/gemma-4-e4b."
+      ],
+      "content_hash": "sha256:dc9c7c5f6555b0a2b655cb5661680fff22a5b3e53594c2826d18b788338ab269"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence-71b066a64364",
+      "workstream_id": "research",
+      "path": "evidence/kojie-voice-over-career-value-assessment.txt",
+      "summary": "Executive assessment prepared for the Kojie voice-over career project.",
+      "actor_id": "actor-evidence"
+    }
+  ],
+  "handoff": {
+    "handoff_id": "handoff-9186a60e4508",
+    "artifact_ids": [
+      "artifact-97865e68327c"
+    ],
+    "complete": true,
+    "created_by": "actor-operator"
+  },
+  "missing_evidence": [],
+  "block_reason": "",
+  "human_approval_by": null,
+  "intake_required": [],
+  "approval_records": [],
+  "policy_decisions": [
+    {
+      "decision_id": "policy-decision-db4be34fe141",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "being-atlas",
+      "requested_action": "write_local_artifact",
+      "resource": "research",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "internal_reversible_artifact_work_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Low-risk internal artifact work is permitted.",
+      "timestamp": "2026-08-16T09:08:27.844229+00:00"
+    },
+    {
+      "decision_id": "policy-decision-cbb0f36e9125",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "actor-evidence",
+      "requested_action": "attach_evidence",
+      "resource": "research",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "internal_evidence_attachment_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Low-risk evidence attachment is permitted.",
+      "timestamp": "2026-08-16T09:08:44.491548+00:00"
+    },
+    {
+      "decision_id": "policy-decision-2da50f88e32f",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "human-kojie",
+      "requested_action": "verify",
+      "resource": "project-kojie-voice-over-career-value-assessment",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "independent_verification_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Independent low-risk verification is permitted.",
+      "timestamp": "2026-08-16T09:08:44.826468+00:00"
+    },
+    {
+      "decision_id": "policy-decision-684984b88c32",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "actor-operator",
+      "requested_action": "closeout",
+      "resource": "project-kojie-voice-over-career-value-assessment",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "verified_internal_closeout_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Verified low-risk internal work may close out.",
+      "timestamp": "2026-08-16T09:08:45.168081+00:00"
+    }
+  ],
+  "verification_records": [
+    {
+      "verification_id": "verification-319a15de6bfc",
+      "artifact_id": "artifact-97865e68327c",
+      "verifier_id": "human-kojie",
+      "artifact_hash": "sha256:1f1f16ff136a6b462b9352020297f931a4d17bb6b189b25ef4564013e353ca90",
+      "result": "approved",
+      "timestamp": "2026-08-16T09:08:44.826534+00:00"
+    }
+  ],
+  "claim_records": [
+    {
+      "claim_id": "claim-7789a3ac3efc",
+      "artifact_id": "artifact-97865e68327c",
+      "text": "Model draft generated by openai_compatible_local/google/gemma-4-e4b.",
+      "evidence_status": "supported",
+      "evidence_ids": [
+        "evidence-71b066a64364"
+      ],
+      "claim_type": "general",
+      "required_approval": null
+    },
+    {
+      "claim_id": "claim-6929d8c1b59a",
+      "artifact_id": "artifact-24623a41e4cc",
+      "text": "Model draft generated by openai_compatible_local/google/gemma-4-e4b.",
+      "evidence_status": "supported",
+      "evidence_ids": [],
+      "claim_type": "general",
+      "required_approval": null
+    }
+  ],
+  "model_call_records": [
+    {
+      "model_call_id": "model-call-abe6330fa3e8",
+      "provider": "openai_compatible_local",
+      "model": "google/gemma-4-e4b",
+      "actor_id": "actor-research",
+      "workstream_id": "research",
+      "prompt_hash": "sha256:779265be59e4e96f1f71ae91c881b96ae7a85360ba9b74e6d5533286c1e86bd1",
+      "output_hash": "sha256:1f1f16ff136a6b462b9352020297f931a4d17bb6b189b25ef4564013e353ca90",
+      "result": "success",
+      "error_message": "",
+      "artifact_id": "artifact-97865e68327c",
+      "timestamp": "2026-08-16T09:08:36.693142+00:00"
+    },
+    {
+      "model_call_id": "model-call-62db611389e7",
+      "provider": "openai_compatible_local",
+      "model": "google/gemma-4-e4b",
+      "actor_id": "actor-research",
+      "workstream_id": "research",
+      "prompt_hash": "sha256:d361e4fbfaa5d99a48e071dd45b69829e71fb4d0af30eba6e3f6f84e03240f53",
+      "output_hash": "sha256:dc9c7c5f6555b0a2b655cb5661680fff22a5b3e53594c2826d18b788338ab269",
+      "result": "success",
+      "error_message": "",
+      "artifact_id": "artifact-24623a41e4cc",
+      "timestamp": "2026-08-18T07:46:07.613247+00:00"
+    }
+  ],
+  "failure_packets": [],
+  "reconciliation_records": [
+    {
+      "reconciliation_id": "reconciliation-f04affe9fcb4",
+      "artifact_ids": [
+        "artifact-97865e68327c"
+      ],
+      "conflict_keys": [],
+      "state": "no_conflicts_detected",
+      "timestamp": "2026-08-16T09:08:44.164470+00:00"
+    }
+  ],
+  "closeout_records": [
+    {
+      "closeout_id": "closeout-9240b771c37b",
+      "created_by": "actor-operator",
+      "artifact_ids": [
+        "artifact-97865e68327c"
+      ],
+      "evidence_ids": [
+        "evidence-71b066a64364"
+      ],
+      "timestamp": "2026-08-16T09:08:45.181777+00:00"
+    }
+  ],
+  "learning_records": [
+    {
+      "learning_id": "learning-91e1b45f9da8",
+      "run_id": "run-ed221ad4a14c",
+      "project_id": "project-kojie-voice-over-career-value-assessment",
+      "lesson": "generated_text_is_not_completion",
+      "timestamp": "2026-08-16T09:08:45.181799+00:00"
+    }
+  ],
+  "schema_version": "kernel.p1.v1"
+}

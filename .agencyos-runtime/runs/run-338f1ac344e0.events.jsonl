@@ -1,0 +1,4 @@
+{"event_id": "event-ea262e478566", "run_id": "run-338f1ac344e0", "from_state": null, "to_state": "received", "actor_id": "actor-operator", "reason": "request received", "timestamp": "2026-08-16T07:32:10.261066+00:00"}
+{"event_id": "event-24385ced0698", "run_id": "run-338f1ac344e0", "from_state": "received", "to_state": "classified", "actor_id": "actor-operator", "reason": "scope and risk classified", "timestamp": "2026-08-16T07:32:10.266812+00:00"}
+{"event_id": "event-99c086144ae2", "run_id": "run-338f1ac344e0", "from_state": "classified", "to_state": "planned", "actor_id": "actor-operator", "reason": "work packets planned", "timestamp": "2026-08-16T07:32:10.273141+00:00"}
+{"event_id": "event-897f3f14f843", "run_id": "run-338f1ac344e0", "from_state": "planned", "to_state": "ready", "actor_id": "actor-operator", "reason": "scheduler evaluated dependencies", "timestamp": "2026-08-16T07:32:10.279322+00:00"}

@@ -1,0 +1,5 @@
+{"event_id": "event-6bb2e28dab6b", "run_id": "run-b530ad943a8b", "from_state": null, "to_state": "received", "actor_id": "actor-operator", "reason": "request received", "timestamp": "2026-08-16T09:02:05.590661+00:00"}
+{"event_id": "event-7d0d11ae8f06", "run_id": "run-b530ad943a8b", "from_state": "received", "to_state": "classified", "actor_id": "actor-operator", "reason": "scope and risk classified", "timestamp": "2026-08-16T09:02:05.601310+00:00"}
+{"event_id": "event-cc5bf54f285e", "run_id": "run-b530ad943a8b", "from_state": "classified", "to_state": "planned", "actor_id": "actor-operator", "reason": "work packets planned", "timestamp": "2026-08-16T09:02:05.611051+00:00"}
+{"event_id": "event-a445c02de8df", "run_id": "run-b530ad943a8b", "from_state": "planned", "to_state": "ready", "actor_id": "actor-operator", "reason": "scheduler evaluated dependencies", "timestamp": "2026-08-16T09:02:05.621407+00:00"}
+{"event_id": "event-449737669cf7", "run_id": "run-b530ad943a8b", "from_state": "ready", "to_state": "blocked", "actor_id": "specialist-operations", "reason": "No policy permits this action.", "timestamp": "2026-08-16T09:02:14.322373+00:00"}

@@ -1,0 +1,154 @@
+{
+  "run_id": "run-7284f8c25c79",
+  "request": {
+    "request_id": "runbook-local-lmstudio",
+    "title": "Local LM Studio runbook",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Draft a short internal runbook for validating a local LM Studio setup before using it on team workflows.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ],
+    "dependencies": {},
+    "evidence_required_for": [],
+    "existing_project_ref": null,
+    "create_project": false,
+    "project_slug": null,
+    "human_owner_id": null,
+    "scope_class": "one_project"
+  },
+  "project_id": "project-runbook-local-lmstudio",
+  "state": "handoff_pending",
+  "risk_level": "low",
+  "execution_mode": "deterministic_batches",
+  "execution_batches": [
+    [
+      "research"
+    ]
+  ],
+  "scope_class": "one_project",
+  "packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "handoff_pending",
+      "artifact_id": "artifact-6273b1aacea4",
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "runnable_packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "handoff_pending",
+      "artifact_id": "artifact-6273b1aacea4",
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-6273b1aacea4",
+      "workstream_id": "research",
+      "path": ".agencyos-runtime/artifacts/run-7284f8c25c79/drafts/runbook.md",
+      "content": "***Note: This runbook assumes the user has successfully installed LM Studio and a specific model (`[MODEL NAME]`).***\n\n---\n\n# \ud83d\ude80 Local LLM Validation Runbook: LM Studio Setup Check\n\n**Objective:** To validate that the local LM Studio setup is functional, stable, and meets minimum performance requirements before integrating it into team pipelines or production workflows.\n\n**Target Time:** 15\u201330 minutes\n**Status:** \u2610 Pass / \u2610 Fail (Requires escalation)\n\n---\n\n### \u2699\ufe0f Phase 0: Prerequisites & Setup Check\n\n*   **Hardware Check:** Verify the GPU is correctly recognized and that CUDA drivers are up-to-date.\n    *   *Action:* Confirm VRAM usage metrics in the system monitor during idle time.\n*   **Environment Setup:** Ensure LM Studio is running, API Server Mode is enabled, and the target model (`[MODEL NAME]`) is loaded and quantized correctly (e.g., Q4_K_M).\n*   **Test Corpus:** Prepare a standardized set of 5\u201310 test prompts covering all intended use cases (e.g., Summarization, Code Generation, QA).\n\n### \u2705 Phase I: Basic Functionality & Stability Check\n\n*(Goal: Ensure the model starts and responds without crashing.)*\n\n| Test Step | Action Taken | Expected Outcome | Result |\n| :--- | :--- | :--- | :--- |\n| **1. API Connectivity** | Access the local API endpoint (e.g., `http://localhost:[PORT]/completion`) via a script or client tool. | A successful JSON response is received, indicating the server is live and accepting requests. | \u2610 Pass / \u2610 Fail |\n| **2. Cold Start Test** | Submit an empty prompt/placeholder query to force a model reload/context initialization. | The initial response is fast, stable, and does not throw memory or resource errors. | \u2610 Pass / \u2610 Fail |\n| **3. Context Handling** | Input a very large context block (e.g., 80% of the defined context window). | Model processes the full context without truncating critical information or failing due to overflow. | \u2610 Pass / \u2610 Fail |\n\n### \ud83d\ude80 Phase II: Performance & Throughput Check\n\n*(Goal: Determine if the setup meets minimum required speed metrics.)*\n\n| Test Step | Metric Measured | Action Taken | Target Requirement (Minimum) | Result |\n| :--- | :--- | :--- | :--- | :--- |\n| **1. Token Generation Speed** | Tokens/Second (Throughput) | Prompt for a standard 500-word response and measure the time elapsed vs. tokens generated. | \u2265 `[TARGET THROUGHPUT]` T/s | \u2610 Pass / \u2610 Fail |\n| **2. Memory Stability** | VRAM Utilization (%) | Run a continuous loop of small requests (10\u201320 iterations) for 5 minutes. | Stable utilization; no sudden spikes or leaks observed in resource monitoring. | \u2610 Pass / \u2610 Fail |\n| **3. Latency Check** | Time-to-First-Token (TTFT) | Measure the delay between sending a prompt and receiving the first token. | Ideally < 1\u20132 seconds for standard prompts. | \u2610 Pass / \u2610 Fail |\n\n### \u2b50 Phase III: Quality & Consistency Check\n\n*(Goal: Validate that model output is predictable and reliable across different prompts.)*\n\n| Test Step | Focus Area | Action Taken (Use a test prompt) | Success Criteria | Result |\n| :--- | :--- | :--- | :--- | :--- |\n| **1. Prompt Sensitivity** | Input Formatting | Run the same prompt, changing only minor formatting (e.g., bullet points vs. numbered lists). | Output structure remains consistent and predictable based on input changes. | \u2610 Pass / \u2610 Fail |\n| **2. Consistency Check** | Temperature/Sampling | Run a non-critical generative task 3 times using identical settings (`Temperature: 0.7`). | Outputs should be coherent and follow the same core logic, even if worded differently. | \u2610 Pass / \u2610 Fail |\n| **3. Edge Case Handling** | Negative Prompts | Provide ambiguous or intentionally flawed input (e.g., a non-existent API endpoint). | The model handles the ambiguity gracefully and does not crash or produce gibberish/hallucinations. | \u2610 Pass / \u2610 Fail |\n\n---\n\n### \ud83d\udea6 Validation Sign-Off\n\n*   **Overall Status:**\n    *   \u2610 **PASS:** All checks passed, performance metrics met, and setup is ready for integration testing.\n    *   \u2610 **FAIL (Minor):** One or two non-critical checks failed. Needs minor adjustment/re-test (`[ISSUE]` ).\n    *   \u2610 **FAIL (Critical):** Multiple critical failures detected (e.g., API connection failure, memory leak). Immediate investigation required.\n\n**Validated By:** [Developer Name]\n**Date:** [YYYY-MM-DD]\n**Notes/Recommendations:**",
+      "creator_id": "actor-research",
+      "evidence_ids": [],
+      "verified_by": null,
+      "claims": [
+        "SUPPORTED::Model draft generated by openai_compatible_local/google/gemma-4-e4b."
+      ],
+      "content_hash": "sha256:e445d33aae1f158aea2bf9fd1913258b4de71a189c20685fe70656783196861e"
+    }
+  ],
+  "evidence": [],
+  "handoff": null,
+  "missing_evidence": [],
+  "block_reason": "",
+  "human_approval_by": null,
+  "intake_required": [],
+  "approval_records": [],
+  "policy_decisions": [
+    {
+      "decision_id": "policy-decision-028b2f1420a0",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "being-atlas",
+      "requested_action": "write_local_artifact",
+      "resource": "research",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "internal_reversible_artifact_work_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Low-risk internal artifact work is permitted.",
+      "timestamp": "2026-08-16T08:18:19.996084+00:00"
+    }
+  ],
+  "verification_records": [],
+  "claim_records": [
+    {
+      "claim_id": "claim-428f9233ce53",
+      "artifact_id": "artifact-6273b1aacea4",
+      "text": "Model draft generated by openai_compatible_local/google/gemma-4-e4b.",
+      "evidence_status": "supported",
+      "evidence_ids": [],
+      "claim_type": "general",
+      "required_approval": null
+    }
+  ],
+  "model_call_records": [
+    {
+      "model_call_id": "model-call-acfcf4bf4c8e",
+      "provider": "openai_compatible_local",
+      "model": "google/gemma-4-e4b",
+      "actor_id": "actor-research",
+      "workstream_id": "research",
+      "prompt_hash": "sha256:caa1998c4c5ce3ce12c2cb95fdd8440d75d3a733dc2e4f01143fa1071a5647d5",
+      "output_hash": "sha256:e445d33aae1f158aea2bf9fd1913258b4de71a189c20685fe70656783196861e",
+      "result": "success",
+      "error_message": "",
+      "artifact_id": "artifact-6273b1aacea4",
+      "timestamp": "2026-08-16T08:22:50.182162+00:00"
+    }
+  ],
+  "failure_packets": [],
+  "reconciliation_records": [],
+  "closeout_records": [],
+  "learning_records": [],
+  "schema_version": "kernel.p1.v1"
+}

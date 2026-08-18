@@ -1,0 +1,116 @@
+{
+  "run_id": "run-07d63035f8f2",
+  "request": {
+    "request_id": "local-model-proof-random",
+    "title": "Local model proof packet random",
+    "actor_id": "actor-operator",
+    "requested_outcome": "Create and verify a local model-draft proof packet for a small random reasoning task.",
+    "action_class": "internal_artifact",
+    "reversible": true,
+    "external": false,
+    "sensitive": false,
+    "required_workstreams": [
+      "research"
+    ],
+    "dependencies": {},
+    "evidence_required_for": [],
+    "existing_project_ref": null,
+    "create_project": false,
+    "project_slug": null,
+    "human_owner_id": null,
+    "scope_class": "one_project"
+  },
+  "project_id": "project-local-model-proof-random",
+  "state": "in_progress",
+  "risk_level": "low",
+  "execution_mode": "deterministic_batches",
+  "execution_batches": [
+    [
+      "research"
+    ]
+  ],
+  "scope_class": "one_project",
+  "packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "dispatched",
+      "artifact_id": null,
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "runnable_packets": [
+    {
+      "workstream_id": "research",
+      "actor_id": "being-atlas",
+      "capability": "research:artifact_creation",
+      "dependencies": [],
+      "state": "dispatched",
+      "artifact_id": null,
+      "retries": 0,
+      "max_retries": 1,
+      "expected_output": "research artifact",
+      "required_evidence": [],
+      "pause_conditions": [],
+      "granted_permissions": [
+        "read_context",
+        "write_local_artifact"
+      ],
+      "withheld_permissions": [
+        "external_send",
+        "destructive_change",
+        "payment_action"
+      ]
+    }
+  ],
+  "artifacts": [],
+  "evidence": [],
+  "handoff": null,
+  "missing_evidence": [],
+  "block_reason": "",
+  "human_approval_by": null,
+  "intake_required": [],
+  "approval_records": [],
+  "policy_decisions": [
+    {
+      "decision_id": "policy-decision-10d651ec9f0d",
+      "policy_version": "agencyos.policy.v1",
+      "actor_id": "being-atlas",
+      "requested_action": "write_local_artifact",
+      "resource": "research",
+      "risk_level": "low",
+      "outcome": "permit",
+      "applicable_rules": [
+        "internal_reversible_artifact_work_permitted"
+      ],
+      "required_conditions": [],
+      "missing_evidence": [],
+      "required_approval": null,
+      "reason": "Low-risk internal artifact work is permitted.",
+      "timestamp": "2026-08-16T07:32:11.035588+00:00"
+    }
+  ],
+  "verification_records": [],
+  "claim_records": [],
+  "model_call_records": [],
+  "failure_packets": [],
+  "reconciliation_records": [],
+  "closeout_records": [],
+  "learning_records": [],
+  "schema_version": "kernel.p1.v1"
+}

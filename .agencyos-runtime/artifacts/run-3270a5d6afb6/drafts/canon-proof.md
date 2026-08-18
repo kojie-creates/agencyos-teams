@@ -1,0 +1,1 @@
+Local validation matters because it ensures the model performs reliably and fairly across diverse subgroups or specific contexts, preventing overall accuracy from masking critical failures in localized real-world scenarios.
