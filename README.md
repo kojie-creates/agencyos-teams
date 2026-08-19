@@ -1,8 +1,11 @@
 
+
 # AgencyOS Teams
 
 AgencyOS Teams is the plural flagship surface:
-<img width="1408" height="1408" alt="grok-image-1786b98e-b901-4444-9002-b38a9878ba69" src="https://github.com/user-attachments/assets/50be1abf-4cb8-4796-856a-c584e1f02a6a" />
+
+<img width="1792" height="1008" alt="grok-image-497462f3-af5a-4274-b4a2-693041323e1e" src="https://github.com/user-attachments/assets/16e5e6c9-0fd1-4681-a30e-e84f02bf4f97" />
+
 ```text
 AgencyOS Teams = AgencyOS Beings + AgencyOS Pro
 ```
@@ -65,6 +68,8 @@ That is already the folder contract.
 AgencyOS Teams does not use anonymous Beings.
 
 Every generated or user-created Being must be named before it can be installed, routed, assigned to a workstream, referenced in a handoff, or used in closeout.
+
+<img width="1408" height="1408" alt="grok-image-1786b98e-b901-4444-9002-b38a9878ba69" src="https://github.com/user-attachments/assets/50be1abf-4cb8-4796-856a-c584e1f02a6a" />
 
 Read:
 
