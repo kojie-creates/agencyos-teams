@@ -120,7 +120,7 @@ body
 history
 intelligence
 memory
-personal
+personality
 portfolio
 presence
 skeleton
