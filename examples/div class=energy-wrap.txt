@@ -1,0 +1,382 @@
+   <div class="energy-wrap">
+          <div class="energy-row">
+            <div class="energy-time">T0<br />Initial brief</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Human + operator</div>
+              <div class="energy-label">Juan + @team-lead</div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 22%"></div>
+              </div>
+            </div>
+            <div class="energy-score">22%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T1<br />Routing</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Orchestration</div>
+              <div class="energy-label">Central Orchestrator</div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 38%"></div>
+              </div>
+            </div>
+            <div class="energy-score">38%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T2<br />Research</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Discovery</div>
+              <div class="energy-label">
+                Market Intelligence + Research Analyst
+              </div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 72%"></div>
+              </div>
+            </div>
+            <div class="energy-score">72%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T3<br />Wedge choice</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Human gate</div>
+              <div class="energy-label">Juan + Research Coordination</div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 82%"></div>
+              </div>
+            </div>
+            <div class="energy-score">82%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T4<br />Positioning</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Strategic framing</div>
+              <div class="energy-label">Marketing Strategy + Distribution</div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="energy-score">88%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T5<br />Activation</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Content + sales</div>
+              <div class="energy-label">
+                Content Creation + Sales Enablement
+              </div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="energy-score">80%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T6<br />Pilot</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Learning</div>
+              <div class="energy-label">
+                Experimentation + Learning Coordinator
+              </div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 76%"></div>
+              </div>
+            </div>
+            <div class="energy-score">76%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T7<br />Launch</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Operational signal</div>
+              <div class="energy-label">Community Manager + Launch Ops</div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 64%"></div>
+              </div>
+            </div>
+            <div class="energy-score">64%</div>
+          </div>
+
+          <div class="energy-row">
+            <div class="energy-time">T8<br />Refinement</div>
+            <div class="energy-entity">
+              <div class="energy-mark">Feedback loop</div>
+              <div class="energy-label">Analytics + Strategy Advisor</div>
+              <div class="energy-bar">
+                <div class="energy-fill" style="width: 58%"></div>
+              </div>
+            </div>
+            <div class="energy-score">58%</div>
+          </div>
+        </div>
+
+        <div class="energy-note">
+          <div class="note-box">
+            <h4>Peak energy</h4>
+            <div class="signal">
+              The highest coordination energy occurs during research,
+              positioning, and wedge validation. This is where the system
+              establishes direction and avoids wasted motion.
+            </div>
+          </div>
+
+          <div class="note-box">
+            <h4>Human energy</h4>
+            <div class="signal">
+              The human is most active at the decision gates: wedge selection,
+              strategic approval, and launch readiness. These are the moments
+              that shape the outcome.
+            </div>
+          </div>
+
+          <div class="note-box">
+            <h4>Operational energy</h4>
+            <div class="signal">
+              Once the strategy is approved, the workload shifts to content,
+              sales enablement, pilot design, and launch execution. The system
+              becomes more operational and less exploratory.
+            </div>
+          </div>
+        </div>
+
+
+---
+
+  <div class="section">
+          <div class="grid">
+            <div class="panel traditional">
+              <h3>Traditional approach</h3>
+              <ul>
+                <li>
+                  Jump from motorsports credibility into athlete marketing
+                  without a clearly defined wedge.
+                </li>
+                <li>Assume the brand story will translate automatically.</li>
+                <li>
+                  Produce research, messaging, content, and outreach in parallel
+                  without a governance layer.
+                </li>
+                <li>
+                  Risk sounding like generic hydration or wellness brands.
+                </li>
+                <li>
+                  Launch quickly, then correct the strategy after the market
+                  reacts.
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel agencyos">
+              <h3>AgencyOS approach</h3>
+              <ul>
+                <li>
+                  Start with a clear brief and a disciplined operating route.
+                </li>
+                <li>
+                  Validate market fit, competitor positioning, and proof assets
+                  before message creation.
+                </li>
+                <li>
+                  Choose a focused wedge based on credibility transfer, not just
+                  market size.
+                </li>
+                <li>
+                  Protect the brand with guardrails that prevent generic
+                  wellness positioning.
+                </li>
+                <li>
+                  Build a pilot, launch with evidence, and improve through a
+                  learning loop.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+---
+
+<div class="page page-break">
+      <div class="doc">
+        <div class="header">
+          <div>
+            <div class="eyebrow">FluidLogic lens</div>
+            <h2>Side-by-side comparison</h2>
+          </div>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 50%">Traditional path</th>
+              <th style="width: 50%">AgencyOS path</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="tag red">Risk</span><br />Starts with broad market
+                ambition instead of a real wedge.
+              </td>
+              <td>
+                <span class="tag green">Strength</span><br />Starts with a
+                defined elite-athlete entry path rooted in race-proven
+                credibility.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Messaging can drift toward wellness, generic performance, or
+                lifestyle hydration language.
+              </td>
+              <td>
+                Messaging is governed by category clarity, banned-language
+                rules, and evidence-based proof assets.
+              </td>
+            </tr>
+            <tr>
+              <td>Research is informal and not tied to a decision process.</td>
+              <td>
+                Research is structured: competitor map, athlete-science signals,
+                wedge selection, and proof indexing.
+              </td>
+            </tr>
+            <tr>
+              <td>Small teams do everything at once and lose alignment.</td>
+              <td>
+                Roles are assigned by lane: research, positioning, content,
+                sales, learning, launch.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Brand credibility is diluted because the market story is too
+                broad.
+              </td>
+              <td>
+                Brand credibility is protected and used as the proof asset that
+                makes the market entry believable.
+              </td>
+            </tr>
+            <tr>
+              <td>Launch can happen before the hypothesis is proven.</td>
+              <td>
+                Pilot design and launch approval occur before broad activation.
+              </td>
+            </tr>
+            <tr>
+              <td>Feedback is anecdotal and not used systematically.</td>
+              <td>
+                Feedback is turned into a learning loop: analyze, test, adjust,
+                and refine.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Outcome: brand confusion, slower traction, and wasted effort.
+              </td>
+              <td>
+                Outcome: a sharper market entry with a stronger, more defensible
+                lane.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="page page-break">
+      <div class="doc">
+        <div class="header">
+          <div>
+            <div class="eyebrow">Operational view</div>
+            <h2>How AgencyOS works for FluidLogic</h2>
+          </div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-step">
+            <strong>1</strong>
+            Intake & routing
+          </div>
+          <div class="flow-step">
+            <strong>2</strong>
+            Research
+          </div>
+          <div class="flow-step">
+            <strong>3</strong>
+            Positioning
+          </div>
+          <div class="flow-step">
+            <strong>4</strong>
+            Human approval
+          </div>
+          <div class="flow-step">
+            <strong>5</strong>
+            Content & sales
+          </div>
+          <div class="flow-step">
+            <strong>6</strong>
+            Pilot & launch
+          </div>
+          <div class="flow-step">
+            <strong>7</strong>
+            Learn & refine
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="two-col">
+            <div class="panel">
+              <h3>Phase 1: Research</h3>
+              <ul>
+                <li>Map the competitive landscape.</li>
+                <li>Identify athlete-science signals and trust anchors.</li>
+                <li>Generate wedge options based on credibility transfer.</li>
+                <li>Rank the strongest entry points.</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Phase 2: Positioning</h3>
+              <ul>
+                <li>Define the category frame.</li>
+                <li>Set the brand tone and proof narrative.</li>
+                <li>Apply guardrails to avoid generic wellness framing.</li>
+                <li>Prepare the message architecture for execution.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="two-col">
+            <div class="panel">
+              <h3>Phase 3: Content & sales</h3>
+              <ul>
+                <li>Create launch materials from the approved strategy.</li>
+                <li>Prepare sales enablement and outreach scripts.</li>
+                <li>Use proof assets rather than vague claims.</li>
+                <li>Keep all material tied to a validated message.</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Phase 4: Pilot & learn</h3>
+              <ul>
+                <li>Test the wedge and message before scaling.</li>
+                <li>Measure traction against meaningful criteria.</li>
+                <li>Use feedback to refine offer, tone, and position.</li>
+                <li>
+                  Shift from launch-and-pray to evidence-driven iteration.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

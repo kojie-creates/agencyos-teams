@@ -1,6 +1,6 @@
 # First Run Context
 
-Generated: 2026-08-14 15:10:35
+Generated: 2026-08-18 20:51:15
 
 Product:
 
@@ -11,55 +11,55 @@ AgencyOS Teams
 Installation mode:
 
 ```text
-standalone
+sidecar
 ```
 
 Project:
 
 ```text
-toya-propertymanager-pacificrose
+i9sports
 ```
 
 Slug:
 
 ```text
-toya-propertymanager-pacificrose
+i9sports
 ```
 
 Packet path:
 
 ```text
-projects/toya-propertymanager-pacificrose
+projects/i9sports
 ```
 
 Human owner / approval owner:
 
 ```text
-Kojie
+Nick / Kojie
 ```
 
 Active Being:
 
 ```text
-Jaavis
+Katie
 ```
 
 Desired outcome:
 
 ```text
-Create an AgencyOS Teams project showing Toya and Cirrus Asset Management how AgencyOS Teams could support Pacific Rose property operations, tenant communication, maintenance visibility, risk/evidence tracking, and owner/employer value.
+show i9 sports, https://i9sports.com, a successul owner wants to see what AgencyOS could do that would bring value. already successful business after 5 years.
 ```
 
 Existing project path:
 
 ```text
-
+~/Desktop/i9Sports
 ```
 
 Allowed tools:
 
 ```text
-local files, Codex, available project tools
+all available
 ```
 
 Off-limits:
@@ -77,7 +77,7 @@ external-facing, sensitive, paid, legal, financial, housing, medical, safety, me
 Startup notes:
 
 ```text
-Source facts provided by Kojie in chat. Draft-only internal setup. Housing/legal/financial decisions, tenant outreach, employer outreach, and public/client-facing materials require approval.
+
 ```
 
 ## Next Action

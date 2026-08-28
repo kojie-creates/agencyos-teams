@@ -1,0 +1,11 @@
+# Core Dependencies for AgencyOS Teams
+# This list must be kept up to date whenever a new library is added or upgraded in the codebase.
+
+# Base framework dependencies (from core services)
+pydantic>=2.0 # For structured data validation and schemas
+python-dotenv # To manage environment variables (.env file loading)
+
+# Core operational libraries
+pyyaml # Used for reading configuration files (like policies/policy_engine.json)
+# If we were using a proper graph DB:
+# networkx # For modeling the relationship between artifacts in the repository

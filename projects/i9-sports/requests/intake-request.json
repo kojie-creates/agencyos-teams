@@ -1,0 +1,18 @@
+{
+  "project_name": "i9 Sports — AgencyOS Integration",
+  "owner": "Brandy",
+  "output_owner": "Kojie",
+  "date": "2026-08-20",
+  "request_type": "Project brief / scoping",
+  "core_task": "Produce an Executive Brief, a phased Implementation Roadmap (4-8 weeks), an Assigned Beings roster, and scaffold the project directory structure.",
+  "acceptance_criteria_pilot": [
+    "Measurable reduction in manual scheduling time (target: ≥25% reduction)",
+    "One working automation for parent notifications",
+    "Clear staff assignment dashboard for the pilot unit"
+  ],
+  "initial_integration_list": [
+    "Calendar Systems (Scheduling)",
+    "Parent Communication Channel (SMS/Email Gateway)",
+    "Coach Roster / Staff Assignment Visibility (LMS)"
+  ]
+}

@@ -9,25 +9,25 @@ Connect this AgencyOS Teams installation to the project or workspace it governs.
 Installation mode:
 
 ```text
-standalone
+sidecar
 ```
 
 Project root:
 
 ```text
-
+~/Desktop/i9Sports
 ```
 
 Human approval owner:
 
 ```text
-Kojie
+Nick / Kojie
 ```
 
 Allowed tools:
 
 ```text
-local files, Codex, available project tools
+all available
 ```
 
 Off-limits:

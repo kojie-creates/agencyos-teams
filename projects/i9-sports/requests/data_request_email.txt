@@ -1,0 +1,47 @@
+Subject: Data export request for i9 Sports — Pilot discovery
+
+Hi Team,
+
+We are starting a short discovery and pilot for i9 Sports to automate scheduling and parent notifications. Please provide the following exports and place them in the shared folder: projects/i9-sports/data/ (or reply with access details to retrieve them).
+
+Required exports (CSV preferred):
+
+A. Registrations & customers (MUST)
+- registrations_YYYY-MM-DD_YYYY-MM-DD.csv
+  Columns: registration_id, season, program_id, program_name, location, session_date, customer_id, parent_name, parent_contact_email, parent_contact_phone, registration_date, status, payment_amount, payment_status, discount_code, referral_source
+  Notes: include refunds and cancellations.
+
+B. Scheduling & sessions (MUST)
+- sessions_YYYY-MM-DD_YYYY-MM-DD.csv
+  Columns: session_id, program_id, location, coach_id, scheduled_start, scheduled_end, created_by, created_at, last_modified_at, status, reschedule_count
+
+C. Coach & staffing (MUST)
+- coaches_YYYY-MM-DD.csv
+  Columns: coach_id, coach_name, hire_date, certifications, availability_slots, assigned_sessions_count, compensation_rate, coach_location, primary_contact
+
+D. Communications (MUST)
+- communications_YYYY-MM-DD_YYYY-MM-DD.csv
+  Columns: comm_id, channel, template_id, recipient_id, send_date, send_time, delivered, opened, clicked, reply_received, subject_or_template_name, related_session_id/registration_id
+
+E. Financials (MUST)
+- transactions_YYYY-MM-DD_YYYY-MM-DD.csv
+  Columns: transaction_id, registration_id, date, amount, fees, net_amount, payment_method, program_id, invoice_id, account_code
+
+F. Operations / manual work tracking (if available)
+- ops_time_sample_week1.csv
+  Columns: task_id, task_type, duration_minutes, performed_by, timestamp, related_session_id
+
+G. Systems inventory (MUST)
+- systems_inventory.csv or xlsx
+  Columns: system_name, owner_contact, api_available, export_method, auth_required, notes
+
+Instructions & notes
+- Time range: please provide last 12 months by default. If seasonal, include the most recent season and previous two seasons if possible.
+- Redact PII if this export will be shared outside the core team, but include a mapping file for IDs.
+- If you cannot produce a direct CSV, provide an export or instructions for API access and a contact for assistance.
+
+Please reply with ETA for these exports and any access constraints.
+
+Thanks,
+Kojie (on behalf of Brandy)
+Operator Team Lead

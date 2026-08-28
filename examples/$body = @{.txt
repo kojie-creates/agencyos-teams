@@ -1,0 +1,52 @@
+$body = @{
+  model = "google/gemma-4-e4b"
+  messages = @(
+    @{ role = "user"; content = "Say hello in one sentence." }
+  )
+} | ConvertTo-Json -Depth 10
+
+Invoke-RestMethod `
+  -Method Post `
+  -Uri "http://192.168.1.48:1234/v1/chat/completions" `
+  -ContentType "application/json" `
+  -Body $body
+
+
+cd agencyos-teams
+python -m agencyos run --request .\requests\runbook-local-lmstudio.json
+python -m agencyos status --run-id run-93896cd2b467
+python -m agencyos dispatch --run-id run-93896cd2b467
+python -m agencyos model-draft --run-id run-93896cd2b467 --workstream-id research --path drafts/test.md --prompt "Draft a concise but strong executive-facing assessment of how AgencyOS Teams could increase value for the Kojie voice-over career project by improving outreach, positioning, offer packaging, and repeatable operating discipline." --model google/gemma-4-e4b --provider openai_compatible_local --actor-id actor-research
+python -m agencyos status --run-id run-93896cd2b467
+python -m agencyos handoff --run-id run-93896cd2b467 --actor-id actor-operator
+python -m agencyos verify --run-id run-93896cd2b467 --reviewer-id actor-verifier
+python -m agencyos close --run-id run-93896cd2b467 --actor-id actor-operator
+
+---
+
+python -m agencyos run --request .\requests\runbook-local-lmstudio.json
+
+python -m agencyos dispatch --run-id run-2b0020d0ff1d
+
+python -m agencyos model-draft --run-id run-2b0020d0ff1d --workstream-id research --path drafts/runbook.md --prompt "Draft a short internal runbook for validating a local LM Studio setup before using it on team workflows." --model google/gemma-4-e4b --provider openai_compatible_local --actor-id actor-research
+
+python -m agencyos handoff --run-id run-2b0020d0ff1d --actor-id actor-operator
+
+python -m agencyos verify --run-id run-2b0020d0ff1d --reviewer-id actor-verifier
+
+python -m agencyos close --run-id run-2b0020d0ff1d --actor-id actor-operator
+
+
+---
+run-7284f8c25c79
+
+python -m agencyos run --request .\requests\runbook-local-lmstudio.json
+
+python -m agencyos dispatch --run-id run-7284f8c25c79
+
+python -m agencyos model-draft --run-id run-7284f8c25c79 --workstream-id research --path drafts/runbook.md --prompt "Draft a short internal runbook for validating a local LM Studio setup before using it on team workflows." --model google/gemma-4-e4b --provider openai_compatible_local --actor-id actor-research
+
+
+
+python -m agencyos model-draft --run-id <RUN_ID> --workstream-id research --path drafts/runbook.md --prompt "Draft a short internal runbook for validating a local LM Studio setup before using it on team workflows." --model google/gemma-4-e4b --provider openai_compatible_local --actor-id actor-research
+

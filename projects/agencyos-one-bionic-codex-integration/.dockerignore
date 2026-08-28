@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+tmp-*/
+asset-workspace/
+artifact-transactions/
+data-source-attempts/
+external-attempts/

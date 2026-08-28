@@ -1,0 +1,26 @@
+{
+  "transaction_id": "txn-7e568c22155f489e823959561d22bffe",
+  "source_file": "C:\\Users\\felix\\Desktop\\agencyos-teams\\projects\\agencyos-one-bionic-codex-integration\\tmp-data-source-attempts\\data-source-9a9632a661dd446fb64ffade68c7a01c.json",
+  "status": "DATA_SOURCE_VALIDATION_HALTED",
+  "sha256": "eb47f4b85e2b08aec27c2d20ac7765fdd2be0bdc7cfe4e2c896c385e3ee28cf1",
+  "transaction_metadata": {
+    "workflow_step": "data_source_trust",
+    "source_name": "unapproved-audit-log",
+    "result": "halted",
+    "reason": "CONSENT_NOT_APPROVED",
+    "source_context": "CLI",
+    "policy": {
+      "status": "PASS",
+      "reason": "NO_POLICY_VIOLATION",
+      "required_action": "NONE",
+      "source": "CLI"
+    },
+    "trust_result": {
+      "status": "FAIL",
+      "reason": "CONSENT_NOT_APPROVED",
+      "required_action": "CONSENT_REVIEW",
+      "source_name": "unapproved-audit-log"
+    }
+  },
+  "created_at": "2026-08-28T08:59:59.340753+00:00"
+}

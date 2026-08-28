@@ -1,0 +1,27 @@
+{
+  "source": {
+    "source_name": "unapproved-audit-log",
+    "owner_approved": true,
+    "consent_status": "MISSING",
+    "reliability_rating": 0.9,
+    "data_age_days": 3
+  },
+  "status": "DATA_SOURCE_VALIDATION_HALTED",
+  "result": "halted",
+  "reason": "CONSENT_NOT_APPROVED",
+  "metadata": {
+    "source_context": "CLI",
+    "policy": {
+      "status": "PASS",
+      "reason": "NO_POLICY_VIOLATION",
+      "required_action": "NONE",
+      "source": "CLI"
+    },
+    "trust_result": {
+      "status": "FAIL",
+      "reason": "CONSENT_NOT_APPROVED",
+      "required_action": "CONSENT_REVIEW",
+      "source_name": "unapproved-audit-log"
+    }
+  }
+}

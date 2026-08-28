@@ -1,0 +1,688 @@
+openapi: 3.1.0
+info:
+  title: AgencyOS One Bionic Codex Integration API
+  version: 0.1.0
+  description: Prototype API contract for governed local workflow, diagnostics, data-source validation, external adapter simulation, forecasting, and transaction manifest retrieval.
+servers:
+  - url: http://localhost:8000
+security:
+  - ApiKeyAuth: []
+paths:
+  /v1/workflow/start:
+    post:
+      summary: Start a governed workflow
+      description: Starts a workflow after API key auth and Policy Gate review.
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkflowStartRequest'
+      responses:
+        '200':
+          description: Workflow completed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkflowStartResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          description: Policy Gate halted the workflow.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GovernanceHaltResponse'
+        '500':
+          $ref: '#/components/responses/InternalFailure'
+  /v1/policy/check:
+    get:
+      summary: Check policy status
+      description: Evaluates text input with the Policy Gate.
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/InputQuery'
+        - $ref: '#/components/parameters/SourceContextQuery'
+      responses:
+        '200':
+          description: Policy result returned.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [success, policy]
+                properties:
+                  success:
+                    type: boolean
+                  policy:
+                    $ref: '#/components/schemas/PolicyResult'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /v1/diagnose:
+    get:
+      summary: Run diagnostics
+      description: Runs simulated diagnostics after Policy Gate review and logs a transaction manifest.
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/InputQuery'
+        - $ref: '#/components/parameters/SourceContextQuery'
+      responses:
+        '200':
+          description: Diagnostics completed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnosticsResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          description: Policy Gate halted diagnostics.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GovernanceHaltResponse'
+        '500':
+          $ref: '#/components/responses/InternalFailure'
+  /v1/data-source/validate:
+    post:
+      summary: Validate data source metadata
+      description: Validates source ownership, consent, reliability, and freshness before downstream prototype workflows consume the source.
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataSourceValidationRequest'
+      responses:
+        '200':
+          description: Data source passed trust checks.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataSourceValidationResponse'
+        '202':
+          description: Data source was flagged for human review.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataSourceValidationResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          description: Policy Gate or Data Source Trust halted validation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataSourceValidationResponse'
+        '500':
+          $ref: '#/components/responses/InternalFailure'
+  /v1/predict/forecast:
+    post:
+      summary: Run simulated forecast
+      description: Runs a simulated forecast after API key auth, Policy Gate, and Data Source Trust pass.
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForecastRequest'
+      responses:
+        '200':
+          description: Forecast completed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForecastResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          description: Governance gate halted forecasting.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForecastHaltResponse'
+        '500':
+          $ref: '#/components/responses/InternalFailure'
+  /v1/external/{service}/{endpoint}:
+    get:
+      summary: Simulate external adapter call
+      description: Simulates a scoped external adapter call after Policy Gate and credential-scope checks.
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ServicePath'
+        - $ref: '#/components/parameters/EndpointPath'
+      responses:
+        '200':
+          description: Simulated external call completed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExternalCallResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          description: Policy or credential-scope check halted the call.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GovernanceHaltResponse'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowed'
+        '502':
+          description: Simulated upstream failure.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      summary: Simulate external adapter call
+      description: Simulates a scoped external adapter call after Policy Gate and credential-scope checks.
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ServicePath'
+        - $ref: '#/components/parameters/EndpointPath'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExternalCallRequest'
+      responses:
+        '200':
+          description: Simulated external call completed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExternalCallResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          description: Policy or credential-scope check halted the call.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GovernanceHaltResponse'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowed'
+        '502':
+          description: Simulated upstream failure.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /v1/transactions/{transaction_id}:
+    get:
+      summary: Retrieve transaction manifest
+      description: Retrieves a transaction manifest available to the active local gateway instance.
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - name: transaction_id
+          in: path
+          required: true
+          schema:
+            type: string
+            example: txn-abc123
+      responses:
+        '200':
+          description: Transaction manifest returned.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [success, transaction]
+                properties:
+                  success:
+                    type: boolean
+                  transaction:
+                    $ref: '#/components/schemas/TransactionManifest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          description: Transaction was not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          $ref: '#/components/responses/InternalFailure'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Required prototype API key checked before Policy Gate execution.
+  parameters:
+    InputQuery:
+      name: input
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Text context for policy review.
+    SourceContextQuery:
+      name: source_context
+      in: query
+      required: false
+      schema:
+        type: string
+        default: CLI
+      description: Client or source identifier for governance metadata.
+    ServicePath:
+      name: service
+      in: path
+      required: true
+      schema:
+        type: string
+      example: crm
+    EndpointPath:
+      name: endpoint
+      in: path
+      required: true
+      schema:
+        type: string
+      example: accounts
+  responses:
+    Unauthorized:
+      description: API key missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UnauthorizedResponse'
+    InternalFailure:
+      description: Internal workflow or manifest logging failed.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    MethodNotAllowed:
+      description: HTTP method is not supported for this internal route.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    WorkflowStartRequest:
+      type: object
+      required: [goal]
+      properties:
+        goal:
+          type: string
+          example: Draft an internal onboarding charter.
+        source_context:
+          type: string
+          default: CLI
+          example: FRONTEND_CLIENT
+    WorkflowStartResponse:
+      type: object
+      required: [success, status, policy]
+      properties:
+        success:
+          type: boolean
+        status:
+          type: string
+          example: COMPLETED
+        goal:
+          type: string
+        source_context:
+          type: string
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        final_transaction_id:
+          type: string
+          nullable: true
+        transaction_id:
+          type: string
+          nullable: true
+        service_call_order:
+          type: array
+          items:
+            type: string
+    DataSourceValidationRequest:
+      type: object
+      required: [source]
+      properties:
+        input_context:
+          type: string
+          example: Validate audit source for forecasting.
+        source_context:
+          type: string
+          default: CLI
+        source:
+          $ref: '#/components/schemas/DataSourceMetadata'
+    DataSourceValidationResponse:
+      type: object
+      required: [success, status, policy, transaction_id]
+      properties:
+        success:
+          type: boolean
+        status:
+          type: string
+          enum: [COMPLETED, HALTED, FLAGGED]
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        trust_result:
+          $ref: '#/components/schemas/TrustResult'
+        required_action:
+          type: string
+        transaction_id:
+          type: string
+    ForecastRequest:
+      type: object
+      required: [source, input_payload]
+      properties:
+        input_context:
+          type: string
+          example: Run internal retention forecast.
+        source_context:
+          type: string
+          default: CLI
+        source:
+          $ref: '#/components/schemas/DataSourceMetadata'
+        input_payload:
+          $ref: '#/components/schemas/ForecastInputPayload'
+    ForecastResponse:
+      type: object
+      required: [success, status, policy, trust_result, forecast, transaction_id]
+      properties:
+        success:
+          type: boolean
+        status:
+          type: string
+          example: COMPLETED
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        trust_result:
+          $ref: '#/components/schemas/TrustResult'
+        forecast:
+          $ref: '#/components/schemas/ForecastResult'
+        transaction_id:
+          type: string
+        service_call_order:
+          type: array
+          items:
+            type: string
+    ForecastHaltResponse:
+      type: object
+      required: [success, status, policy, transaction_id]
+      properties:
+        success:
+          type: boolean
+          example: false
+        status:
+          type: string
+          example: HALTED
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        trust_result:
+          $ref: '#/components/schemas/TrustResult'
+          nullable: true
+        reason:
+          type: string
+        required_action:
+          type: string
+        transaction_id:
+          type: string
+    DiagnosticsResponse:
+      type: object
+      required: [success, status, policy, diagnostics, transaction_id]
+      properties:
+        success:
+          type: boolean
+        status:
+          type: string
+          example: COMPLETED
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        diagnostics:
+          type: object
+          properties:
+            status:
+              type: string
+              example: PASS
+            source_context:
+              type: string
+            summary:
+              type: string
+              example: SIMULATED_DIAGNOSTICS_COMPLETE
+            checks:
+              type: object
+              additionalProperties:
+                type: string
+        transaction_id:
+          type: string
+    ExternalCallRequest:
+      type: object
+      properties:
+        input_context:
+          type: string
+        source_context:
+          type: string
+          default: CLI
+        openapi_spec:
+          type: string
+        credentials:
+          type: object
+          properties:
+            token:
+              type: string
+            scopes:
+              type: array
+              items:
+                type: string
+        payload:
+          type: object
+          additionalProperties: true
+    ExternalCallResponse:
+      type: object
+      required: [success, status, policy, external_call, transaction_id]
+      properties:
+        success:
+          type: boolean
+        status:
+          type: string
+          example: COMPLETED
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        external_call:
+          type: object
+          additionalProperties: true
+        transaction_id:
+          type: string
+    GovernanceHaltResponse:
+      type: object
+      required: [success, status, policy]
+      properties:
+        success:
+          type: boolean
+          example: false
+        status:
+          type: string
+          example: HALTED
+        policy:
+          $ref: '#/components/schemas/PolicyResult'
+        required_action:
+          type: string
+        message:
+          type: string
+        transaction_id:
+          type: string
+          nullable: true
+    UnauthorizedResponse:
+      type: object
+      required: [success, error]
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: string
+          example: UNAUTHORIZED
+    ErrorResponse:
+      type: object
+      required: [success]
+      properties:
+        success:
+          type: boolean
+          example: false
+        status:
+          type: string
+        error:
+          type: string
+        error_code:
+          type: string
+        message:
+          type: string
+        transaction_id:
+          type: string
+          nullable: true
+    PolicyResult:
+      type: object
+      required: [status, reason, required_action, source]
+      properties:
+        status:
+          type: string
+          enum: [PASS, FLAGGED, FAIL]
+        reason:
+          type: string
+          example: NO_POLICY_VIOLATION
+        required_action:
+          type: string
+          example: NONE
+        source:
+          type: string
+    TrustResult:
+      type: object
+      required: [status, reason, required_action, source_name]
+      properties:
+        status:
+          type: string
+          enum: [PASS, FLAGGED, FAIL]
+        reason:
+          type: string
+          example: DATA_SOURCE_TRUSTED
+        required_action:
+          type: string
+          example: NONE
+        source_name:
+          type: string
+    DataSourceMetadata:
+      type: object
+      required: [source_name, owner_approved, consent_status, reliability_rating, data_age_days]
+      properties:
+        source_name:
+          type: string
+          example: approved-audit-log
+        owner_approved:
+          type: boolean
+          example: true
+        consent_status:
+          type: string
+          example: APPROVED
+        reliability_rating:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          example: 0.95
+        data_age_days:
+          type: integer
+          minimum: 0
+          example: 2
+    ForecastInputPayload:
+      type: object
+      properties:
+        baseline_risk:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          example: 0.3
+        volatility:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          example: 0.1
+        exposure:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          example: 0.2
+    ForecastResult:
+      type: object
+      required: [status, forecasted_risk_score, predicted_outcome, confidence_interval, human_review_required, governance_metadata]
+      properties:
+        status:
+          type: string
+          example: PASS
+        forecasted_risk_score:
+          type: number
+          format: float
+          example: 0.45
+        predicted_outcome:
+          type: string
+          enum: [LOW_RISK, MODERATE_RISK, HIGH_RISK]
+        confidence_interval:
+          type: object
+          properties:
+            lower_bound:
+              type: number
+            upper_bound:
+              type: number
+        human_review_required:
+          type: boolean
+        governance_metadata:
+          type: object
+          properties:
+            data_source_trust_status:
+              type: string
+            data_source_trust_reason:
+              type: string
+            source_name:
+              type: string
+            model_scope:
+              type: string
+              example: SIMULATED_PROTOTYPE
+            production_claim:
+              type: boolean
+              example: false
+    TransactionManifest:
+      type: object
+      required: [transaction_id, source_file, status, sha256, transaction_metadata, created_at]
+      properties:
+        transaction_id:
+          type: string
+        source_file:
+          type: string
+        status:
+          type: string
+        sha256:
+          type: string
+        transaction_metadata:
+          type: object
+          additionalProperties: true
+        persistence:
+          type: object
+          properties:
+            status:
+              type: string
+              example: SIMULATED
+            message:
+              type: string
+              example: Persistence simulated by placeholder database.
+        created_at:
+          type: string
+          format: date-time
