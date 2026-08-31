@@ -1,19 +1,20 @@
 """Framework-agnostic API gateway for the integration core loop."""
 
 import json
-import hmac
+import os
 from pathlib import Path
 from uuid import uuid4
 
 from artifact_repository import ArtifactRepository
-from data_source_trust_module import DataSourceTrustService
 from external_adapter import ExternalAPIError
 from external_adapter import GenericAPIAdapter
 from orchestrator import execute_master_workflow
 from orchestrator import IntegrationOrchestrator
-from policy_checker import PolicyEngine
+from platform_governance.auth_gate import AuthGate
+from platform_governance.data_source_trust import DataSourceTrustGate
+from platform_governance.policy_gate import PolicyGate
 
-DEFAULT_API_KEY = "agencyos-local-dev-key"
+API_KEY_ENV_VAR = "AGENCYOS_API_KEY"
 
 
 class ApiGateway:
@@ -34,9 +35,9 @@ class ApiGateway:
         self.diagnostic_runner = diagnostic_runner
         self.external_adapter = external_adapter or GenericAPIAdapter()
         self.external_workspace = Path(external_workspace or Path(".") / "external-attempts")
-        self.data_source_trust_service = data_source_trust_service or DataSourceTrustService()
+        self.data_source_trust_service = data_source_trust_service or DataSourceTrustGate()
         self.data_source_workspace = Path(data_source_workspace or Path(".") / "data-source-attempts")
-        self.policy_engine = policy_engine or PolicyEngine()
+        self.policy_engine = policy_engine or PolicyGate()
         self.artifact_repository = artifact_repository
 
     def handle_request(
@@ -299,6 +300,8 @@ class ApiGateway:
         orchestrator = IntegrationOrchestrator(
             artifact_repository=self.artifact_repository,
             asset_workspace=self.data_source_workspace,
+            policy_gate=self.policy_engine,
+            data_source_trust_gate=self.data_source_trust_service,
         )
         result = orchestrator.predict_workflow(
             input_context=input_context,
@@ -586,27 +589,50 @@ class ApiGateway:
         return str(value)
 
 
-def create_app(api_gateway: ApiGateway | None = None, api_key: str = DEFAULT_API_KEY):
-    """Create a FastAPI wrapper around the internal API gateway contract."""
+def create_app(api_gateway: ApiGateway | None = None, api_key: str | None = None):
+    """Create the FastAPI wrapper.
+
+    Set AGENCYOS_API_KEY before running the service. The wrapper allows the
+    local Vite frontend origins for prototype API consumption. Tests may pass
+    api_key directly to keep fixtures isolated.
+    """
     from fastapi import FastAPI
     from fastapi import Request
     from fastapi.responses import JSONResponse
+    from fastapi.middleware.cors import CORSMiddleware
 
     gateway = api_gateway or ApiGateway()
     app = FastAPI(title="AgencyOS Prototype API", version="0.1.0")
 
     @app.middleware("http")
     async def require_api_key(request: Request, call_next):
-        supplied_key = request.headers.get("X-API-KEY") or ""
-        if not hmac.compare_digest(supplied_key, api_key):
+        required_key = api_key if api_key is not None else os.getenv(API_KEY_ENV_VAR, "")
+        auth_result = AuthGate(required_api_key=required_key).verify_api_key(
+            request.headers.get("X-API-KEY")
+        )
+        if not auth_result.authorized:
             return JSONResponse(
-                status_code=401,
+                status_code=auth_result.to_http_status(),
                 content={
                     "success": False,
-                    "error": "UNAUTHORIZED",
+                    "error": (
+                        "API_KEY_NOT_CONFIGURED"
+                        if auth_result.reason_code == "API_KEY_NOT_CONFIGURED"
+                        else "UNAUTHORIZED"
+                    ),
                 },
             )
         return await call_next(request)
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=[
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+        ],
+        allow_methods=["GET", "POST", "OPTIONS"],
+        allow_headers=["Content-Type", "X-API-KEY"],
+    )
 
     @app.api_route("/v1/{route_path:path}", methods=["GET", "POST"])
     async def route_v1(route_path: str, request: Request):

@@ -28,14 +28,15 @@ Install service dependencies:
 pip install -r requirements.txt
 ```
 
-Run the service:
+Set the service API key and run the service:
 
 ```text
+set AGENCYOS_API_KEY=agencyos-local-dev-key
 set PYTHONPATH=src
 uvicorn api_gateway:app --host 127.0.0.1 --port 8000
 ```
 
-Default local API key:
+Example local API key:
 
 ```text
 agencyos-local-dev-key
@@ -58,7 +59,7 @@ docker build -t agencyos-one-bionic-codex-integration:prototype .
 Run the service:
 
 ```text
-docker run --rm -p 8000:8000 agencyos-one-bionic-codex-integration:prototype
+docker run --rm -p 8000:8000 -e AGENCYOS_API_KEY=agencyos-local-dev-key agencyos-one-bionic-codex-integration:prototype
 ```
 
 ## Core Endpoints
@@ -188,6 +189,6 @@ Retrieves a transaction manifest from the local artifact repository attached to 
 
 - Connect UI forms to the documented request bodies.
 - Add user-facing states for auth failure, policy halt, data-source review, and successful transaction IDs.
-- Decide where the production API key will be configured for each environment.
+- Decide where `AGENCYOS_API_KEY` will be configured for each environment.
 - Replace simulated persistence with the selected database layer in a later backend milestone.
 - Keep product copy bounded to the current contract: the API supports governed prototype workflows and simulated intelligence under local test conditions.

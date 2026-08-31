@@ -5,9 +5,10 @@ from pathlib import Path
 from uuid import uuid4
 
 from artifact_repository import ArtifactRepository
-from data_source_trust_module import DataSourceTrustService
 from forecasting_engine import ForecastingEngine
 from monitoring import MonitoringService
+from platform_governance.data_source_trust import DataSourceTrustGate
+from platform_governance.policy_gate import PolicyGate
 from policy_checker import PolicyEngine
 
 
@@ -19,11 +20,15 @@ class IntegrationOrchestrator:
         project_name="agencyos-one-bionic-codex-integration",
         artifact_repository=None,
         asset_workspace=None,
+        policy_gate=None,
+        data_source_trust_gate=None,
     ):
         self.project_name = project_name
         self.events = []
         self.artifact_repository = artifact_repository
         self.asset_workspace = Path(asset_workspace or Path(".") / "asset-workspace")
+        self.policy_gate = policy_gate or PolicyGate()
+        self.data_source_trust_gate = data_source_trust_gate or DataSourceTrustGate()
 
     def initialize_workflow(self, goal):
         """Create the initial workflow record for a project goal."""
@@ -209,14 +214,13 @@ class IntegrationOrchestrator:
     ) -> dict:
         """Run policy, data-source trust, forecast, and manifest logging."""
         service_call_order = []
-        policy_engine = PolicyEngine()
-        policy = policy_engine.check_data_source_context(
+        policy = self.policy_gate.evaluate(
             input_context,
             source_context=source_context,
-        )
+        ).to_dict()
         service_call_order.append("policy_check")
 
-        if policy_engine.is_blocking(policy):
+        if self.policy_gate.is_blocking(policy):
             return self._complete_prediction_attempt(
                 input_context=input_context,
                 source_context=source_context,
@@ -233,7 +237,7 @@ class IntegrationOrchestrator:
                 required_action=policy["required_action"],
             )
 
-        trust_result = DataSourceTrustService().validate_source(source)
+        trust_result = self.data_source_trust_gate.validate(source).to_dict()
         service_call_order.append("data_source_trust")
 
         if trust_result["status"] != "PASS":

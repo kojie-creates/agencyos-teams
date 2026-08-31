@@ -1,5 +1,8 @@
+import sqlite3
 import warnings
 from pathlib import Path
+
+import pytest
 
 warnings.filterwarnings(
     "ignore",
@@ -8,6 +11,12 @@ warnings.filterwarnings(
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+
+@pytest.fixture
+def sqlite_manifest_db(tmp_path):
+    db_path = tmp_path / "manifests.db"
+    yield db_path
 
 
 def test_initial_scaffold_files_exist():
@@ -24,6 +33,11 @@ def test_initial_scaffold_files_exist():
         "src/forecasting_engine.py",
         "src/monitoring.py",
         "src/orchestrator.py",
+        "src/platform_governance/__init__.py",
+        "src/platform_governance/auth_gate.py",
+        "src/platform_governance/data_source_trust.py",
+        "src/platform_governance/manifest_service.py",
+        "src/platform_governance/policy_gate.py",
         "src/policy_checker.py",
         "tests/test_initial_scaffold.py",
     ]
@@ -215,6 +229,76 @@ def test_artifact_repository_uses_simulated_database_write(tmp_path):
     }
 
 
+def test_artifact_repository_persists_manifest_to_sqlite(tmp_path, sqlite_manifest_db):
+    import hashlib
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from artifact_repository import ArtifactRepository
+
+    asset_file = tmp_path / "asset.txt"
+    asset_file.write_text("asset payload for sqlite persistence", encoding="utf-8")
+    repository = ArtifactRepository(
+        tmp_path / "transaction-store",
+        db_path=sqlite_manifest_db,
+    )
+
+    transaction_id = repository.log_asset_transaction(
+        source_file=str(asset_file),
+        status="PROCESSED",
+        transaction_metadata={"source": "sqlite-test"},
+    )
+
+    with sqlite3.connect(sqlite_manifest_db) as connection:
+        row = connection.execute(
+            """
+            SELECT transaction_id, status, hash_back_data
+            FROM transaction_manifests
+            WHERE transaction_id = ?
+            """,
+            (transaction_id,),
+        ).fetchone()
+
+    assert row == (
+        transaction_id,
+        "SUCCESS",
+        hashlib.sha256(asset_file.read_bytes()).hexdigest(),
+    )
+
+
+def test_artifact_repository_can_read_manifest_from_sqlite_after_restart(
+    tmp_path,
+    sqlite_manifest_db,
+):
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from artifact_repository import ArtifactRepository
+
+    asset_file = tmp_path / "asset.txt"
+    asset_file.write_text("asset payload after restart", encoding="utf-8")
+    repository = ArtifactRepository(
+        tmp_path / "transaction-store",
+        db_path=sqlite_manifest_db,
+    )
+    transaction_id = repository.log_asset_transaction(
+        source_file=str(asset_file),
+        status="EXTERNAL_CALL_FAILED",
+        transaction_metadata={"result": "failure"},
+    )
+    (tmp_path / "transaction-store" / f"{transaction_id}.json").unlink()
+
+    restarted_repository = ArtifactRepository(
+        tmp_path / "transaction-store",
+        db_path=sqlite_manifest_db,
+    )
+    stored = restarted_repository.get_transaction(transaction_id)
+
+    assert stored["transaction_id"] == transaction_id
+    assert stored["status"] == "EXTERNAL_CALL_FAILED"
+    assert stored["persistence"]["status"] == "SQLITE_COMMITTED"
+
+
 def test_full_lifecycle_success(tmp_path):
     import sys
 
@@ -355,6 +439,45 @@ def test_http_service_accepts_valid_api_key_for_workflow_start():
     assert response.json()["final_transaction_id"] == "txn-http-test"
 
 
+def test_http_service_reads_api_key_from_environment(monkeypatch):
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from api_gateway import ApiGateway
+    from api_gateway import create_app
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        from fastapi.testclient import TestClient
+
+    def workflow_runner(goal, source_context):
+        return {
+            "status": "COMPLETED",
+            "goal": goal,
+            "source_context": source_context,
+        }
+
+    monkeypatch.setenv("AGENCYOS_API_KEY", "env-test-key")
+    client = TestClient(
+        create_app(api_gateway=ApiGateway(workflow_runner=workflow_runner))
+    )
+
+    old_default = client.post(
+        "/v1/workflow/start",
+        headers={"X-API-KEY": "agencyos-local-dev-key"},
+        json={"goal": "Draft an internal onboarding charter."},
+    )
+    from_env = client.post(
+        "/v1/workflow/start",
+        headers={"X-API-KEY": "env-test-key"},
+        json={"goal": "Draft an internal onboarding charter."},
+    )
+
+    assert old_default.status_code == 401
+    assert from_env.status_code == 200
+    assert from_env.json()["status"] == "COMPLETED"
+
+
 def test_http_service_rejects_missing_or_invalid_api_key_before_policy():
     import sys
 
@@ -411,6 +534,32 @@ def test_http_service_rejects_missing_or_invalid_api_key_before_policy():
         "error": "UNAUTHORIZED",
     }
     assert policy_engine.calls == []
+
+
+def test_http_service_allows_local_frontend_cors_preflight():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from api_gateway import create_app
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        from fastapi.testclient import TestClient
+
+    client = TestClient(create_app(api_key="test-key"))
+
+    response = client.options(
+        "/v1/predict/forecast",
+        headers={
+            "Origin": "http://127.0.0.1:5173",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "content-type,x-api-key",
+        },
+    )
+
+    assert response.status_code == 200
+    assert response.headers["access-control-allow-origin"] == "http://127.0.0.1:5173"
+    assert "X-API-KEY" in response.headers["access-control-allow-headers"]
 
 
 def test_http_service_returns_policy_failure_after_valid_api_key():
@@ -1106,3 +1255,255 @@ def test_orchestrator_predict_workflow_logs_success_fail_and_flagged(tmp_path):
     assert flagged["status"] == "HALTED"
     assert flagged["trust_result"]["status"] == "FLAGGED"
     assert flagged_manifest["status"] == "FORECAST_HALTED"
+
+
+def test_platform_governance_policy_gate_returns_structured_result():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from platform_governance.policy_gate import PolicyGate
+    from platform_governance.policy_gate import PolicyResult
+
+    result = PolicyGate().evaluate(
+        "Contact user@example.com before analysis.",
+        source_context="PLATFORM_TEST",
+    )
+
+    assert isinstance(result, PolicyResult)
+    assert result.status == "FAIL"
+    assert result.reason_code == "PII_DETECTED"
+    assert result.mandatory_remediation == "MASKING"
+    assert result.to_dict() == {
+        "status": "FAIL",
+        "reason": "PII_DETECTED",
+        "reason_code": "PII_DETECTED",
+        "required_action": "MASKING",
+        "mandatory_remediation": "MASKING",
+        "source": "PLATFORM_TEST",
+    }
+
+
+def test_platform_governance_data_source_trust_returns_confidence_score():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from platform_governance.data_source_trust import DataSourceTrustGate
+    from platform_governance.data_source_trust import TrustResult
+
+    result = DataSourceTrustGate().validate(
+        {
+            "source_name": "approved-audit-log",
+            "owner_approved": True,
+            "consent_status": "APPROVED",
+            "reliability_rating": 0.92,
+            "data_age_days": 5,
+        }
+    )
+
+    assert isinstance(result, TrustResult)
+    assert result.status == "PASS"
+    assert result.reason_code == "DATA_SOURCE_TRUSTED"
+    assert result.confidence_score == 0.92
+    assert result.to_dict()["confidence_score"] == 0.92
+
+
+def test_platform_governance_manifest_service_logs_event_to_sqlite(tmp_path):
+    import sqlite3
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from platform_governance.manifest_service import ManifestService
+
+    service = ManifestService(
+        root_path=tmp_path / "platform-transactions",
+        db_path=tmp_path / "manifests.db",
+    )
+
+    transaction_id = service.log_event(
+        status="PLATFORM_TEST_COMPLETED",
+        event_data={"message": "platform event"},
+        metadata={"workflow_step": "platform_governance"},
+    )
+
+    with sqlite3.connect(tmp_path / "manifests.db") as connection:
+        row = connection.execute(
+            """
+            SELECT transaction_id, status, original_status
+            FROM transaction_manifests
+            WHERE transaction_id = ?
+            """,
+            (transaction_id,),
+        ).fetchone()
+
+    assert row == (
+        transaction_id,
+        "SUCCESS",
+        "PLATFORM_TEST_COMPLETED",
+    )
+    assert service.get_event(transaction_id)["transaction_id"] == transaction_id
+
+
+def test_platform_governance_auth_gate_validates_api_key():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from platform_governance.auth_gate import AuthGate
+    from platform_governance.auth_gate import AuthResult
+
+    result = AuthGate(required_api_key="test-key").verify_api_key("test-key")
+
+    assert isinstance(result, AuthResult)
+    assert result.authorized is True
+    assert result.status == "PASS"
+    assert result.reason_code == "AUTHORIZED"
+    assert result.required_action == "NONE"
+    assert result.to_dict() == {
+        "authorized": True,
+        "status": "PASS",
+        "reason": "AUTHORIZED",
+        "reason_code": "AUTHORIZED",
+        "required_action": "NONE",
+        "auth_method": "API_KEY",
+    }
+
+
+def test_platform_governance_auth_gate_rejects_invalid_api_key():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from platform_governance.auth_gate import AuthGate
+
+    result = AuthGate(required_api_key="test-key").verify_api_key("wrong-key")
+
+    assert result.authorized is False
+    assert result.status == "FAIL"
+    assert result.reason_code == "AUTH_FAILED"
+    assert result.required_action == "CHECK_API_KEY"
+    assert result.to_http_status() == 401
+
+
+def test_platform_governance_oidc_stub_reports_not_configured():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from platform_governance.auth_gate import OIDCVerifier
+
+    result = OIDCVerifier().verify_token("token-placeholder")
+
+    assert result.authorized is False
+    assert result.status == "NOT_CONFIGURED"
+    assert result.reason_code == "OIDC_NOT_CONFIGURED"
+    assert result.required_action == "CONFIGURE_OIDC_PROVIDER"
+
+
+def test_http_service_auth_gate_valid_key_reaches_policy_gate():
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from api_gateway import ApiGateway
+    from api_gateway import create_app
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        from fastapi.testclient import TestClient
+
+    class SpyPolicyGate:
+        def __init__(self):
+            self.calls = []
+
+        def check_compliance(self, input_context, source=None):
+            self.calls.append((input_context, source))
+            return {
+                "status": "PASS",
+                "reason": "NO_POLICY_VIOLATION",
+                "required_action": "NONE",
+                "source": source or "CLI",
+            }
+
+        def is_blocking(self, policy_result):
+            return False
+
+    policy_gate = SpyPolicyGate()
+    client = TestClient(
+        create_app(
+            api_gateway=ApiGateway(policy_engine=policy_gate),
+            api_key="test-key",
+        )
+    )
+
+    response = client.post(
+        "/v1/workflow/start",
+        headers={"X-API-KEY": "test-key"},
+        json={"goal": "Draft an internal onboarding charter."},
+    )
+
+    assert response.status_code == 200
+    assert policy_gate.calls == [("Draft an internal onboarding charter.", "CLI")]
+
+
+def test_api_gateway_forecast_uses_platform_governance_classes(tmp_path):
+    import sys
+
+    sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    from api_gateway import ApiGateway
+    from artifact_repository import ArtifactRepository
+    from platform_governance.data_source_trust import DataSourceTrustGate
+    from platform_governance.policy_gate import PolicyGate
+
+    class RecordingPolicyGate(PolicyGate):
+        def __init__(self):
+            super().__init__()
+            self.calls = []
+
+        def evaluate(self, input_context, source_context=None):
+            self.calls.append((input_context, source_context))
+            return super().evaluate(input_context, source_context=source_context)
+
+    class RecordingTrustGate(DataSourceTrustGate):
+        def __init__(self):
+            super().__init__()
+            self.calls = []
+
+        def validate(self, source_metadata):
+            self.calls.append(source_metadata)
+            return super().validate(source_metadata)
+
+    policy_gate = RecordingPolicyGate()
+    trust_gate = RecordingTrustGate()
+    repository = ArtifactRepository(tmp_path / "transaction-store")
+
+    response = ApiGateway(
+        policy_engine=policy_gate,
+        data_source_trust_service=trust_gate,
+        artifact_repository=repository,
+        data_source_workspace=tmp_path / "data-source-attempts",
+    ).handle_request(
+        method="POST",
+        path="/v1/predict/forecast",
+        json_body={
+            "input_context": "Run internal retention forecast.",
+            "source_context": "PLATFORM_TEST",
+            "source": {
+                "source_name": "approved-audit-log",
+                "owner_approved": True,
+                "consent_status": "APPROVED",
+                "reliability_rating": 0.95,
+                "data_age_days": 2,
+            },
+            "input_payload": {
+                "baseline_risk": 0.3,
+                "volatility": 0.1,
+                "exposure": 0.2,
+            },
+        },
+    )
+
+    assert response["status_code"] == 200
+    assert response["body"]["service_call_order"] == [
+        "policy_check",
+        "data_source_trust",
+        "forecasting_engine",
+        "transaction_manifest",
+    ]
+    assert policy_gate.calls == [("Run internal retention forecast.", "PLATFORM_TEST")]
+    assert trust_gate.calls[0]["source_name"] == "approved-audit-log"
