@@ -16,7 +16,7 @@ The system must preserve AgencyOS Teams as the work authority. Chat platforms, b
 
 Hermes bots can message each other and work as expected when they stay active long enough.
 
-The workflow is slow because only two local models are available, so bots can time out while waiting for each other in a live chat-style loop.
+The workflow is slow because the local model pool is constrained even with three available models: Qwen, Gemma 4, and Bonsai. Bots can time out while waiting for each other in a live chat-style loop.
 
 The fix is to move from synchronous bot conversation to asynchronous packet work. A bot should not need another bot to be online at the same moment. It should claim durable work, complete it, write evidence, and emit a next-agent notification.
 
@@ -84,6 +84,7 @@ Workers should be narrow:
 - `codex-worker`: repository execution, verification, artifacts.
 - `gemma-worker`: reasoning, governance, scope, claim review.
 - `qwen-worker`: triage, summary, low-cost preparation.
+- `bonsai-worker`: third local model lane for configurable helper work, overflow, or future specialist routing.
 - future workers: additional Hermes bots or specialist Beings.
 
 ### Human Approval Gate
@@ -130,6 +131,7 @@ agencyos.packet.ready.hermes
 agencyos.packet.ready.codex
 agencyos.packet.ready.gemma
 agencyos.packet.ready.qwen
+agencyos.packet.ready.bonsai
 agencyos.packet.claimed
 agencyos.packet.in_progress
 agencyos.packet.handoff_ready
@@ -261,7 +263,8 @@ It does not prove live production coordination, continuous availability, deploye
 1. First surface: Telegram, Zulip, Discord, local web UI, or direct CLI.
 2. Worker location: inside `agencyos-teams`, inside `agencyos-bus-sidecar`, or split with sidecar owning bus code.
 3. First live worker: Codex, Gemma, or Qwen.
-4. NATS installation method: local binary, Docker, or embedded developer runbook.
+4. Bonsai role: helper, overflow, specialist worker, or another named governance lane.
+5. NATS installation method: local binary, Docker, or embedded developer runbook.
 
 ## Recommendation
 

@@ -15,6 +15,7 @@
 - AgencyOS Teams packet files remain authoritative in v0.1.
 - NATS carries small packet availability and lifecycle events, not full work context.
 - Hermes routes and summarizes; workers perform specialist work.
+- Local model lanes include Qwen, Gemma 4, and Bonsai.
 - Workers are asynchronous and must not depend on another bot being live in the same chat loop.
 - Timeouts produce packet state such as `BLOCKED`, not lost conversations.
 - External app actions require `HUMAN_APPROVAL_REQUIRED` until explicit human approval is recorded.
@@ -198,6 +199,7 @@ def test_subject_for_agent_normalizes_known_bot_names():
     assert subject_for_agent("bionic-gemma") == "agencyos.packet.ready.gemma"
     assert subject_for_agent("anythingllm-qwen") == "agencyos.packet.ready.qwen"
     assert subject_for_agent("qwen") == "agencyos.packet.ready.qwen"
+    assert subject_for_agent("bonsai") == "agencyos.packet.ready.bonsai"
 
 
 def test_in_memory_bus_records_events_by_subject():
@@ -244,6 +246,7 @@ READY_SUBJECTS = {
     "bionic-gemma": "agencyos.packet.ready.gemma",
     "qwen": "agencyos.packet.ready.qwen",
     "anythingllm-qwen": "agencyos.packet.ready.qwen",
+    "bonsai": "agencyos.packet.ready.bonsai",
 }
 
 
@@ -393,6 +396,25 @@ def test_hermes_route_records_bus_publish_event(tmp_path):
     assert any(event["event_type"] == "PACKET_ROUTED" for event in events)
     assert any(event["event_type"] == "BUS_EVENT_PUBLISHED" for event in events)
     assert result["event"].subject == "agencyos.packet.ready.gemma"
+
+
+def test_hermes_route_supports_bonsai_as_third_local_model(tmp_path):
+    config = {"agencyos_teams_path": "C:/Users/felix/Desktop/agencyos-teams", "entities": {}}
+    fake_bus = InMemoryMessageBus()
+
+    result = route_packet(
+        sidecar_root=tmp_path,
+        config=config,
+        task="Use Bonsai as helper lane.",
+        assigned_to="bonsai",
+        next_agent="gemma",
+        workstream="projects/example/workstreams/runtime",
+        message_bus=fake_bus,
+    )
+
+    assert result["packet"]["assigned_to"] == "bonsai"
+    assert result["packet"]["next_agent"] == "gemma"
+    assert result["event"].subject == "agencyos.packet.ready.bonsai"
 ```
 
 - [ ] **Step 2: Run tests to verify failure**
