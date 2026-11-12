@@ -1,6 +1,6 @@
 # First Run Context
 
-Generated: 2026-08-18 20:51:15
+Generated: 2026-08-29 22:24:28
 
 Product:
 
@@ -17,67 +17,67 @@ sidecar
 Project:
 
 ```text
-i9sports
+innerlight-agency-desktop
 ```
 
 Slug:
 
 ```text
-i9sports
+innerlight-agency-desktop
 ```
 
 Packet path:
 
 ```text
-projects/i9sports
+projects/innerlight-agency-desktop
 ```
 
 Human owner / approval owner:
 
 ```text
-Nick / Kojie
+Kojie
 ```
 
 Active Being:
 
 ```text
-Katie
+Jaavis
 ```
 
 Desired outcome:
 
 ```text
-show i9 sports, https://i9sports.com, a successul owner wants to see what AgencyOS could do that would bring value. already successful business after 5 years.
+Create and govern a cross-platform Electron desktop app for InnerLight Agency OS with BYOK Anthropic access, business intake, daily operating loop, embedded agent prompts, SQLite history, and packaging readiness.
 ```
 
 Existing project path:
 
 ```text
-~/Desktop/i9Sports
+C:\Users\felix\Desktop\InnerLight_Agency_Desktop
 ```
 
 Allowed tools:
 
 ```text
-all available
+Codex, PowerShell, npm, git, filesystem, local test runners
 ```
 
 Off-limits:
 
 ```text
-external sends, publication, paid commitments, sensitive data, destructive changes without approval
+Do not overwrite existing desktop repo changes; do not expose API keys; do not claim production readiness before live app, packaging, persistence, key storage, and user flows are verified.
 ```
 
 Approval required for:
 
 ```text
-external-facing, sensitive, paid, legal, financial, housing, medical, safety, memory, or destructive actions
+External API calls, package publishing, installer distribution, destructive git operations, credential handling beyond local safeStorage.
 ```
 
 Startup notes:
 
 ```text
-
+Context source: pasted InnerLight Agency OS Desktop App Implementation Plan. Source agent prompts expected at C:\Users\felix\Desktop\InnerLight_AgencyOS\.claude\agents. Target app repo already exists and has uncommitted work; AgencyOS packet is a sidecar governance and execution wrapper.
 ```
 
 ## Next Action

@@ -1,0 +1,12 @@
+{
+  "lead_id": "LA-VO-009",
+  "recipient": "contact@loyalstudios.tv",
+  "received_at": "2026-09-05T21:27:14-07:00",
+  "message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEMAAAAujhULop4MUKcpweqID9PRgAJTJm0qgAAAA==",
+  "subject": "Undeliverable: Backup narration for corporate productions",
+  "sender": "postmaster@outlook.com",
+  "diagnostic": "554 5.4.1 / 550 5.4.1 Recipient address rejected: Access denied. Recipient not listed in domain directory.",
+  "original_internet_message_id": "<PH0PR02MB84725CB6FAB8B97116F3F5D197B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+  "result": "delivery_failed",
+  "suppression": "No retry or follow-up pending verified correction and approval of changed recipient."
+}

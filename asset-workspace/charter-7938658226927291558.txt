@@ -1,0 +1,4 @@
+Project: agencyos-one-bionic-codex-integration
+Goal: Draft an internal onboarding charter.
+Charter: charter-7938658226927291558
+Artifact: simulated master workflow asset

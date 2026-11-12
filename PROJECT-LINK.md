@@ -15,29 +15,29 @@ sidecar
 Project root:
 
 ```text
-~/Desktop/i9Sports
+C:\Users\felix\Desktop\InnerLight_Agency_Desktop
 ```
 
 Human approval owner:
 
 ```text
-Nick / Kojie
+Kojie
 ```
 
 Allowed tools:
 
 ```text
-all available
+Codex, PowerShell, npm, git, filesystem, local test runners
 ```
 
 Off-limits:
 
 ```text
-external sends, publication, paid commitments, sensitive data, destructive changes without approval
+Do not overwrite existing desktop repo changes; do not expose API keys; do not claim production readiness before live app, packaging, persistence, key storage, and user flows are verified.
 ```
 
 Approval required for:
 
 ```text
-external-facing, sensitive, paid, legal, financial, housing, medical, safety, memory, or destructive actions
+External API calls, package publishing, installer distribution, destructive git operations, credential handling beyond local safeStorage.
 ```

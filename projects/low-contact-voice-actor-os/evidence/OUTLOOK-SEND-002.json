@@ -1,0 +1,400 @@
+{
+  "batch_id": "BATCH-002-v1",
+  "approved_sha256": "CD8C8EEC6F44BA6E4CFC675C59B77A78F06D71E9B24D2E8A7A582D03B07BC01A",
+  "mailbox": "felix.montanez@hotmail.com",
+  "connector": "user-Outlook send_mail",
+  "send_api_status": "202 Accepted for all 12",
+  "send_results": [
+    {
+      "lead_id": "LA-VO-011",
+      "to": "info@ajaxcreative.com",
+      "subject": "Backup VO for corporate and explainer videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:13 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDwAAAA==",
+      "internetMessageId": "<PH0PR02MB84724FF4E991F6D293431A4097B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-012",
+      "to": "inquire@visionsoundfilms.com",
+      "subject": "Narration for corporate and training videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:15 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEAAAAA==",
+      "internetMessageId": "<PH0PR02MB8472BF6B71C217E0CA1E8A9997B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-013",
+      "to": "info@blarevideo.com",
+      "subject": "Voice-over for corporate and explainer videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:17 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEQAAAA==",
+      "internetMessageId": "<PH0PR02MB8472D0AEBA352780BF02926697B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-014",
+      "to": "getquote@adjustproduction.com",
+      "subject": "VO for product and brand videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:19 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEgAAAA==",
+      "internetMessageId": "<PH0PR02MB847258EDCCF5EB9B9F63E56A97B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-015",
+      "to": "info@filmless.com",
+      "subject": "Remote VO for corporate and explainer videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:20 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEwAAAA==",
+      "internetMessageId": "<PH0PR02MB847267F9EC84AB674BA5E23C97B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-016",
+      "to": "contact@brandefy.com",
+      "subject": "Narration for training and explainer videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:21 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFAAAAA==",
+      "internetMessageId": "<PH0PR02MB8472DF2EBDCAAB80B9704A7097B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-017",
+      "to": "hello@7wonders.com",
+      "subject": "Narration for corporate explainer and brand videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:29 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFQAAAA==",
+      "internetMessageId": "<PH0PR02MB847239B11AEDFF258D9693BF97B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-018",
+      "to": "info@luminoustudios.com",
+      "subject": "Voice option for brand and corporate videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:30 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFgAAAA==",
+      "internetMessageId": "<PH0PR02MB8472ACE0F6F5BDE6FC573FFA97B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-020",
+      "to": "info@casualfilms.com",
+      "subject": "VO support for corporate and brand video",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:31 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFwAAAA==",
+      "internetMessageId": "<PH0PR02MB84720F8B3214F03908BEBCB897B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-021",
+      "to": "hello@goodpictures.co",
+      "subject": "Documentary-style brand narration sample",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:33 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQGAAAAA==",
+      "internetMessageId": "<PH0PR02MB847228D4F9599FAC9CD5215897B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-024",
+      "to": "info@pollackgroup.com",
+      "subject": "VO for PR and client video clips",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:35 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQGQAAAA==",
+      "internetMessageId": "<PH0PR02MB847200F8E6074A65D1E16B8C97B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    },
+    {
+      "lead_id": "LA-VO-025",
+      "to": "hi@44-studios.com",
+      "subject": "VO for branded content and corporate videos",
+      "result": {
+        "status": 202,
+        "isError": false
+      },
+      "time_utc": "2026-09-06 06:35:35 UTC",
+      "graph_message_id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQGgAAAA==",
+      "internetMessageId": "<PH0PR02MB84723380F0D3D6740F179D2C97B32@PH0PR02MB8472.namprd02.prod.outlook.com>"
+    }
+  ],
+  "sent_items": {
+    "value": [
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDwAAAA==",
+        "subject": "Backup VO for corporate and explainer videos",
+        "sentDateTime": "2026-09-06T06:35:13Z",
+        "internetMessageId": "<PH0PR02MB84724FF4E991F6D293431A4097B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@ajaxcreative.com",
+              "name": "info@ajaxcreative.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEAAAAA==",
+        "subject": "Narration for corporate and training videos",
+        "sentDateTime": "2026-09-06T06:35:15Z",
+        "internetMessageId": "<PH0PR02MB8472BF6B71C217E0CA1E8A9997B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "inquire@visionsoundfilms.com",
+              "name": "inquire@visionsoundfilms.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEQAAAA==",
+        "subject": "Voice-over for corporate and explainer videos",
+        "sentDateTime": "2026-09-06T06:35:17Z",
+        "internetMessageId": "<PH0PR02MB8472D0AEBA352780BF02926697B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@blarevideo.com",
+              "name": "info@blarevideo.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEgAAAA==",
+        "subject": "VO for product and brand videos",
+        "sentDateTime": "2026-09-06T06:35:19Z",
+        "internetMessageId": "<PH0PR02MB847258EDCCF5EB9B9F63E56A97B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "getquote@adjustproduction.com",
+              "name": "getquote@adjustproduction.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQEwAAAA==",
+        "subject": "Remote VO for corporate and explainer videos",
+        "sentDateTime": "2026-09-06T06:35:20Z",
+        "internetMessageId": "<PH0PR02MB847267F9EC84AB674BA5E23C97B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@filmless.com",
+              "name": "info@filmless.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFAAAAA==",
+        "subject": "Narration for training and explainer videos",
+        "sentDateTime": "2026-09-06T06:35:21Z",
+        "internetMessageId": "<PH0PR02MB8472DF2EBDCAAB80B9704A7097B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "contact@brandefy.com",
+              "name": "contact@brandefy.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFQAAAA==",
+        "subject": "Narration for corporate explainer and brand videos",
+        "sentDateTime": "2026-09-06T06:35:29Z",
+        "internetMessageId": "<PH0PR02MB847239B11AEDFF258D9693BF97B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "hello@7wonders.com",
+              "name": "hello@7wonders.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFgAAAA==",
+        "subject": "Voice option for brand and corporate videos",
+        "sentDateTime": "2026-09-06T06:35:30Z",
+        "internetMessageId": "<PH0PR02MB8472ACE0F6F5BDE6FC573FFA97B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@luminoustudios.com",
+              "name": "info@luminoustudios.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQFwAAAA==",
+        "subject": "VO support for corporate and brand video",
+        "sentDateTime": "2026-09-06T06:35:31Z",
+        "internetMessageId": "<PH0PR02MB84720F8B3214F03908BEBCB897B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@casualfilms.com",
+              "name": "info@casualfilms.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQGAAAAA==",
+        "subject": "Documentary-style brand narration sample",
+        "sentDateTime": "2026-09-06T06:35:33Z",
+        "internetMessageId": "<PH0PR02MB847228D4F9599FAC9CD5215897B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "hello@goodpictures.co",
+              "name": "hello@goodpictures.co"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQGQAAAA==",
+        "subject": "VO for PR and client video clips",
+        "sentDateTime": "2026-09-06T06:35:35Z",
+        "internetMessageId": "<PH0PR02MB847200F8E6074A65D1E16B8C97B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@pollackgroup.com",
+              "name": "info@pollackgroup.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQGgAAAA==",
+        "subject": "VO for branded content and corporate videos",
+        "sentDateTime": "2026-09-06T06:35:35Z",
+        "internetMessageId": "<PH0PR02MB84723380F0D3D6740F179D2C97B32@PH0PR02MB8472.namprd02.prod.outlook.com>",
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "hi@44-studios.com",
+              "name": "hi@44-studios.com"
+            }
+          }
+        ],
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        }
+      }
+    ],
+    "has_more": false
+  },
+  "verification": "One matching Sent Items message per approved recipient; subjects and recipients exact. Graph send_mail returned status 202 for each. Recipient delivery not established.",
+  "delivery_status": "Sent Items confirmation establishes sent, not recipient delivery."
+}

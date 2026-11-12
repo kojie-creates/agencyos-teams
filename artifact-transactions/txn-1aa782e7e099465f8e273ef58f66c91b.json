@@ -1,0 +1,16 @@
+{
+  "transaction_id": "txn-1aa782e7e099465f8e273ef58f66c91b",
+  "source_file": "asset-workspace\\charter-656577244102154012.txt",
+  "status": "PROCESSED",
+  "sha256": "0231bc0c53f481e9f13db232d0a4fd133fff5308d2643521dd3bcc176e2a3afb",
+  "transaction_metadata": {
+    "workflow_step": "asset_processor",
+    "charter_id": "charter-656577244102154012",
+    "source_context": "CLI"
+  },
+  "created_at": "2026-08-31T03:56:01.847016+00:00",
+  "persistence": {
+    "status": "SQLITE_COMMITTED",
+    "db_path": "artifact-transactions\\manifests.db"
+  }
+}

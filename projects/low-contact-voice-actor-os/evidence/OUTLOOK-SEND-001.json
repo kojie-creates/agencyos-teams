@@ -1,0 +1,202 @@
+{
+  "batch_id": "BATCH-001-v2",
+  "approved_sha256": "84B4F309B8FF4C8EF72DC10DFCD42DBC3E5EFF08E57763F57936E9556C7AB462",
+  "mailbox": "felix.montanez@hotmail.com",
+  "preflight": {
+    "sent_items_checked": 6,
+    "has_more": false,
+    "matching_messages": 0,
+    "mailbox_domain_search_matches": 0
+  },
+  "send_results": [
+    {
+      "lead_id": "LA-VO-007",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "isError": false
+      },
+      "time": "2026-09-06 04:27:00 UTC"
+    },
+    {
+      "lead_id": "LA-VO-008",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "isError": false
+      },
+      "time": "2026-09-06 04:27:06 UTC"
+    },
+    {
+      "lead_id": "LA-VO-009",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "isError": false
+      },
+      "time": "2026-09-06 04:27:07 UTC"
+    },
+    {
+      "lead_id": "LA-VO-010",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "isError": false
+      },
+      "time": "2026-09-06 04:27:07 UTC"
+    }
+  ],
+  "sent_items": {
+    "value": [
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQCwAAAA==",
+        "subject": "Narration for e-learning modules",
+        "body": {
+          "contentType": "text",
+          "content": "Hi Ripe Media team, I am Felix Montanez, a Los Angeles voice actor with a\nwarm, conversational voice and an announcer-style range. Your e-learning\nservices and interactive learning applications caught my attention. I offer\nwarm narration for instructional modules and app walkthroughs. I record from a\ntreated home booth. Typical turnaround is 24 hours after receipt of scope for\nsmaller projects; timing depends on project size and is confirmed after scope\nreview. Voice-over sample:\nhttps://d26oc3sg82pgk3.cloudfront.net/transcoded/e0ad89d4-8fcb-4ef2-a57a-01462633698e/mp3/audio_192k.mp3\nWould it be useful to keep my sample on hand for future productions? Best,\nFelix Montanez felix.montanez@hotmail.com (310) 422-6416\n\n"
+        },
+        "bodyPreview": "Hi Ripe Media team,\n\nI am Felix Montanez, a Los Angeles voice actor with a warm, conversational voice and an announcer-style range.\n\nYour e-learning services and interactive learning applications caught my attention. I offer warm narration for instruction",
+        "web_link": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQCwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "getmore@ripemedia.com",
+              "name": "getmore@ripemedia.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "receivedDateTime": "2026-09-06T04:27:01Z",
+        "isRead": true,
+        "categories": [],
+        "has_attachments": false,
+        "display_url": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQCwAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "display_title": "Narration for e-learning modules"
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDAAAAA==",
+        "subject": "Voice-over for explainer videos",
+        "body": {
+          "contentType": "text",
+          "content": "Hi Rip Media Group team, I am Felix Montanez, a Los Angeles voice actor with a\nwarm, conversational voice and an announcer-style range. Your explainer,\nproduct, and training video services look like a fit for my conversational\ndelivery. I would welcome consideration as a backup voice for those\nproductions. I record from a treated home booth. Typical turnaround is 24\nhours after receipt of scope for smaller projects; timing depends on project\nsize and is confirmed after scope review. Voice-over sample:\nhttps://d26oc3sg82pgk3.cloudfront.net/transcoded/e0ad89d4-8fcb-4ef2-a57a-01462633698e/mp3/audio_192k.mp3\nWould it be useful to keep my sample on hand for future productions? Best,\nFelix Montanez felix.montanez@hotmail.com (310) 422-6416\n\n"
+        },
+        "bodyPreview": "Hi Rip Media Group team,\n\nI am Felix Montanez, a Los Angeles voice actor with a warm, conversational voice and an announcer-style range.\n\nYour explainer, product, and training video services look like a fit for my conversational delivery. I would welcome ",
+        "web_link": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDAAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@ripmediagroup.com",
+              "name": "info@ripmediagroup.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "receivedDateTime": "2026-09-06T04:27:07Z",
+        "isRead": true,
+        "categories": [],
+        "has_attachments": false,
+        "display_url": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDAAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "display_title": "Voice-over for explainer videos"
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDQAAAA==",
+        "subject": "Backup narration for corporate productions",
+        "body": {
+          "contentType": "text",
+          "content": "Hi Loyal Studios team, I am Felix Montanez, a Los Angeles voice actor with a\nwarm, conversational voice and an announcer-style range. I noticed your\ncorporate video production and in-house post-production services. I offer\nconversational narration and announcer-style reads for corporate and\npromotional videos. I record from a treated home booth. Typical turnaround is\n24 hours after receipt of scope for smaller projects; timing depends on\nproject size and is confirmed after scope review. Voice-over sample:\nhttps://d26oc3sg82pgk3.cloudfront.net/transcoded/e0ad89d4-8fcb-4ef2-a57a-01462633698e/mp3/audio_192k.mp3\nWould it be useful to keep my sample on hand for future productions? Best,\nFelix Montanez felix.montanez@hotmail.com (310) 422-6416\n\n"
+        },
+        "bodyPreview": "Hi Loyal Studios team,\n\nI am Felix Montanez, a Los Angeles voice actor with a warm, conversational voice and an announcer-style range.\n\nI noticed your corporate video production and in-house post-production services. I offer conversational narration and a",
+        "web_link": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDQAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "contact@loyalstudios.tv",
+              "name": "contact@loyalstudios.tv"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "receivedDateTime": "2026-09-06T04:27:08Z",
+        "isRead": true,
+        "categories": [],
+        "has_attachments": false,
+        "display_url": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDQAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "display_title": "Backup narration for corporate productions"
+      },
+      {
+        "id": "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDgAAAA==",
+        "subject": "Voice-over talent submission route",
+        "body": {
+          "contentType": "text",
+          "content": "Hi Lemonlight team, I am Felix Montanez, a Los Angeles voice actor with a\nwarm, conversational voice and an announcer-style range. Your contact page\nincludes a talent roster route alongside your brand and agency video services.\nCould you point me toward the appropriate process for submitting voice-over\nsamples? I record from a treated home booth. Typical turnaround is 24 hours\nafter receipt of scope for smaller projects; timing depends on project size\nand is confirmed after scope review. Voice-over sample:\nhttps://d26oc3sg82pgk3.cloudfront.net/transcoded/e0ad89d4-8fcb-4ef2-a57a-01462633698e/mp3/audio_192k.mp3\nThank you for pointing me toward the right contact. Best, Felix Montanez\nfelix.montanez@hotmail.com (310) 422-6416\n\n"
+        },
+        "bodyPreview": "Hi Lemonlight team,\n\nI am Felix Montanez, a Los Angeles voice actor with a warm, conversational voice and an announcer-style range.\n\nYour contact page includes a talent roster route alongside your brand and agency video services. Could you point me toward",
+        "web_link": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDgAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "sender": {
+          "emailAddress": {
+            "address": "felix.montanez@hotmail.com",
+            "name": "Felix montanez"
+          }
+        },
+        "toRecipients": [
+          {
+            "emailAddress": {
+              "address": "info@lemonlight.com",
+              "name": "info@lemonlight.com"
+            }
+          }
+        ],
+        "ccRecipients": [],
+        "bccRecipients": [],
+        "receivedDateTime": "2026-09-06T04:27:09Z",
+        "isRead": true,
+        "categories": [],
+        "has_attachments": false,
+        "display_url": "https://outlook.live.com/owa/?ItemID=AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgEJAAAAujhULop4MUKcpweqID9PRgAJTJnQDgAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "display_title": "Voice-over talent submission route"
+      }
+    ],
+    "next_link": null,
+    "has_more": false,
+    "next_from_index": null
+  },
+  "verification": "One matching Sent Items message per approved recipient; subjects and sender exact; body text equal after whitespace normalization. Connector renders body whitespace differently. Exact original body supplied to send_email.",
+  "delivery_status": "Sent Items confirmation establishes sent, not recipient delivery."
+}

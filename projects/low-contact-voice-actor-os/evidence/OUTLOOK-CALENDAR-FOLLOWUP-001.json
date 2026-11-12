@@ -1,0 +1,35 @@
+﻿{
+    "automation":  "routine vo-follow-up-calendar-sync weekdays 9am PT; auto-send FU1/FU2 routines deleted",
+    "preflight":  {
+                      "excluded":  [
+                                       "LA-VO-009 Loyal bounce",
+                                       "LA-VO-019 hold",
+                                       "LA-VO-022 skip",
+                                       "LA-VO-023 hold"
+                                   ],
+                      "matching_vo_followup_reminders":  0,
+                      "sent_items_confirmed_eligible":  15,
+                      "calendar_events_sep5_to_sep20":  0
+                  },
+    "events_created":  [
+                           {
+                               "id":  "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgENAAAAujhULop4MUKcpweqID9PRgAJTJngLwAAAA==",
+                               "due":  "2026-09-10T09:00:00 America/Los_Angeles",
+                               "isReminderOn":  true,
+                               "wave":  "FU1",
+                               "subject":  "VO follow-up FU1 — send 15 (FOLLOWUP-001)",
+                               "reminderMinutesBeforeStart":  15
+                           },
+                           {
+                               "id":  "AQMkADAwATZiZmYAZC1hMWQ0LTAyZjUtMDACLTAwCgBGAAADYfP9GhJDl0KnflobMYOh8AcAujhULop4MUKcpweqID9PRgAAAgENAAAAujhULop4MUKcpweqID9PRgAJTJngMAAAAA==",
+                               "due":  "2026-09-16T09:00:00 America/Los_Angeles",
+                               "isReminderOn":  true,
+                               "wave":  "FU2",
+                               "subject":  "VO follow-up FU2 — final send 15 (FOLLOWUP-001)",
+                               "reminderMinutesBeforeStart":  15
+                           }
+                       ],
+    "note":  "Calendar placement only; emails still require send action on due day",
+    "created_at_pt":  "2026-09-05T23:42:00-07:00",
+    "mailbox":  "felix.montanez@hotmail.com"
+}

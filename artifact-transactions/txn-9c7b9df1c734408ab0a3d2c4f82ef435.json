@@ -1,0 +1,18 @@
+{
+  "transaction_id": "txn-9c7b9df1c734408ab0a3d2c4f82ef435",
+  "source_file": "asset-workspace\\charter-5118111849562187355.txt",
+  "status": "MASTER_WORKFLOW_COMPLETED",
+  "sha256": "91c025b9312e3069caf56e8d8498dd8f6b794bb45bf3697f7c8d488c1e24c48c",
+  "transaction_metadata": {
+    "workflow_step": "transaction_manifest",
+    "asset_transaction_id": "txn-804dbea47c734448afdd0a68218e4e0d",
+    "charter_id": "charter-5118111849562187355",
+    "source_context": "CLI",
+    "policy_status": "PASS"
+  },
+  "created_at": "2026-08-31T04:22:58.403665+00:00",
+  "persistence": {
+    "status": "SQLITE_COMMITTED",
+    "db_path": "artifact-transactions\\manifests.db"
+  }
+}
