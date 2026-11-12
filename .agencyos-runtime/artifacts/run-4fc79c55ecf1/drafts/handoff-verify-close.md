@@ -1,1 +1,0 @@
-Hello! It's great to connect with you today.
